@@ -1,0 +1,9 @@
+<?php exit;?>
+2022-10-10 15:55:05 | http://localhost:91/ | 127.0.0.1 | ExceptionError | syntax error, unexpected end of file | D:\phpstudy_pro\WWW\www.site.com\cache\index\header_426d91295b33fc0c630527d38f968977.tpl.php | 273
+2022-10-10 15:55:25 | http://localhost:91/ | 127.0.0.1 | ExceptionError | syntax error, unexpected '}', expecting end of file | D:\phpstudy_pro\WWW\www.site.com\cache\index\header_426d91295b33fc0c630527d38f968977.tpl.php | 132
+2022-10-10 15:55:48 | http://localhost:91/ | 127.0.0.1 | ExceptionError | syntax error, unexpected '}', expecting end of file | D:\phpstudy_pro\WWW\www.site.com\cache\index\header_426d91295b33fc0c630527d38f968977.tpl.php | 132
+2022-10-10 15:55:57 | http://localhost:91/ | 127.0.0.1 | ExceptionError | syntax error, unexpected '}', expecting end of file | D:\phpstudy_pro\WWW\www.site.com\cache\index\header_426d91295b33fc0c630527d38f968977.tpl.php | 132
+2022-10-10 15:55:58 | http://localhost:91/ | 127.0.0.1 | ExceptionError | syntax error, unexpected '}', expecting end of file | D:\phpstudy_pro\WWW\www.site.com\cache\index\header_426d91295b33fc0c630527d38f968977.tpl.php | 132
+2022-10-10 15:55:58 | http://localhost:91/ | 127.0.0.1 | ExceptionError | syntax error, unexpected '}', expecting end of file | D:\phpstudy_pro\WWW\www.site.com\cache\index\header_426d91295b33fc0c630527d38f968977.tpl.php | 132
+2022-10-10 15:55:58 | http://localhost:91/ | 127.0.0.1 | ExceptionError | syntax error, unexpected '}', expecting end of file | D:\phpstudy_pro\WWW\www.site.com\cache\index\header_426d91295b33fc0c630527d38f968977.tpl.php | 132
+2022-10-10 15:56:16 | http://localhost:91/ | 127.0.0.1 | ExceptionError | syntax error, unexpected '}', expecting end of file | D:\phpstudy_pro\WWW\www.site.com\cache\index\header_426d91295b33fc0c630527d38f968977.tpl.php | 132

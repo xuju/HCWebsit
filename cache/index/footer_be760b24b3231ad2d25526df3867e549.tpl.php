@@ -1,0 +1,162 @@
+<?php defined('IN_YZMPHP') or exit('No permission resources.'); ?><!-- footer area start -->
+<footer>
+    <div class="footer__area grey-bg pt-100">
+        <div class="footer__top pb-45">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                        <div class="footer__widget mb-45 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="footer__widget-title">
+                                <h4>海创三维</h4>
+                            </div>
+                            <div class="footer__widget-content">
+                                <div class="footer__links">
+                                    <ul>
+                                        <li><a href="#">关于我们</a></li>
+                                        <li><a href="#">产品中心</a></li>
+                                        <li><a href="#">咨询服务</a></li>
+                                        <li><a href="#">合作伙伴</a></li>
+                                        <li><a href="#">联系我们</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 offset-xl-1 col-lg-2 offset-lg-1 col-md-4 col-sm-6">
+                        <div class="footer__widget mb-45 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="footer__widget-title">
+                                <h4>资源</h4>
+                            </div>
+                            <div class="footer__widget-content">
+                                <div class="footer__links">
+                                    <ul>
+                                        <li><a href="#">客户</a></li>
+                                        <li><a href="#">价格</a></li>
+                                        <li><a href="#">新闻</a></li>
+                                        <li><a href="#">学习中心</a></li>
+                                        <li><a href="#">服务台</a></li>
+                                        <li><a href="#">支持</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 offset-xl-1 col-lg-2 offset-lg-1 col-md-4 col-sm-6">
+                        <div class="footer__widget mb-45 wow fadeInUp" data-wow-delay=".6s">
+                            <div class="footer__widget-title">
+                                <h4>用户案例</h4>
+                            </div>
+                            <div class="footer__widget-content">
+                                <div class="footer__links">
+                                    <ul>
+                                        <li><a href="#">用户案例</a></li>
+                                        <li><a href="#">机构</a></li>
+                                        <li><a href="#">数字营销</a></li>
+                                        <li><a href="#">商业搜索引擎</a></li>
+                                        <li><a href="#">企业</a></li>
+                                        <li><a href="#">出版商</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 offset-xl-1 col-lg-3 offset-lg-1 col-md-4 col-sm-6">
+                        <div class="footer__widget mb-45 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="footer__widget-title">
+                                <h4>消息</h4>
+                            </div>
+                            <div class="footer__widget-content">
+                                <div class="footer__info">
+                                    <ul>
+                                        <li>
+                                            <div class="icon">
+                                                <i class="fal fa-map-marker-alt"></i>
+                                            </div>
+                                            <div class="text">
+                                                <span>江苏省，苏州市，高新区 枫桥街道浩福路66号</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon theme-color ">
+                                                <i class="fal fa-envelope"></i>
+                                            </div>
+                                            <div class="text theme-color ">
+                                                <span><a
+                                                        href="mailto:support@HaiC.3D.com">support@HaiC.3D.com</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon theme-color">
+                                                <i class="fas fa-phone-alt"></i>
+                                            </div>
+                                            <div class="text theme-color">
+                                                <span><a href="tel:(+86)-13375184697">(+86) 13375184697</a></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="footer__copyright-text">
+                            <p>&copy;
+                                <script>document.write(new Date().getFullYear());</script> XX公司&nbsp;&nbsp;友情链接：<a
+                                    href="https://www.niiam.com/" title="3D打印服务" target="_blank">www.HaiC.3D.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="footer__social theme-social f-right">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-vimeo-v"></i>
+                                        <i class="fab fa-vimeo-v"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer area end -->
+
+<!-- JS here -->
+
+<script src="<?php echo STATIC_URL;?>company/js/vendor/waypoints.min.js"></script>
+<script src="<?php echo STATIC_URL;?>company/js/bootstrap.bundle.min.js"></script>
+<script src="<?php echo STATIC_URL;?>company/js/jquery.meanmenu.js"></script>
+<script src="<?php echo STATIC_URL;?>company/js/slick.min.js"></script>
+<script src="<?php echo STATIC_URL;?>company/js/jquery.fancybox.min.js"></script>
+<script src="<?php echo STATIC_URL;?>company/js/jquery.counterup.min.js"></script>
+<script src="<?php echo STATIC_URL;?>company/js/isotope.pkgd.min.js"></script>
+<script src="<?php echo STATIC_URL;?>company/js/owl.carousel.min.js"></script>
+<script src="<?php echo STATIC_URL;?>company/js/ajax-form.js"></script>
+<script src="<?php echo STATIC_URL;?>company/js/wow.min.js"></script>
+<script src="<?php echo STATIC_URL;?>company/js/imagesloaded.pkgd.min.js"></script>
+<script src="<?php echo STATIC_URL;?>company/js/main.js"></script>
+</body>
+
+</html>
