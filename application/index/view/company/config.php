@@ -9,8 +9,14 @@
   array (
 		'category_article' => '文章频道页模板', 
 		'category_product' => '产品频道页模板',
+    'category_product_sub' => '产品频道页二级模板',
 		'category_download' => '下载频道页模板',
-		'category_page' => '单页面模板', 		
+		'category_page' => '单页面模板', 	
+    'category_page_introduce' => '公司介绍',	
+    'category_page_culture' => '企业文化',	
+    'category_page_honor' => '公司荣誉',	
+    'category_page_partner' => '合作伙伴',	
+    'category_page_organization' => '组织架构',	
   ),
   
   
