@@ -48,6 +48,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Microsoft Yahei", sans-serif;
   font-size: 16px;

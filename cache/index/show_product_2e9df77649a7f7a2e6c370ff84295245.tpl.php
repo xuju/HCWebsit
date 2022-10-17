@@ -25,196 +25,174 @@
         </div>
     </div>
 </section>
-<div id="carousel" class="wow fadeInUp" style="margin-top:100px">
-    <div class="swiper swiper-3d">
-        <?php $pictures = string2array($pictures);?>
-        <div class="swiper-wrapper">
-            <?php if(is_array($pictures)) foreach($pictures as $v) { ?>
-            <div class="swiper-slide">
-                <a data-fancybox="gallery" href="<?php echo $v['url'];?>">
-                    <img class="rounded" src="<?php echo $v['url'];?>" alt="<?php echo $v['alt'];?>" title="<?php echo $v['alt'];?>" width="305" height="211" />
-                </a>
-                <!-- <img src="<?php echo STATIC_URL;?>company/images/carousel01.png" /> -->
-                <p><?php echo $v['alt'];?></p>
-            </div>
-            <?php } ?>
-            <!-- <div class="swiper-slide"><img src="<?php echo STATIC_URL;?>company/images/carousel02.png" />
-                <p>北京冬奥会迎来倒计时一个月</p>
-            </div>
-            <div class="swiper-slide"><img src="<?php echo STATIC_URL;?>company/images/carousel03.png" />
-                <p>北京冬奥会迎来倒计时一个月</p>
-            </div>
-            <div class="swiper-slide"><img src="<?php echo STATIC_URL;?>company/images/carousel04.png" />
-                <p>北京冬奥会迎来倒计时一个月</p>
-            </div>
-            <div class="swiper-slide"><img src="<?php echo STATIC_URL;?>company/images/carousel05.png" />
-                <p>北京冬奥会迎来倒计时一个月</p>
-            </div> -->
-        </div>
-    </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-</div>
-<div class="container ">
-    <div class="row">
-        <div class="col-lg-12 wow fadeInUp">
-            <h3 style="text-align: center;"><?php echo $title;?></h3>
-        </div>
-        <div class="col-lg-12 wow fadeInUp">
-            <div class="description" style="text-indent: 30px">
-                <?php echo $content;?>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="container">
-    <div class="row wow fadeInUp">
+    <div id="carousel" class="wow fadeInUp" style="margin-top:50px">
+        <div class="swiper swiper-3d">
+            <?php $pictures = string2array($pictures);?>
+            <div class="swiper-wrapper">
+                <?php if(is_array($pictures)) foreach($pictures as $v) { ?>
+                <div class="swiper-slide">
+                    <a data-fancybox="gallery" href="<?php echo $v['url'];?>">
+                        <img class="rounded" src="<?php echo $v['url'];?>" alt="<?php echo $v['alt'];?>" title="<?php echo $v['alt'];?>" width="305"
+                            height="211" />
+                    </a>
+                    <!-- <img src="<?php echo STATIC_URL;?>company/images/carousel01.png" /> -->
+                    <p><?php echo $v['alt'];?></p>
+                </div>
+                <?php } ?>
 
-        <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'tag')) {$data = $tag->tag(array('field'=>'id,tag,total','limit'=>'20',));}?>
-        <div class="blog__tag mb-30 wow fadeInUp col-12" data-wow-delay=".6s">
-            <span>相关标签 : </span>
-            <?php if(is_array($data)) foreach($data as $v) { ?>
-            <a href="<?php echo tag_url($v['id']);?>" target="_blank"><?php echo $v['tag'];?>(<?php echo $v['total'];?>)</a>
-            <?php } ?>
-        </div>
-        <div class="blog__share d-flex align-items-center mb-30 wow fadeInUp  col-12" data-wow-delay=".2s">
-            <span>分享 : </span>
-            <div class="blog__social theme-social d-inline-block">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-qq"></i>
-                            <i class="fab fa-qq"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-weixin"></i>
-                            <i class="fab fa-weixin"></i>
-                        </a>
-                    </li>
-
-                </ul>
             </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
-
-
 </div>
+<section class="blog__area pt-50">
+    <div class="container">
 
-<div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-9">
+                <h3 style="text-align: center;"><?php echo $title;?></h3>
+                <div class="blog__details-wrapper mr-50">
 
-    <div class="row wow fadeInUp">
-
-        <div class="sidebar__widget-title mb-50  col-12">
-            <h4>相关文章</h4>
-        </div>
-        <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'relation')) {$data = $tag->relation(array('field'=>'title,url,color,updatetime,thumb,catid','modelid'=>$modelid,'id'=>$id,'limit'=>'3',));}?>
-        <?php if(is_array($data)) foreach($data as $v) { ?>
-        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 grid-item  ">
-            <div class="portfolio__item p-relative mb-30">
-                <div class="portfolio__thumb w-img fix  thumb-real">
-                    <!-- <img src="<?php echo STATIC_URL;?>company/img/portfolio/port-1.jpg" alt=""> -->
-                    <img src="<?php echo $v['thumb'];?>" alt="<?php echo $v['title'];?>">
-                    <div class="portfolio__plus p-absolute transition-3">
-                        <a href="<?php echo $v['thumb'];?>" data-fancybox="gallery">
-                            <i class="fal fa-plus"></i>
-                            <i class="fal fa-plus"></i>
-                        </a>
-                    </div>
-                    <div class="btn-m"><?php echo get_catname($v['catid']);?></div>
-                </div>
-                <div class="portfolio__content">
-                    <h4><a href="<?php echo $v['url'];?>"><?php echo str_cut($v['title'],40);?></a></h4>
-                    <p class="title-time"><i class="far fa-calendar-alt"></i> <?php echo date('Y-m-d',
-                        $v['updatetime']);?>
-
-                    </p>
-                    <div class="portfolio__more p-absolute transition-3">
-                        <a href="<?php echo get_category($v['catid'], 'pclink');?>" class="link-btn-2">
-                            更多
-                            <i class="fal fa-long-arrow-right"></i>
-                            <i class="fal fa-long-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php } ?>
-        <!-- <div class="post-comment-form wow fadeInUp  col-12" data-wow-delay=".2s">
-            <h4>留下回复 </h4>
-            <span>您的联系方式不会被泄露 </span>
-            <form action="<?php echo U('comment/index/init');?>" method="post" onsubmit="return check_comm(this)">
-                <div class="row">
-                    <input type="hidden" name="modelid" value="<?php echo $modelid;?>">
-                    <input type="hidden" name="catid" value="<?php echo $catid;?>">
-                    <input type="hidden" name="id" value="<?php echo $id;?>">
-                    <input type="hidden" name="title" value="<?php echo $title;?>">
-                    <input type="hidden" name="url" value="<?php echo $url;?>">
-                    <div class="col-xl-6 col-md-6">
-                        <div class="post-input">
-                            <input type="text" name="commonname" placeholder="姓名" required>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md-6">
-                        <div class="post-input">
-                            <input type="text" name="commonphone" placeholder="联系方式" required>
-                        </div>
-                    </div>
-                    <div class="col-xl-12">
-                        <div class="post-input">
-                            <textarea placeholder="请输入留言内容..." name="content" required></textarea>
-                        </div>
-                    </div>
-                    <div class="col-xl-12">
-                        <div class="post-input">
-                            <input type="submit" style="background-color: #4636FF;color: #fff;"
-                                class="yzm-comment-submit" name="dosubmit" value="提交">
-                        </div>
+                    <div class="description" style="text-indent: 30px">
+                        <?php echo $content;?>
                     </div>
 
                 </div>
-            </form>
-        </div>
-        <div class="post-comments mb-95 wow fadeInUp  col-12" data-wow-delay=".6s">
-            <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'comment_list')) {$data = $tag->comment_list(array('modelid'=>$modelid,'catid'=>$catid,'id'=>$id,'field'=>'commonname,inputtime,content',));}?>
-            <div class="post-comment-title mb-40">
-                <h3><?php echo get_comment_total($id, $catid, $modelid);?>条评论</h3>
-            </div>
-            <div class="latest-comments">
-                <ul>
-                    <?php if(is_array($data)) foreach($data as $v) { ?>
-
-                    <li>
-                        <div class="comments-box">
-                            <div class="comments-avatar">
-                                <img src="<?php if(!empty($v['userpic'])) { ?><?php echo $v['userpic'];?><?php } else { ?><?php echo STATIC_URL;?>images/default.gif<?php } ?>"
-                                    alt="" width="35" height="35">
-                            </div>
-                            <div class="comments-text">
-                                <div class="avatar-name">
-                                    <h5><?php echo $v['commonname'];?></h5>
-                                    <span class="post-meta"><?php echo date('Y-m-d H:i:s',$v['inputtime']);?></span>
-                                </div>
-                                <p><?php echo nl2br($v['content']);?></p>
-                                <a href="javascript:toreply('<?php echo $v['id'];?>');" class="comment-reply comm_a">
-                                    &nbsp;
+                <div class="blog__share d-flex align-items-center mb-30 wow fadeInUp" data-wow-delay=".2s">
+                    <span>分享 : </span>
+                    <div class="blog__social theme-social d-inline-block">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-qq"></i>
+                                    <i class="fab fa-qq"></i>
                                 </a>
-
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-weixin"></i>
+                                    <i class="fab fa-weixin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3">
+                <div class="blog__sidebar">
+                    <!-- <div class="sidebar__widget mb-50 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="sidebar__widget-content">
+                            <div class="search">
+                                <form action="#">
+                                    <input type="text" placeholder="Search...">
+                                    <button type="submit"><i class="far fa-search"></i></button>
+                                </form>
                             </div>
                         </div>
-                    </li>
-                    <?php } ?>
-                    <?php if(empty($data)) { ?><li>这篇文章还没有收到评论，赶紧来抢沙发吧~</li><?php } ?>
-
-                </ul>
+                    </div> -->
+                    <div class="sidebar__widget mb-75 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="sidebar__widget-title mb-50">
+                            <h4>相关文章</h4>
+                        </div>
+                        <div class="sidebar__widget-content">
+                            <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'relation')) {$data = $tag->relation(array('field'=>'title,url,color,updatetime,thumb,catid','modelid'=>$modelid,'id'=>$id,'limit'=>'3',));}?>
+                            <div class="rc-post">
+                                <ul>
+                                    <?php if(is_array($data)) foreach($data as $v) { ?>
+                                    <li class="d-flex mb-20">
+                                        <div class="rc-thumb mr-15">
+                                            <a href="<?php echo $v['url'];?>"><img src="<?php echo $v['thumb'];?>" alt="<?php echo $v['title'];?>"></a>
+                                        </div>
+                                        <div class="rc-text">
+                                            <h6><a href="<?php echo $v['url'];?>"><?php echo $v['title'];?></a></h6>
+                                            <div class="rc-meta"><span><?php echo date('Y-m-d',
+                                                    $v['updatetime']);?></span> </div>
+                                        </div>
+                                    </li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar__widget mb-75 wow fadeInUp" data-wow-delay=".6s">
+                        <div class="sidebar__widget-title mb-50">
+                            <h4>标签</h4>
+                        </div>
+                        <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'tag')) {$data = $tag->tag(array('field'=>'id,tag,total','limit'=>'20',));}?>
+                        <div class="sidebar__widget-content">
+                            <div class="cat-link">
+                                <ul>
+                                    <?php if(is_array($data)) foreach($data as $v) { ?>
+                                    <li> <a href="<?php echo tag_url($v['id']);?>" target="_blank"><?php echo $v['tag'];?>(<?php echo $v['total'];?>)</a>
+                                    </li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar__widget mb-60 wow fadeInUp" data-wow-delay=".8s">
+                        <div class="sidebar__widget-title mb-50">
+                            <h4>Categories</h4>
+                        </div>
+                        <div class="sidebar__widget-content">
+                            <div class="rc__comments">
+                                <ul>
+                                    <li class="d-flex mb-25">
+                                        <div class="rc__comments-icon mr-30">
+                                            <i class="icon_comment_alt"></i>
+                                        </div>
+                                        <div class="rc__comments-content">
+                                            <h6>Justin Case</h6>
+                                            <p>My lady mush hanky panky young delinquent.!</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-25">
+                                        <div class="rc__comments-icon mr-30">
+                                            <i class="icon_comment_alt"></i>
+                                        </div>
+                                        <div class="rc__comments-content">
+                                            <h6>Eric Widget</h6>
+                                            <p>My lady mush hanky panky young delinquent.!</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex mb-25">
+                                        <div class="rc__comments-icon mr-30">
+                                            <i class="icon_comment_alt"></i>
+                                        </div>
+                                        <div class="rc__comments-content">
+                                            <h6>Penny Tool</h6>
+                                            <p>My lady mush hanky panky young delinquent.!</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="sidebar__widget mb-50 wow fadeInUp" data-wow-delay="1s">
+                        <div class="sidebar__widget-title mb-50">
+                            <h4>Popular Tags</h4>
+                        </div>
+                        <div class="sidebar__widget-content">
+                            <div class="tags">
+                                <a href="blog-details.html">The Saas</a>
+                                <a href="blog-details.html">Pix Saas 新闻中心</a>
+                                <a href="blog-details.html">Landing</a>
+                                <a href="blog-details.html">UI/UX Design</a>
+                                <a href="blog-details.html">Branding</a>
+                                <a href="blog-details.html">Animation</a>
+                                <a href="blog-details.html">Design</a>
+                                <a href="blog-details.html">Ideas</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
             </div>
-        </div> -->
-
+        </div>
     </div>
-</div>
-</div>
+</section>
 <?php include template("index","footer"); ?>
 <script>
     let slideW = 300;//一张图300px, 每面四张角度22.5（PI/8），中心角度PI/16	             
