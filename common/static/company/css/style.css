@@ -3751,15 +3751,18 @@ p {
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .contact__wrapper {
     left: 30px;
-    width: 500px;
+    width: 90%;
+    padding: 20px;
+
+
   }
 }
 
 @media (max-width: 575px) {
   .contact__wrapper {
     left: 30px;
-    width: 280px;
-    padding: 30px;
+    width: 90%;
+    padding: 20px;
   }
 }
 
@@ -6263,4 +6266,8 @@ p {
 
 .none {
   display: none;
+}
+
+.compensate-for-scrollbar {
+  margin-right: 0px !important;
 }

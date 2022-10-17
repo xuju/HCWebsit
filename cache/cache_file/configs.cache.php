@@ -67,6 +67,6 @@ return array (
     'advertise' => '免费又好用的CMS建站系统，就选YzmCMS!',
   ),
   'expire' => 0,
-  'mtime' => 1665480447,
+  'mtime' => 1665974348,
 );
 ?>
