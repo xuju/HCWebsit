@@ -6,6 +6,7 @@ return array (
     'site_url' => 'http://localhost:91/',
     'site_keyword' => '3D,专业3d打印服务,3D打印部件,3D打印服务',
     'site_description' => '海创三维科技,海创三维科技（苏州）有限公司,海创三维科技苏州有限公司,苏州海创三维科技有限公司',
+    'organization' => '/uploads/202210/19/221019092455246.png',
     'site_copyright' => 'Powered By YzmCMS内容管理系统 © 2014-2022 袁志蒙工作室',
     'site_filing' => '京ICP备666666号',
     'site_code' => '',
@@ -67,6 +68,6 @@ return array (
     'advertise' => '免费又好用的CMS建站系统，就选YzmCMS!',
   ),
   'expire' => 0,
-  'mtime' => 1665974348,
+  'mtime' => 1666142731,
 );
 ?>

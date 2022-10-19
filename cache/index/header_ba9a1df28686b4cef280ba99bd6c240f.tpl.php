@@ -25,11 +25,11 @@
     <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/elegantFont.css">
     <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/default.css">
     <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/style.css">
-    <?php if($id) { ?>
+
     <link rel="stylesheet" type="text/css" href="<?php echo STATIC_URL;?>plugin/swiper/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/carousel.css">
     <script type="text/javascript" src="<?php echo STATIC_URL;?>plugin/swiper/js/swiper-bundle.min.js"></script>
-    <?php } ?>
+
     <script src="<?php echo STATIC_URL;?>company/js/vendor/jquery-3.5.1.min.js"></script>
 
 </head>
@@ -108,7 +108,8 @@
                     </div>
                 </div>
             </div>
-            <div id="header__sticky" class="header__bottom">
+
+            <div id="header__sticky" <?php if(!$catid) { ?> class="header__bottom sticky" <?php } else { ?> class=" header__bottom" <?php } ?>>
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">

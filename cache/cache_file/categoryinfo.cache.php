@@ -185,7 +185,7 @@ return array (
       'listorder' => 0,
       'target' => '_self',
       'member_publish' => 0,
-      'display' => 1,
+      'display' => 0,
       'pclink' => 'http://localhost:91/guanyugongsi/',
       'domain' => '',
       'entitle' => '',
@@ -984,62 +984,6 @@ return array (
     ),
     35 => 
     array (
-      'catid' => 49,
-      'siteid' => 0,
-      'catname' => '服务支持',
-      'modelid' => 1,
-      'parentid' => 48,
-      'arrparentid' => '0,48',
-      'arrchildid' => '49',
-      'catdir' => 'fuwuzhichi',
-      'catimg' => '',
-      'type' => 0,
-      'listorder' => 0,
-      'target' => '_self',
-      'member_publish' => 0,
-      'display' => 1,
-      'pclink' => 'http://localhost:91/fuwuzhichi/',
-      'domain' => '',
-      'entitle' => '',
-      'subtitle' => '',
-      'mobname' => '服务支持',
-      'category_template' => 'category_article',
-      'list_template' => 'list_article',
-      'show_template' => 'show_article',
-      'seo_title' => '',
-      'seo_keywords' => '',
-      'seo_description' => '',
-    ),
-    36 => 
-    array (
-      'catid' => 50,
-      'siteid' => 0,
-      'catname' => '售后服务',
-      'modelid' => 1,
-      'parentid' => 48,
-      'arrparentid' => '0,48',
-      'arrchildid' => '50',
-      'catdir' => 'shouhoufuwu',
-      'catimg' => '',
-      'type' => 0,
-      'listorder' => 0,
-      'target' => '_self',
-      'member_publish' => 0,
-      'display' => 1,
-      'pclink' => 'http://localhost:91/shouhoufuwu/',
-      'domain' => '',
-      'entitle' => '',
-      'subtitle' => '',
-      'mobname' => '售后服务',
-      'category_template' => 'category_article',
-      'list_template' => 'list_article',
-      'show_template' => 'show_article',
-      'seo_title' => '',
-      'seo_keywords' => '',
-      'seo_description' => '',
-    ),
-    37 => 
-    array (
       'catid' => 18,
       'siteid' => 0,
       'catname' => '公司介绍',
@@ -1066,7 +1010,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    38 => 
+    36 => 
     array (
       'catid' => 6,
       'siteid' => 0,
@@ -1094,7 +1038,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    39 => 
+    37 => 
     array (
       'catid' => 41,
       'siteid' => 0,
@@ -1122,7 +1066,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    40 => 
+    38 => 
     array (
       'catid' => 10,
       'siteid' => 0,
@@ -1150,7 +1094,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    41 => 
+    39 => 
     array (
       'catid' => 48,
       'siteid' => 0,
@@ -1158,27 +1102,27 @@ return array (
       'modelid' => 1,
       'parentid' => 0,
       'arrparentid' => '0',
-      'arrchildid' => '48,49,50',
-      'catdir' => 'fuwuzhuanqu',
+      'arrchildid' => '48',
+      'catdir' => 'service',
       'catimg' => '',
       'type' => 0,
       'listorder' => 6,
       'target' => '_self',
       'member_publish' => 0,
       'display' => 1,
-      'pclink' => 'http://localhost:91/fuwuzhuanqu/',
+      'pclink' => 'http://localhost:91/service/',
       'domain' => '',
       'entitle' => '',
       'subtitle' => '',
       'mobname' => '服务专区',
-      'category_template' => 'category_article',
-      'list_template' => 'list_article',
+      'category_template' => 'category_article_service',
+      'list_template' => 'list_article_service',
       'show_template' => 'show_article',
       'seo_title' => '',
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    42 => 
+    40 => 
     array (
       'catid' => 51,
       'siteid' => 0,
@@ -1208,6 +1152,6 @@ return array (
     ),
   ),
   'expire' => 0,
-  'mtime' => 1665974270,
+  'mtime' => 1666143633,
 );
 ?>

@@ -1,0 +1,175 @@
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #fff !important;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {}
+
+
+.home-one {
+    width: 100%;
+    height: 100%;
+    background-image: url('/common/static/company/img/slider/slider-1.jpg');
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-one::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -moz-linear-gradient(60deg, #690ed0 0%, #170da2 100%);
+    background-image: -ms-linear-gradient(60deg, #690ed0 0%, #170da2 100%);
+    background-image: -webkit-linear-gradient(60deg, #690ed0 0%, #170da2 100%);
+    background-image: linear-gradient(60deg, #690ed0 0%, #170da2 100%);
+    opacity: 0.9;
+}
+
+.slider__shape img {
+    position: absolute;
+}
+
+.slider__shape img.triangle {
+    right: 28%;
+    bottom: 38%;
+    animation: triangle 5s linear 0s infinite alternate;
+    -webkit-animation: triangle 5s linear 0s infinite alternate;
+}
+
+.slider__shape img.dotted-square {
+    right: 22%;
+    bottom: 31%;
+    animation: dottedSquare 8s linear 0s infinite alternate;
+    -webkit-animation: dottedSquare 8s linear 0s infinite alternate;
+}
+
+.slider__shape img.solid-square {
+    bottom: 19%;
+    right: 25%;
+    z-index: 1;
+    animation: solidsquare 5s linear 0s infinite alternate;
+    -webkit-animation: solidsquare 5s linear 0s infinite alternate;
+}
+
+.slider__shape img.circle {
+    right: 10%;
+    bottom: -47%;
+    animation: sliderCircle 7s linear 0s infinite alternate;
+    -webkit-animation: sliderCircle 7s linear 0s infinite alternate;
+}
+
+.slider__shape img.circle-2 {
+    right: 12%;
+    top: 65%;
+    animation: sliderCircle 7s linear 0s infinite alternate;
+    -webkit-animation: sliderCircle 7s linear 0s infinite alternate;
+}
+
+.slider__shape-1 {
+    top: -120px;
+    left: -100px;
+    z-index: -1;
+}
+
+.home-text {
+    margin-top: 200px;
+}
+
+.features__area {
+    margin-top: 150px;
+}
+
+.about__area,
+.rongyu,
+.hezuo,
+.zuzhi {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.rongyu {
+    padding-top: 30px;
+    flex-direction: column;
+
+}
+
+.rongyu-engish {
+    font-size: 18px;
+    color: #4636ff;
+    display: block;
+    font-weight: 700;
+    font-family: "Microsoft Yahei", serif;
+    margin-bottom: 25px;
+}
+
+
+
+.rongyu-content>div {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 40px;
+    font-family: "Microsoft Yahei", sans-serif;
+    color: #1f1841;
+}
+
+.hezuo {
+    flex-direction: column;
+}
+
+.hezuo-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hezuo-content {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hezuo-content>div>img {
+
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.hezuo-content>div>img:nth-child(5n+5) {
+    margin-right: 0px;
+}
+
+.hezuo-content>div {
+    overflow: hidden;
+    width: 18%;
+    margin-right: 2%;
+    margin-bottom: 50px;
+}
+
+.hezuo-content>div:hover img {
+    transform: scale(1.2);
+}
