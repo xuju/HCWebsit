@@ -6271,3 +6271,16 @@ p {
 .compensate-for-scrollbar {
   margin-right: 0px !important;
 }
+
+.contact-map {
+  height: 490px;
+}
+
+.contact-map .container {
+  height: 100%;
+}
+
+.map-wrap {
+  width: 100%;
+  height: 100%;
+}

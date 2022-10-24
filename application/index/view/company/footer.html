@@ -73,7 +73,8 @@
                                                 <i class="fal fa-map-marker-alt"></i>
                                             </div>
                                             <div class="text">
-                                                <span>江苏省，苏州市，高新区 枫桥街道浩福路66号</span>
+                                                <!-- <span>江苏省，苏州市，高新区 枫桥街道浩福路66号</span> -->
+                                                <span>苏州工业园区东旺路8号七号楼A幢F301-047室</span>
                                             </div>
                                         </li>
                                         <li>

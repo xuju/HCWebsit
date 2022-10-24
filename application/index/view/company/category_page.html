@@ -1,4 +1,5 @@
 {m:include "index","header"}
+<script src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=ed0xbmFXAwO3FSheAGh6iTNuY12nLpr6"></script>
 <section class="page__title p-relative d-flex align-items-center fix">
     <div class="slider__shape">
         <img class="shape triangle" src="{STATIC_URL}company/img/icon/slider/triangle.png" alt="triangle">
@@ -27,45 +28,10 @@
 
 
 <!-- contact info area start -->
-<section class="contact__help p-relative pt-115 pb-150">
-    <div class="contact__shape">
-        <img class="dot" src="{STATIC_URL}company/img/icon/contact/dot.png" alt="">
-        <img class="shape" src="{STATIC_URL}company/img/icon/contact/shape.png" alt="">
-    </div>
+<section class="contact-map" style="margin-top: 20px;">
     <div class="container">
-        <div class="row">
-            <div class="col-xl-5 offset-xl-1">
-                <div class="section__title section__title-3 mb-55">
-                    <span class="fadeInUp wow" data-wow-delay=".2s">联 系</span>
-                    <h2 class="fadeInUp wow" data-wow-delay=".4s">帮助中心</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xl-5 col-lg-6 col-md-6 offset-xl-1">
-                <div class="contact__help-item white-bg text-center mb-30 wow fadeInLeft" data-wow-delay=".3s">
-                    <div class="contact__icon mb-35">
-                        <img src="{STATIC_URL}company/img/icon/contact/headset.png" alt="">
-                    </div>
-                    <div class="contact__text">
-                        <h3>客户支持</h3>
-                        <p>来一次愉快的合作，面对面交流，咖啡供上。</p>
-                        <a href="contact.html" class="z-btn z-btn-border">定位导航到现场</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-5 col-lg-6 col-md-6">
-                <div class="contact__help-item white-bg text-center mb-30 wow fadeInLeft" data-wow-delay=".6s">
-                    <div class="contact__icon mb-35">
-                        <img src="{STATIC_URL}company/img/icon/contact/msg.png" alt="">
-                    </div>
-                    <div class="contact__text">
-                        <h3>任何问题</h3>
-                        <p>请把你的遇到的问题,难题都甩给我们吧.</p>
-                        <a href="contact.html" class="z-btn z-btn-border">联系支持人员</a>
-                    </div>
-                </div>
-            </div>
+        <div class="map-wrap" id="maps">
+
         </div>
     </div>
 </section>
@@ -130,4 +96,26 @@
         </div>
     </div>
 </section>
+
 {m:include "index","footer"}
+<script>
+    var map = new BMapGL.Map('maps');
+    map.centerAndZoom(new BMapGL.Point(120.771799, 31.296322), 20);
+    map.enableScrollWheelZoom(true);
+    map.setHeading(64.5);
+    map.setTilt(73);
+    // 创建添加点标记
+    var marker = new BMapGL.Marker(new BMapGL.Point(120.771799, 31.296322));
+    map.addOverlay(marker);
+    // 创建图文信息窗口
+    var sContent = `<div style="padding-bottom:10px">
+    <h6 style='margin:0 0 5px 0;'>海创三维科技（苏州）有限公司</h6>
+
+    <p style='margin:0;line-height:1.5;font-size:13px;'>
+        苏州工业园区东旺路8号七号楼A幢F301-047室
+    </p>
+</div>`;
+    var infoWindow = new BMapGL.InfoWindow(sContent);
+    marker.openInfoWindow(infoWindow)
+
+</script>
