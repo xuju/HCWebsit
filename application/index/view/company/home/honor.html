@@ -1,0 +1,23 @@
+<div class="honor">
+    <div class="home-title-wrap  ani" swiper-animate-effect="fadeInUp" swiper-animate-delay=".1s">
+        <div class="r-title">合作伙伴</div>
+        <div class="r-desc d-none d-lg-block">Cooperative partner</div>
+    </div>
+    <div class="list-wrap">
+        <div class="swiper honorSwiper">
+            {m:link field="logo" limit="2000000"}
+
+
+            <div class="swiper-wrapper">
+                {loop $data $v}
+
+                <div class="swiper-slide ">
+                    <img src="{$v[logo]}" alt="">
+                </div>
+                {/loop}
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>

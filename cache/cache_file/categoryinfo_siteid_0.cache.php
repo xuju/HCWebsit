@@ -172,146 +172,6 @@ return array (
     ),
     6 => 
     array (
-      'catid' => 17,
-      'siteid' => 0,
-      'catname' => '关于公司',
-      'modelid' => 1,
-      'parentid' => 0,
-      'arrparentid' => '0',
-      'arrchildid' => '17,18,19,20,21,22',
-      'catdir' => 'guanyugongsi',
-      'catimg' => '',
-      'type' => 0,
-      'listorder' => 0,
-      'target' => '_self',
-      'member_publish' => 0,
-      'display' => 0,
-      'pclink' => 'http://localhost:91/guanyugongsi/',
-      'domain' => '',
-      'entitle' => '',
-      'subtitle' => '',
-      'mobname' => '关于公司',
-      'category_template' => 'category_article',
-      'list_template' => 'list_article',
-      'show_template' => 'show_article',
-      'seo_title' => '',
-      'seo_keywords' => '',
-      'seo_description' => '',
-    ),
-    7 => 
-    array (
-      'catid' => 19,
-      'siteid' => 0,
-      'catname' => '企业文化',
-      'modelid' => 0,
-      'parentid' => 17,
-      'arrparentid' => '0,17',
-      'arrchildid' => '19',
-      'catdir' => 'qiyewenhua',
-      'catimg' => '',
-      'type' => 1,
-      'listorder' => 0,
-      'target' => '_self',
-      'member_publish' => 0,
-      'display' => 1,
-      'pclink' => 'http://localhost:91/qiyewenhua/',
-      'domain' => '',
-      'entitle' => '',
-      'subtitle' => '',
-      'mobname' => '企业文化',
-      'category_template' => 'category_page_culture',
-      'list_template' => '',
-      'show_template' => '',
-      'seo_title' => '',
-      'seo_keywords' => '',
-      'seo_description' => '',
-    ),
-    8 => 
-    array (
-      'catid' => 20,
-      'siteid' => 0,
-      'catname' => '公司荣誉',
-      'modelid' => 0,
-      'parentid' => 17,
-      'arrparentid' => '0,17',
-      'arrchildid' => '20',
-      'catdir' => 'gongsirongyu',
-      'catimg' => '',
-      'type' => 1,
-      'listorder' => 0,
-      'target' => '_self',
-      'member_publish' => 0,
-      'display' => 1,
-      'pclink' => 'http://localhost:91/gongsirongyu/',
-      'domain' => '',
-      'entitle' => '',
-      'subtitle' => '',
-      'mobname' => '公司荣誉',
-      'category_template' => 'category_page_honor',
-      'list_template' => '',
-      'show_template' => '',
-      'seo_title' => '',
-      'seo_keywords' => '',
-      'seo_description' => '',
-    ),
-    9 => 
-    array (
-      'catid' => 21,
-      'siteid' => 0,
-      'catname' => '合作伙伴',
-      'modelid' => 0,
-      'parentid' => 17,
-      'arrparentid' => '0,17',
-      'arrchildid' => '21',
-      'catdir' => 'hezuohuoban',
-      'catimg' => '',
-      'type' => 1,
-      'listorder' => 0,
-      'target' => '_self',
-      'member_publish' => 0,
-      'display' => 1,
-      'pclink' => 'http://localhost:91/hezuohuoban/',
-      'domain' => '',
-      'entitle' => '',
-      'subtitle' => '',
-      'mobname' => '合作伙伴',
-      'category_template' => 'category_page_partner',
-      'list_template' => '',
-      'show_template' => '',
-      'seo_title' => '',
-      'seo_keywords' => '',
-      'seo_description' => '',
-    ),
-    10 => 
-    array (
-      'catid' => 22,
-      'siteid' => 0,
-      'catname' => '组织架构',
-      'modelid' => 0,
-      'parentid' => 17,
-      'arrparentid' => '0,17',
-      'arrchildid' => '22',
-      'catdir' => 'zuzhijiagou',
-      'catimg' => '',
-      'type' => 1,
-      'listorder' => 0,
-      'target' => '_self',
-      'member_publish' => 0,
-      'display' => 1,
-      'pclink' => 'http://localhost:91/zuzhijiagou/',
-      'domain' => '',
-      'entitle' => '',
-      'subtitle' => '',
-      'mobname' => '组织架构',
-      'category_template' => 'category_page_organization',
-      'list_template' => '',
-      'show_template' => '',
-      'seo_title' => '',
-      'seo_keywords' => '',
-      'seo_description' => '',
-    ),
-    11 => 
-    array (
       'catid' => 23,
       'siteid' => 0,
       'catname' => '生产工艺方法',
@@ -338,7 +198,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    12 => 
+    7 => 
     array (
       'catid' => 24,
       'siteid' => 0,
@@ -366,7 +226,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    13 => 
+    8 => 
     array (
       'catid' => 25,
       'siteid' => 0,
@@ -394,7 +254,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    14 => 
+    9 => 
     array (
       'catid' => 26,
       'siteid' => 0,
@@ -422,7 +282,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    15 => 
+    10 => 
     array (
       'catid' => 27,
       'siteid' => 0,
@@ -450,7 +310,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    16 => 
+    11 => 
     array (
       'catid' => 28,
       'siteid' => 0,
@@ -478,7 +338,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    17 => 
+    12 => 
     array (
       'catid' => 29,
       'siteid' => 0,
@@ -506,7 +366,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    18 => 
+    13 => 
     array (
       'catid' => 30,
       'siteid' => 0,
@@ -534,7 +394,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    19 => 
+    14 => 
     array (
       'catid' => 31,
       'siteid' => 0,
@@ -562,7 +422,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    20 => 
+    15 => 
     array (
       'catid' => 32,
       'siteid' => 0,
@@ -590,7 +450,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    21 => 
+    16 => 
     array (
       'catid' => 33,
       'siteid' => 0,
@@ -618,7 +478,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    22 => 
+    17 => 
     array (
       'catid' => 34,
       'siteid' => 0,
@@ -646,7 +506,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    23 => 
+    18 => 
     array (
       'catid' => 35,
       'siteid' => 0,
@@ -674,7 +534,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    24 => 
+    19 => 
     array (
       'catid' => 36,
       'siteid' => 0,
@@ -702,7 +562,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    25 => 
+    20 => 
     array (
       'catid' => 37,
       'siteid' => 0,
@@ -730,7 +590,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    26 => 
+    21 => 
     array (
       'catid' => 38,
       'siteid' => 0,
@@ -758,7 +618,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    27 => 
+    22 => 
     array (
       'catid' => 39,
       'siteid' => 0,
@@ -786,7 +646,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    28 => 
+    23 => 
     array (
       'catid' => 40,
       'siteid' => 0,
@@ -814,7 +674,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    29 => 
+    24 => 
     array (
       'catid' => 42,
       'siteid' => 0,
@@ -842,7 +702,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    30 => 
+    25 => 
     array (
       'catid' => 43,
       'siteid' => 0,
@@ -870,7 +730,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    31 => 
+    26 => 
     array (
       'catid' => 44,
       'siteid' => 0,
@@ -898,7 +758,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    32 => 
+    27 => 
     array (
       'catid' => 45,
       'siteid' => 0,
@@ -926,7 +786,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    33 => 
+    28 => 
     array (
       'catid' => 46,
       'siteid' => 0,
@@ -954,7 +814,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    34 => 
+    29 => 
     array (
       'catid' => 47,
       'siteid' => 0,
@@ -982,35 +842,63 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    35 => 
+    30 => 
     array (
-      'catid' => 18,
+      'catid' => 52,
       'siteid' => 0,
-      'catname' => '公司介绍',
-      'modelid' => 0,
-      'parentid' => 17,
-      'arrparentid' => '0,17',
-      'arrchildid' => '18',
-      'catdir' => 'gongsijieshao',
+      'catname' => '公司荣誉',
+      'modelid' => 1,
+      'parentid' => 0,
+      'arrparentid' => '0',
+      'arrchildid' => '52',
+      'catdir' => 'Companyhonor',
       'catimg' => '',
-      'type' => 1,
-      'listorder' => 1,
+      'type' => 0,
+      'listorder' => 0,
       'target' => '_self',
       'member_publish' => 0,
-      'display' => 1,
-      'pclink' => 'http://localhost:91/gongsijieshao/',
+      'display' => 0,
+      'pclink' => 'http://localhost:91/Companyhonor/',
       'domain' => '',
-      'entitle' => '',
+      'entitle' => 'Company honor',
       'subtitle' => '',
-      'mobname' => '公司介绍',
-      'category_template' => 'category_page_introduce',
-      'list_template' => '',
-      'show_template' => '',
+      'mobname' => '公司荣誉',
+      'category_template' => 'category_article',
+      'list_template' => 'list_article',
+      'show_template' => 'show_article',
       'seo_title' => '',
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    36 => 
+    31 => 
+    array (
+      'catid' => 53,
+      'siteid' => 0,
+      'catname' => '新闻中心',
+      'modelid' => 1,
+      'parentid' => 0,
+      'arrparentid' => '0',
+      'arrchildid' => '53',
+      'catdir' => 'xinwenzhongxin',
+      'catimg' => '',
+      'type' => 0,
+      'listorder' => 0,
+      'target' => '_self',
+      'member_publish' => 0,
+      'display' => 0,
+      'pclink' => 'http://localhost:91/xinwenzhongxin/',
+      'domain' => '',
+      'entitle' => 'Company news',
+      'subtitle' => '',
+      'mobname' => '新闻中心',
+      'category_template' => 'category_article',
+      'list_template' => 'list_article',
+      'show_template' => 'show_article',
+      'seo_title' => '',
+      'seo_keywords' => '',
+      'seo_description' => '',
+    ),
+    32 => 
     array (
       'catid' => 6,
       'siteid' => 0,
@@ -1038,7 +926,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    37 => 
+    33 => 
     array (
       'catid' => 41,
       'siteid' => 0,
@@ -1066,7 +954,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    38 => 
+    34 => 
     array (
       'catid' => 10,
       'siteid' => 0,
@@ -1094,7 +982,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    39 => 
+    35 => 
     array (
       'catid' => 48,
       'siteid' => 0,
@@ -1122,7 +1010,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    40 => 
+    36 => 
     array (
       'catid' => 51,
       'siteid' => 0,
@@ -1152,6 +1040,6 @@ return array (
     ),
   ),
   'expire' => 0,
-  'mtime' => 1666143634,
+  'mtime' => 1667469929,
 );
 ?>
