@@ -1,0 +1,1 @@
+<?php defined('IN_YZMPHP') or exit('No permission resources.'); ?>

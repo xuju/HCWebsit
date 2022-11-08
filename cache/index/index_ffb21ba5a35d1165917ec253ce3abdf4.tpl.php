@@ -2,35 +2,16 @@
 <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/home.css">
 
 
-<script type="text/javascript" src="<?php echo STATIC_URL;?>plugin/swiper/js/swiper.animate1.0.3.min.js"></script>
+<!-- <script type="text/javascript" src="<?php echo STATIC_URL;?>plugin/swiper/js/swiper.animate1.0.3.min.js"></script> -->
 
+<?php include template("index","/home/homeSwiper"); ?>
+<?php include template("index","./home/companydesc"); ?>
+<?php include template("index","./home/companyrong"); ?>
+<?php include template("index","./home/honor"); ?>
+<?php include template("index","./home/organization"); ?>
+<?php include template("index","./home/news"); ?>
+<?php include template("index","./home/footer"); ?>
 
-<div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <?php include template("index","/home/homeSwiper"); ?>
-        </div>
-        <div class="swiper-slide">
-            <?php include template("index","./home/companydesc"); ?>
-        </div>
-        <div class="swiper-slide">
-            <?php include template("index","./home/companyrong"); ?>
-        </div>
-        <div class="swiper-slide honor-silder">
-            <?php include template("index","./home/honor"); ?>
-        </div>
-        <div class="swiper-slide">
-            <?php include template("index","./home/organization"); ?>
-        </div>
-        <div class="swiper-slide"><?php include template("index","./home/news"); ?></div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">
-
-        </div>
-    </div>
-    <div class="swiper-pagination"></div>
-</div>
 
 
 
@@ -50,32 +31,6 @@
 </body>
 <script>
     window.onload = function () {
-        let swiper = new Swiper(".mySwiper", {
-            direction: "vertical",
-            slidesPerView: 1,
-            spaceBetween: 30,
-            mousewheel: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            on: {
-                init: function () {
-                    swiperAnimateCache(this); //隐藏动画元素 
-                    swiperAnimate(this); //初始化完成开始动画
-                },
-                slideChangeTransitionEnd: function () {
-                    swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
-                    //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
-                },
-                slideChange: function () {
-                    const dom = $('.home-types-item');
-                    dom.removeClass('select')
-                    dom.eq(this.activeIndex).addClass('select')
-
-                }
-            }
-        });
 
 
 

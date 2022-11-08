@@ -1,5 +1,5 @@
 <div class="news">
-    <div class="home-title-wrap  ani" swiper-animate-effect="fadeInUp" swiper-animate-delay=".1s">
+    <div class="home-title-wrap  wow fadeInUp" data-delay=".1s">
         <div class="r-title">{get_catname(53)}</div>
         <div class="r-desc d-none d-lg-block">{get_category(53, 'entitle')}</div>
     </div>
@@ -9,7 +9,7 @@
                 <div class=" col-lg-6   d-none d-lg-block">
                     {m:lists field="title,thumb,url,color,updatetime,content" catid="53" limit="1" order="updatetime
                     DESC"}
-                    <div class="news-left ani" swiper-animate-effect="fadeInUp" swiper-animate-delay=".1s">
+                    <div class="news-left ani" data-delay=".1s">
                         {loop $data $v}
                         <img src="{$v[thumb]}" alt="{$v[title]}">
                         <div class="news-left-bottom">
@@ -44,7 +44,7 @@
                         {loop $data $v}
                         {$i++}
                         {if $i!=1}
-                        <div class="news-right-item ani" swiper-animate-effect="fadeInUp" swiper-animate-delay=".{$i}s">
+                        <div class="news-right-item ani" data-delay=".{$i}s">
                             <div class="news-item-left">
                                 <img src="{$v[thumb]}" alt="{$v[title]}">
                             </div>

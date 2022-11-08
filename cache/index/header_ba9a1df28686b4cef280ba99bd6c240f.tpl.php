@@ -88,13 +88,13 @@
                                     <li>
                                         <a href="tel:(+468)-254-762-443">
                                             <i class="fal fa-phone-alt"></i>
-                                            (+86) 13771921540
+                                            (+86) 18018149584
                                         </a>
                                     </li>
                                     <li>
                                         <a href="mailto:qhyft@163.com">
                                             <i class="fal fa-envelope"></i>
-                                            qhyft@163.com
+                                            848820348@qq.com
                                         </a>
                                     </li>
                                     <li>

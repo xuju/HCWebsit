@@ -10,194 +10,79 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="page__title-content mt-100">
+                <div class="page__title-content ">
                     <h2>{get_catname($catid)}</h2>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <!-- <li class="breadcrumb-item"><a href="{SITE_URL}">回到首页</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">常见问题解答</li> -->
-                            {get_location($catid)}
-                        </ol>
-                    </nav>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- portfolio area start -->
-<section class="portfolio__area pt-110 pb-160">
-    <div class="container">
-
+<section>
+    <div class="container  production-wrap">
         <div class="row">
+            <div class="col-lg-3">
 
-            {php $temp=isset($arrchildid)&&get_category($catid,'parentid')?$parentid:$catid}
-            <div class="col-xl-12">
-                <div class="portfolio__menu mb-40 wow fadeInUp">
-                    <!-- <span>Filter by: </span> -->
-                    {php $r = get_childcat($temp);}
-                    <div class="masonary-menu filter-button-group d-sm-inline-block">
-                        <a href="{get_category($catid, 'pclink' )}" class="active  button">全部</a>
-                        {loop $r $v}
-                        <!-- {is_childid($v)} -->
 
-                        <a href="{get_category($v['catid'], 'pclink')}" {if $v['catid']==$catid} class="button  active"
-                            {else} class="button " {/if}>{$v['catname']}</a>
-                        {/loop}
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        {php $r = get_childcat($temp);}
-        <?php
-            $flag=false;
-            for ($i = 1; $i <= count($r); $i++) {
-                
-                $hasChild=get_childcat($i);
-               if($hasChild){
-                $flag=true;
-                break;
-               }
-            }
-            
-           ?>
-        {m:lists field="title,thumb,url,color,catid,updatetime" catid="$catid" limit="10" page="page"}
-        <div class="row ">
-            <div {if $flag} class="col-xl-9" {else} class="col-xl-12" {/if}>
-                <div class="row ">
-                    {php $i=0;}
+                {php $data = get_childcat($catid);}
+                <ul class="category-wrap">
+                    <li class="select">
+                        <a href="">部分产品展示图</a>
+                    </li>
                     {loop $data $v}
-                    {php $i++;}
-
-
-
-
-
-                    <div {if $i==1} class="col-xl-8 col-lg-8 col-md-6 col-sm-6   wow fadeInUp " {else}
-                        class="col-xl-4 col-lg-4 col-md-6 col-sm-6   wow fadeInUp " {/if}>
-                        <div class="portfolio__item p-relative mb-30">
-                            <div class="portfolio__thumb w-img fix  thumb-real">
-
-                                <img src="{get_thumb($v['thumb'])}" alt="{$v['title']}">
-                                <div class="portfolio__plus p-absolute transition-3">
-                                    <a href="{get_thumb($v['thumb'])}" data-fancybox="gallery">
-                                        <i class="fal fa-plus"></i>
-                                        <i class="fal fa-plus"></i>
-                                    </a>
-                                </div>
-                                <!-- <div class="btn-m">{get_catname($v['catid'])}</div> -->
-                            </div>
-                            <div class="portfolio__content">
-                                <h4><a href="{$v[url]}">{str_cut($v['title'],40)}</a></h4>
-                                <p class="title-time"><i class="far fa-calendar-alt"></i> {date('Y-m-d',
-                                    $v['updatetime'])}
-
-                                </p>
-                                <div class="portfolio__more p-absolute transition-3">
-                                    <a href="{get_category($v['catid'], 'pclink')}" class="link-btn-2">
-                                        {get_category($v['catid'],'catname')}
-                                        <i class="fal fa-long-arrow-right"></i>
-                                        <i class="fal fa-long-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <li>
+                        <a href="{$v[pclink]}">{$v[catname]}</a>
+                    </li>
                     {/loop}
-                    <div class="col-xl-12">
-                        <div class="portfolio__load mt-25">
+                </ul>
+            </div>
+            <div class="col-lg-9">
+                <div class="production-right">
+                    <div class="location">
+                        {get_location($catid)}
+                    </div>
+                    <div class="list-wrap">
+                        {m:lists field="title,url,thumb" catid="$catid" limit="10" page="page"}
+                        <div class="row">
+                            {loop $data $v}
+                            <div class=" col-lg-4 col-sm-6  col-md-6">
+                                <a href="{$v[url]}">
+                                    <div class="list-item">
+                                        <div class="img-wrap">
+                                            <img src="{get_thumb($v['thumb'])}" alt="{$v[title]}">
+                                        </div>
+                                        <span class="title">{$v[title]}</span>
+                                    </div>
+                                </a>
+
+                            </div>
+                            {/loop}
+                            <div class="col-xl-12">
+                                <div class="portfolio__load mt-25">
 
 
-                            <div class="basic-pagination wow fadeInUp">
-                                <?php
-                                 $str=$pages;
-                                 $str=str_ireplace('上页','←',$str);
-                               
-                                 $str=str_ireplace('下页','→',$str);
-                                 $str=str_ireplace('<div id="page">','',$str);
-                               
-                                ?>
-                                <ul>
-                                    {$str}
+                                    <div class="basic-pagination wow fadeInUp">
+                                        <!-- <?php
+                                         $str=$pages;
+                                         $str=str_ireplace('上页','←',$str);
+                                       
+                                         $str=str_ireplace('下页','→',$str);
+                                         $str=str_ireplace('<div id="page">','',$str);
+                                       
+                                        ?> -->
 
-                                </ul>
+                                        <ul>
+                                            {$pages}
+
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            {if $flag}
-            <div class="col-xl-2">
-                <div class="sidebar__widget mb-75 wow fadeInUp">
-                    <div class="sidebar__widget-title mb-50">
-                        <h4>分类</h4>
-                    </div>
-
-                    <div class="sidebar__widget-content">
-                        <div class="cat-link">
-                            <ul>
-
-
-                                {loop $r $v}
-                                {php $c = get_childcat($v['catid']);}
-
-                                {loop $c $k}
-
-                                <li><a href="{get_category($k['catid'], 'pclink' )}">{$k['catname']}</a></li>
-                                {/loop}
-                                {/loop}
-
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/if}
-            <!-- {php $i=0;}
-            {loop $data $v}
-            {php $i++;}
-
-
-
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 grid-item  wow fadeInUp ">
-                <div class="portfolio__item p-relative mb-30">
-                    <div class="portfolio__thumb w-img fix  thumb-real">
-
-                        <img src="{get_thumb($v['thumb'])}" alt="{$v['title']}">
-                        <div class="portfolio__plus p-absolute transition-3">
-                            <a href="{get_thumb($v['thumb'])}" data-fancybox="gallery">
-                                <i class="fal fa-plus"></i>
-                                <i class="fal fa-plus"></i>
-                            </a>
-                        </div>
-                        <div class="btn-m">{get_catname($v['catid'])}</div>
-                    </div>
-                    <div class="portfolio__content">
-                        <h4><a href="{$v[url]}">{str_cut($v['title'],40)}</a></h4>
-                        <p class="title-time"><i class="far fa-calendar-alt"></i> {date('Y-m-d',
-                            $v['updatetime'])}
-
-                        </p>
-                        <div class="portfolio__more p-absolute transition-3">
-                            <a href="{get_category($v['catid'], 'pclink')}" class="link-btn-2">
-                                更多
-                                <i class="fal fa-long-arrow-right"></i>
-                                <i class="fal fa-long-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/loop} -->
-
-
         </div>
-        <!-- <div class="row">
-           
-        </div> -->
     </div>
 </section>
-<!-- portfolio area end -->
 {m:include "index","footer"}

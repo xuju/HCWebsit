@@ -1,6 +1,6 @@
 {m:include "index","header"}
 <script src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=ed0xbmFXAwO3FSheAGh6iTNuY12nLpr6"></script>
-<section class="page__title p-relative d-flex align-items-center fix">
+<section class="page__title p-relative d-flex align-items-center fix" data-background="{$catimg}">
     <div class="slider__shape">
         <img class="shape triangle" src="{STATIC_URL}company/img/icon/slider/triangle.png" alt="triangle">
         <img class="shape dotted-square" src="{STATIC_URL}company/img/icon/slider/dotted-square.png"
@@ -11,15 +11,9 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="page__title-content mt-100">
+                <div class="page__title-content ">
                     <h2>{get_catname($catid)}</h2>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <!-- <li class="breadcrumb-item"><a href="{SITE_URL}">回到首页</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">常见问题解答</li> -->
-                            {get_location($catid)}
-                        </ol>
-                    </nav>
+
                 </div>
             </div>
         </div>

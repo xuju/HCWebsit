@@ -1,6 +1,9 @@
 <?php defined('IN_YZMPHP') or exit('No permission resources.'); ?><?php include template("index","header"); ?>
-<script type="text/javascript" src="<?php echo STATIC_URL;?>js/yzm-front.js"></script>
-<section class="page__title p-relative d-flex align-items-center fix">
+
+<?php $parentids=get_category($catid, 'parentid')?>
+
+<?php $topImg=get_category($parentids,'catimg')?>
+<section class="page__title p-relative d-flex align-items-center fix" data-background="<?php echo $topImg;?>">
     <div class="slider__shape">
         <img class="shape triangle" src="<?php echo STATIC_URL;?>company/img/icon/slider/triangle.png" alt="triangle">
         <img class="shape dotted-square" src="<?php echo STATIC_URL;?>company/img/icon/slider/dotted-square.png"
@@ -11,183 +14,64 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="page__title-content mt-100">
-                    <h2><?php echo get_catname($catid);?></h2>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <!-- <li class="breadcrumb-item"><a href="<?php echo SITE_URL;?>">回到首页</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">常见问题解答</li> -->
-                            <?php echo get_location($catid);?>
-                        </ol>
-                    </nav>
+                <div class="page__title-content ">
+                    <h2><?php echo $title;?></h2>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
-<div class="container">
-    <div id="carousel" class="wow fadeInUp" style="margin-top:50px">
-        <div class="swiper swiper-3d">
-            <?php $pictures = string2array($pictures);?>
-            <div class="swiper-wrapper">
-                <?php if(is_array($pictures)) foreach($pictures as $v) { ?>
-                <div class="swiper-slide">
-                    <a data-fancybox="gallery" href="<?php echo $v['url'];?>">
-                        <img class="rounded" src="<?php echo $v['url'];?>" alt="<?php echo $v['alt'];?>" title="<?php echo $v['alt'];?>" width="305"
-                            height="211" />
-                    </a>
-                    <!-- <img src="<?php echo STATIC_URL;?>company/images/carousel01.png" /> -->
-                    <p><?php echo $v['alt'];?></p>
-                </div>
-                <?php } ?>
-
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    </div>
-</div>
-<section class="blog__area pt-50">
-    <div class="container">
-
+<section>
+    <div class="container  production-wrap">
         <div class="row">
-            <div class="col-xl-9 col-lg-9">
-                <h3 style="text-align: center;"><?php echo $title;?></h3>
-                <div class="blog__details-wrapper mr-50">
+            <div class="col-lg-3">
 
-                    <div class="description" style="text-indent: 30px">
-                        <?php echo $content;?>
-                    </div>
 
-                </div>
-                <div class="blog__share d-flex align-items-center mb-30 wow fadeInUp" data-wow-delay=".2s">
-                    <span>分享 : </span>
-                    <div class="blog__social theme-social d-inline-block">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-qq"></i>
-                                    <i class="fab fa-qq"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-weixin"></i>
-                                    <i class="fab fa-weixin"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <?php $data = get_childcat($parentids);?>
+                <ul class="category-wrap">
+                    <li class="select">
+                        <a href="<?php echo get_category($catid,'pclink');?>">部分产品展示图</a>
+
+                    </li>
+                    <?php if(is_array($data)) foreach($data as $v) { ?>
+                    <li>
+                        <a href="<?php echo $v['pclink'];?>"><?php echo $v['catname'];?></a>
+                    </li>
+                    <?php } ?>
+                </ul>
             </div>
-            <div class="col-xl-3 col-lg-3">
-                <div class="blog__sidebar">
-                    <!-- <div class="sidebar__widget mb-50 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="sidebar__widget-content">
-                            <div class="search">
-                                <form action="#">
-                                    <input type="text" placeholder="Search...">
-                                    <button type="submit"><i class="far fa-search"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="sidebar__widget mb-75 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="sidebar__widget-title mb-50">
-                            <h4>相关文章</h4>
-                        </div>
-                        <div class="sidebar__widget-content">
-                            <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'relation')) {$data = $tag->relation(array('field'=>'title,url,color,updatetime,thumb,catid','modelid'=>$modelid,'id'=>$id,'limit'=>'3',));}?>
-                            <div class="rc-post">
-                                <ul>
-                                    <?php if(is_array($data)) foreach($data as $v) { ?>
-                                    <li class="d-flex mb-20">
-                                        <div class="rc-thumb mr-15">
-                                            <a href="<?php echo $v['url'];?>"><img src="<?php echo $v['thumb'];?>" alt="<?php echo $v['title'];?>"></a>
-                                        </div>
-                                        <div class="rc-text">
-                                            <h6><a href="<?php echo $v['url'];?>"><?php echo $v['title'];?></a></h6>
-                                            <div class="rc-meta"><span><?php echo date('Y-m-d',
-                                                    $v['updatetime']);?></span> </div>
-                                        </div>
-                                    </li>
+            <div class="col-lg-9">
+                <div class="production-right">
+                    <div class="location">
+                        <?php echo get_location($catid);?>
+                    </div>
+                    <div class="list-wrap   ">
+                        <div id="carousel" class="wow fadeInUp" style="margin-top:50px">
+                            <div class="swiper swiper-3d">
+                                <?php $pictures = string2array($pictures);?>
+                                <div class="swiper-wrapper">
+                                    <?php if(is_array($pictures)) foreach($pictures as $v) { ?>
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="gallery" href="<?php echo $v['url'];?>">
+                                            <img class="rounded" src="<?php echo $v['url'];?>" alt="<?php echo $v['alt'];?>" title="<?php echo $v['alt'];?>"
+                                                width="305" height="211" />
+                                        </a>
+                                        <!-- <img src="<?php echo STATIC_URL;?>company/images/carousel01.png" /> -->
+                                        <p><?php echo $v['alt'];?></p>
+                                    </div>
                                     <?php } ?>
-                                </ul>
+
+                                </div>
                             </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <div class="desc-wrap">
+                            <?php echo $content;?>
                         </div>
                     </div>
-                    <div class="sidebar__widget mb-75 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="sidebar__widget-title mb-50">
-                            <h4>标签</h4>
-                        </div>
-                        <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'tag')) {$data = $tag->tag(array('field'=>'id,tag,total','limit'=>'20',));}?>
-                        <div class="sidebar__widget-content">
-                            <div class="cat-link">
-                                <ul>
-                                    <?php if(is_array($data)) foreach($data as $v) { ?>
-                                    <li> <a href="<?php echo tag_url($v['id']);?>" target="_blank"><?php echo $v['tag'];?>(<?php echo $v['total'];?>)</a>
-                                    </li>
-                                    <?php } ?>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sidebar__widget mb-60 wow fadeInUp" data-wow-delay=".8s">
-                        <div class="sidebar__widget-title mb-50">
-                            <h4>Categories</h4>
-                        </div>
-                        <div class="sidebar__widget-content">
-                            <div class="rc__comments">
-                                <ul>
-                                    <li class="d-flex mb-25">
-                                        <div class="rc__comments-icon mr-30">
-                                            <i class="icon_comment_alt"></i>
-                                        </div>
-                                        <div class="rc__comments-content">
-                                            <h6>Justin Case</h6>
-                                            <p>My lady mush hanky panky young delinquent.!</p>
-                                        </div>
-                                    </li>
-                                    <li class="d-flex mb-25">
-                                        <div class="rc__comments-icon mr-30">
-                                            <i class="icon_comment_alt"></i>
-                                        </div>
-                                        <div class="rc__comments-content">
-                                            <h6>Eric Widget</h6>
-                                            <p>My lady mush hanky panky young delinquent.!</p>
-                                        </div>
-                                    </li>
-                                    <li class="d-flex mb-25">
-                                        <div class="rc__comments-icon mr-30">
-                                            <i class="icon_comment_alt"></i>
-                                        </div>
-                                        <div class="rc__comments-content">
-                                            <h6>Penny Tool</h6>
-                                            <p>My lady mush hanky panky young delinquent.!</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="sidebar__widget mb-50 wow fadeInUp" data-wow-delay="1s">
-                        <div class="sidebar__widget-title mb-50">
-                            <h4>Popular Tags</h4>
-                        </div>
-                        <div class="sidebar__widget-content">
-                            <div class="tags">
-                                <a href="blog-details.html">The Saas</a>
-                                <a href="blog-details.html">Pix Saas 新闻中心</a>
-                                <a href="blog-details.html">Landing</a>
-                                <a href="blog-details.html">UI/UX Design</a>
-                                <a href="blog-details.html">Branding</a>
-                                <a href="blog-details.html">Animation</a>
-                                <a href="blog-details.html">Design</a>
-                                <a href="blog-details.html">Ideas</a>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
