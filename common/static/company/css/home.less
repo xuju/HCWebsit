@@ -112,6 +112,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .home-one-desc>span {
@@ -265,6 +266,42 @@ body {
 }
 
 .swiper-company-desc {
+    .company-rotate {
+        width: 468px;
+        height: 687px;
+        position: relative;
+
+        >img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 1s;
+            z-index: 1;
+
+            &:first-child {
+                z-index: 2;
+                backface-visibility: hidden;
+            }
+
+        }
+
+        &:hover img {
+            transform: rotateY(180deg);
+        }
+
+        .company-desc-bg {
+            background-image: url("/common/static/company/images/gsjj-矩形.png");
+            width: 523px;
+            height: 310px;
+            background-size: 100% 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+.swiper-company-desc {
     margin-top: 126px;
 }
 
@@ -279,15 +316,7 @@ body {
     position: relative;
 }
 
-.company-desc-bg {
-    background-image: url("/common/static/company/images/gsjj-矩形.png");
-    width: 523px;
-    height: 310px;
-    background-size: 100% 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
+
 
 .company-title {
     display: flex;
@@ -334,7 +363,7 @@ body {
     display: flex;
     align-items: baseline;
     justify-content: center;
-    margin-bottom: 54px;
+
 
     .r-title {
         font-family: AlibabaPuHuiTiM;
@@ -356,14 +385,16 @@ body {
 
     margin-top: 75px;
     padding: 35px 0;
-
+    background-image: url("/common/static/company/images/descbg.png");
     position: relative;
+    background-size: 100% 100%;
 
     .rong-title-wrap {
         display: flex;
         align-items: baseline;
         justify-content: center;
         margin-bottom: 54px;
+        margin-top: 50px;
 
         .r-title {
             font-family: AlibabaPuHuiTiM;
@@ -378,6 +409,10 @@ body {
             font-size: 24px;
             margin-left: 10px;
         }
+    }
+
+    .row {
+        padding-left: 50px;
     }
 
     .time-wrap {
@@ -431,15 +466,15 @@ body {
                     font-family: AlibabaPuHuiTiB;
                     font-weight: bold;
                     font-size: 20px;
-                    margin-bottom: 17px;
+                    margin-bottom: 5px;
                 }
 
                 .time-desc p {
                     font-size: 18px;
                     font-family: AlibabaPuHuiTiR;
                     color: #44434D;
-                    line-height: 2;
-                    padding-bottom: 15px;
+                    line-height: 1.5;
+
                 }
 
             }
@@ -450,14 +485,16 @@ body {
 
     .rongyuc {
         position: absolute;
-        top: 28%;
+        top: 22%;
         z-index: 2;
+        left: -18%;
     }
 
     .rongyue {
         position: absolute;
         right: -10%;
         z-index: 1;
+        top: -5%;
     }
 }
 
@@ -550,10 +587,15 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 50px;
+    margin-bottom: 50px;
 
     .news-wrap {
         >.container {
             margin-top: 71px;
+
+            >.row>div {
+                padding: 0;
+            }
         }
 
         .news-left {
@@ -715,9 +757,10 @@ body {
         justify-content: space-between;
         color: #fff;
         font-family: AlibabaPuHuiTiR;
-        padding-bottom: 45px;
+
         border-bottom: 1px solid #24212A;
         margin-bottom: 41px;
+        margin-top: 50px;
 
         .footer-top-item {
             display: flex;

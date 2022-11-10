@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class=" col-sm-12 col-lg-6 d-none d-lg-block">
-                <div class="company-desc-swiper wow fadeInUp " data-delay=".3s">
+                <!-- <div class="company-desc-swiper wow fadeInUp " data-delay=".3s">
                     <div class="swiper company-Swiper">
                         {m:banner field="title,image,url,typeid,status" limit="10", typeid=2}
 
@@ -14,6 +14,15 @@
                             {/loop}
 
                         </div>
+                        <div class="company-desc-bg"></div>
+                    </div>
+                </div> -->
+                <div class="company-desc-swiper wow fadeInUp " data-delay=".3s">
+                    <div class="company-rotate">
+                        {m:banner field="title,image,url,typeid,status" limit="10", typeid=2}
+                        {loop $data $v}
+                        <img src="{$v[image]}" alt="">
+                        {/loop}
                         <div class="company-desc-bg"></div>
                     </div>
                 </div>

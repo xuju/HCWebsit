@@ -1,4 +1,10 @@
 <?php defined('IN_YZMPHP') or exit('No permission resources.'); ?><div class="company-rong">
+    <div class="brand__shape">
+        <img class="square" src="<?php echo STATIC_URL;?>company/img/icon/brand/square.png" alt="">
+
+        <img class="circle-2" src="<?php echo STATIC_URL;?>company/img/icon/brand/circle-2.png" alt="">
+
+    </div>
     <div class="container">
         <div class="rong-title-wrap  wow fadeInUp" data-delay=".1s">
             <div class="r-title"><?php echo get_catname(52);?></div>

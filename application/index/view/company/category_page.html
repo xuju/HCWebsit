@@ -23,71 +23,67 @@
 
 <!-- contact info area start -->
 <section class="contact-map" style="margin-top: 20px;">
-    <div class="container">
-        <div class="map-wrap" id="maps">
+    <div class="contact-map-container">
+        <div class="row">
+            <div class="map-left  col-lg-7  col-sm-12">
+                <div class="map-wrap" id="maps">
 
-        </div>
-    </div>
-</section>
-<!-- contact info area end -->
+                </div>
+            </div>
+            <div class="map-right  col-lg-5  col-sm-12">
+                <div class="map-right-wrap">
+                    <h1>海创三维科技（苏州）有限公司</h1>
+                    <div class="company-info-wrap">
+                        <p>地址：江苏省,苏州市,工业园区东旺路8号</p>
+                        <p> </p>
+                        <p>电话：<a href="tel:(+86)-18018149584">(+86) 18018149584</a></p>
 
-<!-- contact area start -->
-<section class="contact__area">
-    <div class="container-fluid p-0">
-        <div class="row ">
-            <div class="col-xl-12">
-                <div class="contact__map  wow fadeInUp">
-
-                    <div class="contact__wrapper d-md-flex justify-content-between ">
-                        <div class="contact__info mr-100">
-                            <h3>给我们留言</h3>
-                            <ul>
-                                <li>
-                                    <h4>地址</h4>
-                                    <p>江苏省,苏州市,工业园区<br> 东旺路8号 </p>
-                                </li>
-                                <li>
-                                    <h4>电话</h4>
-                                    <p><a href="tel:(+86)-13771921540">(+86) 13771921540</a></p>
-                                    <p><a href="tel:(+86)-13771921540">(+86) 13771921540</a></p>
-                                </li>
-                                <li>
-                                    <h4>邮箱</h4>
-                                    <p><a href="mailto:qhyft@163.com">qhyft@163.com</a></p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="contact__form">
-
-
-                            <form action="{U('guestbook/index/init')}" method="post">
-
-                                <table class='yzm-table'>
-                                    <input type="hidden" value="title" name="title" placeholder="留言主题">
-                                    <input type="text" value="" name="name" placeholder="你的姓名" required>
-                                    <input type="email" value="" name="email" placeholder="你的邮箱" required>
-                                    <textarea name="bookmsg" value="" placeholder="请留下您的信息" required></textarea>
-
-                                    <div>
-                                        验证码 <input name="code" required type="text" class="yzm-input-text"
-                                            style="width:100px;">
-                                        <img src="{U('api/index/code')}" onclick="this.src=this.src+'?'"
-                                            class="yzm-code" title="看不清？点击更换">
-                                    </div>
-                                    <div>
-                                        <input type="submit" name="dosubmit" value="确认提交" class="yzm-submit">
-                                    </div>
-
-
-
-
-                                </table>
-                            </form>
-                        </div>
+                        <p>邮箱：<a href="mailto:848820348@qq.com">848820348@qq.com</a></p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+<section class="message-wrap">
+    <h1>欢迎给我们留言</h1>
+    <div class="ly-wrap">
+        <form action="{U('guestbook/index/init')}" method="post">
+            <input type="hidden" value="title" name="title" placeholder="留言主题">
+            <div class="row">
+                <div class="col-lg-4  col-sm-6">
+
+                    <input type="text" value="" name="name" placeholder-class="placeholderStyle " class="name"
+                        placeholder="你的姓名" required>
+                </div>
+                <div class="col-lg-4  col-sm-6">
+
+                    <input type="email" value="" name="email" class="email" placeholder="你的邮箱" required>
+                </div>
+                <div class="col-lg-4  col-sm-6">
+
+                    <textarea name="bookmsg" value="" class="bookmsg" placeholder="请留下您的信息" required></textarea>
+                </div>
+
+                <div class="col-lg-4  col-sm-6">
+
+                    <div class="code-wrap">
+                        <input name="code" placeholder="请输入验证码" required type="text" class="yzm-input-text">
+                        <img src="{U('api/index/code')}" onclick="this.src=this.src+'?'" class="yzm-code"
+                            title="看不清？点击更换">
+                    </div>
+                </div>
+                <div class="col-lg-4  col-sm-6">
+
+                    <div>
+                        <input type="submit" name="dosubmit" value="确认提交" class="yzm-submit">
+                    </div>
+                </div>
+
+
+            </div>
+
+        </form>
     </div>
 </section>
 

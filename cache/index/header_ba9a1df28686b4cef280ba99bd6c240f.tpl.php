@@ -109,7 +109,8 @@
                 </div>
             </div>
 
-            <div id="header__sticky" <?php if(!$catid) { ?> class="header__bottom sticky" <?php } else { ?> class=" header__bottom" <?php } ?>>
+            <!-- <div id="header__sticky" <?php if(!$catid) { ?> class="header__bottom sticky" <?php } else { ?> class=" header__bottom" <?php } ?>> -->
+            <div class="header__bottom sticky">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">

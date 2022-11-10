@@ -52,6 +52,32 @@ html {
     overflow-x: hidden;
 }
 
+
+// @font-face {
+//     font-family: AlibabaPuHuiTiM;
+//     src: url('./fonts/Alibaba-PuHuiTi-Medium.otf') format('truetype'), url('./fonts/Alibaba-PuHuiTi-Medium.otf');
+
+// }
+
+@font-face {
+    font-family: "AlibabaPuHuiTiM";
+    src: url("./fonts/Alibaba-PuHuiTi-Medium/Alibaba-PuHuiTi-Medium.eot");
+    /* IE9 */
+    src: url("./fonts/Alibaba-PuHuiTi-Medium/Alibaba-PuHuiTi-Medium.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */
+
+        url("./fonts/Alibaba-PuHuiTi-Medium/Alibaba-PuHuiTi-Medium.woff") format("woff"),
+        /* chrome、firefox */
+        url("./fonts/Alibaba-PuHuiTi-Medium/Alibaba-PuHuiTi-Medium.ttf") format("truetype"),
+        /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+
+        url("./fonts/Alibaba-PuHuiTi-Medium/Alibaba-PuHuiTi-Medium.svg#Alibaba-PuHuiTi-Medium") format("svg");
+    /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
 body {
     font-family: "Microsoft Yahei", sans-serif;
     font-size: 16px;
@@ -677,9 +703,9 @@ p {
     font-size: 15px;
     color: #ffffff;
     list-style-type: none;
-    background: #4636ff;
+    background: linear-gradient(to bottom, #8E33F2, #B83DF5);
     margin-right: 20px;
-    border: 1px solid #4636ff;
+    border: 1px solid #8E33F2;
     z-index: 999;
 }
 
@@ -1743,8 +1769,14 @@ p {
 .slider__content h1 {
     font-size: 68px;
     color: #ffffff;
-    font-weight: 900;
     margin-bottom: 38px;
+    font-family: AlibabaPuHuiTiM;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.slider__content {
+    margin-top: 34px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3990,7 +4022,7 @@ p {
 /*  12. FAQ CSS START
 /*----------------------------------------*/
 .faq__wrapper .card {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     border: none;
     background: transparent;
 }
@@ -5728,7 +5760,7 @@ p {
 
 .page__title-content h2 {
     font-weight: bold;
-    font-family: AlibabaPuHuiTiB;
+    font-family: AlibabaPuHuiTiM;
     color: #FFFFFF;
     position: relative;
 }
@@ -6238,10 +6270,132 @@ p {
 
 .contact-map {
     height: 490px;
+    margin-bottom: 30px;
 }
 
-.contact-map .container {
+.contact-map .contact-map-container {
     height: 100%;
+    width: 80%;
+    margin: auto;
+    max-width: 1280px;
+    overflow: hidden;
+
+    // display: flex;
+    // flex-wrap: wrap;
+    .row {
+        height: 100%;
+    }
+
+    .map-left {
+        padding: 0;
+        height: 100%;
+    }
+
+    .map-right {
+
+        background-color: rgba(20, 20, 20, 0.9);
+        color: #fff;
+        background-image: url(/common/static/company/images/dw_pc_con_bg.png);
+        background-repeat: repeat;
+        background-position: top left;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+        .map-right-wrap {
+            width: 90%;
+            margin: auto;
+            color: #fff;
+
+            >h1 {
+                font-size: 26px;
+                color: #fff;
+            }
+
+            .company-info-wrap {
+                margin-top: 4rem;
+
+                >p {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.message-wrap {
+    background-color: rgba(40, 47, 73, 1);
+    padding: 2rem 0;
+
+    >h1 {
+        text-align: center;
+        color: #fff;
+        font-weight: normal;
+    }
+
+    >.ly-wrap {
+        width: 80%;
+        margin: auto;
+        max-width: 1280px;
+        color: #fff;
+        margin-top: 30px;
+
+        input {
+            width: 100%;
+            height: 50px;
+            max-width: none;
+            background: #fff;
+            border: none;
+            border-radius: 0;
+            padding-left: 10px;
+            outline: none;
+        }
+
+        .bookmsg {
+            width: 100%;
+            height: 50px;
+            max-width: none;
+            background: #fff;
+            border: none;
+            border-radius: 0;
+            padding-left: 10px;
+        }
+
+        .yzm-code {
+            height: 50px;
+        }
+
+        .code-wrap {
+            display: flex;
+
+            .yzm-input-text {
+                margin-right: 10px;
+            }
+        }
+
+        textarea {
+            outline: none;
+        }
+
+
+        input::-webkit-input-placeholder {
+            color: #595959;
+        }
+
+        textarea::-webkit-input-placeholder {
+            color: #595959;
+        }
+
+        .yzm-submit {
+            background-color: #D9242B;
+            color: #fff;
+
+        }
+
+        .row>div {
+            margin-bottom: 30px;
+        }
+
+    }
 }
 
 .map-wrap {
@@ -6348,7 +6502,7 @@ p {
         &.select {
             background-image: linear-gradient(to bottom, #8E33F2, #B83DF5);
             color: #fff;
-            font-family: AlibabaPuHuiTiB;
+            font-family: AlibabaPuHuiTiM;
             font-weight: bold;
             font-size: 24px;
             text-align: center;
@@ -6478,23 +6632,29 @@ p {
 }
 
 .servive-bg {
-    background-color: #F2F2F2;
+    background-color: #fff;
 }
 
 .service-content {
     margin-top: 60px;
 
-    .left-menu-item {
-        height: 50px;
-        margin-bottom: 2px;
-        line-height: 50px;
-        background-color: #fff;
-        padding: 0 20px;
+    .left-menu-wrap {
+        box-shadow: 0px 0px 1px rgb(0 0 0 / 50%);
         box-sizing: border-box;
+    }
+
+    .left-menu-item {
+        padding: 30px;
+        text-align: center;
+        font-family: AlibabaPuHuiTiM;
+        color: #605B66;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         cursor: pointer;
 
         &.select {
-            background-image: linear-gradient(45deg, #b72024, #e01f27);
+            // background-image: linear-gradient(45deg, #b72024, #e01f27);
+            background-image: linear-gradient(to bottom, #8E33F2, #B83DF5);
             color: #fff;
         }
     }
@@ -6554,4 +6714,107 @@ p {
             margin: 20px 0;
         }
     }
+}
+
+.show-wrap {
+
+    margin-bottom: 80px;
+
+
+    .show-menu-wrap {
+        height: 85px;
+        background-color: #fff;
+        box-shadow: 0px 1px 7px 0px #E7E4E4;
+        display: flex;
+
+        >.container {
+            display: flex;
+
+            >.show-menu-item {
+                flex: 1;
+
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                font-family: AlibabaPuHuiTiM;
+                font-size: 18px;
+                justify-content: center;
+
+                &.select {
+                    font-size: 20px;
+                    background-image: linear-gradient(#8E33F2, #B83DF5);
+                    -webkit-background-clip: text;
+
+                    -webkit-text-fill-color: transparent;
+                    position: relative;
+
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0;
+                        right: 0;
+                        height: 2px;
+                        background-color: #8E33F2;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .show-desc-wrap {
+        margin-top: 50px;
+
+        .title {
+            font-family: AlibabaPuHuiTiB;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+
+            >.desc-text {
+                color: #7D7A80;
+            }
+        }
+    }
+
+    .params-wrap {
+        margin-top: 61px;
+
+        .params-title {
+            background-color: #9A36F3;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: AlibabaPuHuiTiB;
+            color: #FFFFFF;
+        }
+
+        .params-content-wrap {
+            display: flex;
+
+            .left {
+                background-color: #F3EAFB;
+                border-bottom: 1px solid #E7E3EB;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: AlibabaPuHuiTiM;
+                font-size: 20px;
+                padding: 50px;
+            }
+
+            .right {
+                font-family: AlibabaPuHuiTiM;
+                color: #7D7A80;
+                font-size: 18px;
+                padding: 50px;
+                border-bottom: 1px solid #E7E3EB;
+            }
+        }
+    }
+
 }

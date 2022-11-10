@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class=" col-sm-12 col-lg-6 d-none d-lg-block">
-                <div class="company-desc-swiper wow fadeInUp " data-delay=".3s">
+                <!-- <div class="company-desc-swiper wow fadeInUp " data-delay=".3s">
                     <div class="swiper company-Swiper">
                         <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'banner')) {$data = $tag->banner(array('field'=>'title,image,url,typeid,status','limit'=>'10','typeid'=>'2',));}?>
 
@@ -14,6 +14,15 @@
                             <?php } ?>
 
                         </div>
+                        <div class="company-desc-bg"></div>
+                    </div>
+                </div> -->
+                <div class="company-desc-swiper wow fadeInUp " data-delay=".3s">
+                    <div class="company-rotate">
+                        <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'banner')) {$data = $tag->banner(array('field'=>'title,image,url,typeid,status','limit'=>'10','typeid'=>'2',));}?>
+                        <?php if(is_array($data)) foreach($data as $v) { ?>
+                        <img src="<?php echo $v['image'];?>" alt="">
+                        <?php } ?>
                         <div class="company-desc-bg"></div>
                     </div>
                 </div>

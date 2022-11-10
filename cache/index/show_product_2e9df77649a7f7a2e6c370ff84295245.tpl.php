@@ -3,6 +3,9 @@
 <?php $parentids=get_category($catid, 'parentid')?>
 
 <?php $topImg=get_category($parentids,'catimg')?>
+<link href="<?php echo STATIC_URL;?>css/yzm-common.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo STATIC_URL;?>css/yzm-style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<?php echo STATIC_URL;?>js/yzm-product-img.js"></script>
 <section class="page__title p-relative d-flex align-items-center fix" data-background="<?php echo $topImg;?>">
     <div class="slider__shape">
         <img class="shape triangle" src="<?php echo STATIC_URL;?>company/img/icon/slider/triangle.png" alt="triangle">
@@ -15,109 +18,112 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="page__title-content ">
-                    <h2><?php echo $title;?></h2>
+                    <h2><?php echo get_catname($catid);?></h2>
 
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section>
-    <div class="container  production-wrap">
-        <div class="row">
-            <div class="col-lg-3">
-
-
-                <?php $data = get_childcat($parentids);?>
-                <ul class="category-wrap">
-                    <li class="select">
-                        <a href="<?php echo get_category($catid,'pclink');?>">部分产品展示图</a>
-
-                    </li>
-                    <?php if(is_array($data)) foreach($data as $v) { ?>
-                    <li>
-                        <a href="<?php echo $v['pclink'];?>"><?php echo $v['catname'];?></a>
-                    </li>
+<section class="show-wrap">
+    <div class="show-menu-wrap">
+        <?php $parid=get_category($catid, 'parentid')?>
+        <div class="container">
+            <?php $data = get_childcat($parid);?>
+            <?php if(is_array($data)) foreach($data as $v) { ?>
+            <li class="show-menu-item <?php if($catid===$v[catid]) { ?>  select <?php } ?> ">
+                <a href="<?php echo $v['pclink'];?>"><?php echo $v['catname'];?></a>
+            </li>
+            <?php } ?>
+        </div>
+    </div>
+    <div class="show-desc-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12  col-lg-6" style="overflow: hidden;">
+                    <?php $pictures = string2array($pictures);?>
+                    <div class="yzm-image" id="bigpics">
+                        <!-- 获取产品图集第一张的图片地址 -->
+                        <img
+                            src="<?php if(!isset($pictures[0])) { ?><?php echo STATIC_URL;?>images/nopic.jpg<?php } else { ?><?php echo $pictures['0']['url'];?><?php } ?>" />
+                    </div>
+                    <div class="yzm-switch" style="display: flex;">
+                        <div class="yzm-icon1"><a href="javascript:;" title="上一个" onfocus="this.blur();">上一个</a></div>
+                        <div class="yzm-switch-center" id="pics">
+                            <ul>
+                                <?php if(is_array($pictures)) foreach($pictures as $v) { ?>
+                                <li><a href="javascript:;"><img src="<?php echo $v['url'];?>" alt="<?php echo $v['alt'];?>" title="<?php echo $v['alt'];?>"></a>
+                                </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                        <div class="yzm-icon2"><a href="javascript:;" title="下一个" onfocus="this.blur();">下一个</a></div>
+                    </div>
+                </div>
+                <div class="col-sm-12  col-lg-6">
+                    <div class="title"><?php echo $title;?></div>
+                    <div class="desc-text"><?php echo $content;?></div>
+                </div>
+                <div class="col-12  params-wrap">
+                    <div class="params-title"><?php echo $title;?></div>
+                    <?php if($jgxt) { ?>
+                    <?php $jgxts=explode(',',$jgxt)?>
+                    <div class="params-content-wrap">
+                        <div class="left">激光系统 </div>
+                        <div class="right">
+                            <?php if(is_array($jgxts)) foreach($jgxts as $v) { ?>
+                            <?php echo $v;?><br />
+                            <?php } ?>
+                        </div>
+                    </div>
                     <?php } ?>
-                </ul>
-            </div>
-            <div class="col-lg-9">
-                <div class="production-right">
-                    <div class="location">
-                        <?php echo get_location($catid);?>
-                    </div>
-                    <div class="list-wrap   ">
-                        <div id="carousel" class="wow fadeInUp" style="margin-top:50px">
-                            <div class="swiper swiper-3d">
-                                <?php $pictures = string2array($pictures);?>
-                                <div class="swiper-wrapper">
-                                    <?php if(is_array($pictures)) foreach($pictures as $v) { ?>
-                                    <div class="swiper-slide">
-                                        <a data-fancybox="gallery" href="<?php echo $v['url'];?>">
-                                            <img class="rounded" src="<?php echo $v['url'];?>" alt="<?php echo $v['alt'];?>" title="<?php echo $v['alt'];?>"
-                                                width="305" height="211" />
-                                        </a>
-                                        <!-- <img src="<?php echo STATIC_URL;?>company/images/carousel01.png" /> -->
-                                        <p><?php echo $v['alt'];?></p>
-                                    </div>
-                                    <?php } ?>
-
-                                </div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                        </div>
-                        <div class="desc-wrap">
-                            <?php echo $content;?>
+                    <?php if($ctxt) { ?>
+                    <?php $ctxts=explode(',',$ctxt)?>
+                    <div class="params-content-wrap">
+                        <div class="left">重涂系统 </div>
+                        <div class="right">
+                            <?php if(is_array($ctxts)) foreach($ctxts as $v) { ?>
+                            <?php echo $v;?><br />
+                            <?php } ?>
                         </div>
                     </div>
+                    <?php } ?>
+                    <?php if($gxsmxt) { ?>
+                    <?php $gxsmxts=explode(',',$gxsmxt)?>
+                    <div class="params-content-wrap">
+                        <div class="left">光学扫描系统 </div>
+                        <div class="right">
+                            <?php if(is_array($gxsmxts)) foreach($gxsmxts as $v) { ?>
+                            <?php echo $v;?><br />
+                            <?php } ?>
+                        </div>
+                    </div>
+                    <?php } ?>
+                    <?php if($sjxt) { ?>
+                    <?php $sjxts=explode(',',$sjxt)?>
+                    <div class="params-content-wrap">
+                        <div class="left">升降系统 </div>
+                        <div class="right">
+                            <?php if(is_array($sjxts)) foreach($sjxts as $v) { ?>
+                            <?php echo $v;?><br />
+                            <?php } ?>
+                        </div>
+                    </div>
+                    <?php } ?>
+                    <?php if($szc) { ?>
+                    <?php $szcs=explode(',',$szc)?>
+                    <div class="params-content-wrap">
+                        <div class="left">树脂槽 </div>
+                        <div class="right">
+                            <?php if(is_array($szcs)) foreach($szcs as $v) { ?>
+                            <?php echo $v;?><br />
+                            <?php } ?>
+                        </div>
+                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <?php include template("index","footer"); ?>
-<script>
-    let slideW = 300;//一张图300px, 每面四张角度22.5（PI/8），中心角度PI/16	             
-    let radius = slideW * 0.5 / Math.sin(Math.PI / 16);//半径。圆心并不是视点中心，视点在1200px
-
-    let carouselSwiper = new Swiper('#carousel .swiper', {
-        watchSlidesProgress: true,
-        slidesPerView: 'auto',
-        centeredSlides: false,
-        loop: true,
-        loopedSlides: 4,
-        grabCursor: true,
-        autoplay: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            //clickable :true,
-        },
-        on: {
-            progress: function (swiper, progress) {
-                for (i = 0; i < this.slides.length; i++) {
-                    var slide = this.slides.eq(i);
-                    var slideProgress = this.slides[i].progress;
-                    translateX = (slideProgress + 1.5) * (slideW / 3 - Math.cos((slideProgress + 1.5) * 0.125 * Math.PI) * slideW * 1.1 / 3) + 'px';//调整图片间距，根据图片宽度改变数值实现自适应
-                    rotateY = (slideProgress + 1.5) * 22.5;//图片角度
-                    translateZ = (radius - Math.cos((slideProgress + 1.5) * 0.125 * Math.PI) * radius - 150) + 'px';//调整图片远近，刚好4个在画框内
-                    slide.transform('translateX(' + translateX + ') translateZ(' + translateZ + ') rotateY(' + rotateY + 'deg)');
-
-                }
-            },
-            setTransition: function (swiper, transition) {
-                for (var i = 0; i < this.slides.length; i++) {
-                    var slide = this.slides.eq(i)
-                    slide.transition(transition);
-                }
-
-            }
-        }
-
-    })
-</script>

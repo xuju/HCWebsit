@@ -93,6 +93,6 @@ return array (
     '^shouhoufuwu$' => 'index/index/lists/catid/67',
   ),
   'expire' => 0,
-  'mtime' => 1667891593,
+  'mtime' => 1667981468,
 );
 ?>

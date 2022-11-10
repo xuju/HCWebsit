@@ -49,6 +49,15 @@
 html {
   overflow-x: hidden;
 }
+@font-face {
+  font-family: "AlibabaPuHuiTiM";
+  src: url("fonts/Alibaba-PuHuiTi-Medium/Alibaba-PuHuiTi-Medium.eot");
+  /* IE9 */
+  src: url("fonts/Alibaba-PuHuiTi-Medium/Alibaba-PuHuiTi-Medium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("fonts/Alibaba-PuHuiTi-Medium/Alibaba-PuHuiTi-Medium.woff") format("woff"), /* chrome、firefox */ url("fonts/Alibaba-PuHuiTi-Medium/Alibaba-PuHuiTi-Medium.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */ url("fonts/Alibaba-PuHuiTi-Medium/Alibaba-PuHuiTi-Medium.svg#Alibaba-PuHuiTi-Medium") format("svg");
+  /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal;
+}
 body {
   font-family: "Microsoft Yahei", sans-serif;
   font-size: 16px;
@@ -572,9 +581,9 @@ p {
   font-size: 15px;
   color: #ffffff;
   list-style-type: none;
-  background: #4636ff;
+  background: linear-gradient(to bottom, #8E33F2, #B83DF5);
   margin-right: 20px;
-  border: 1px solid #4636ff;
+  border: 1px solid #8E33F2;
   z-index: 999;
 }
 /* theme social */
@@ -1474,8 +1483,13 @@ p {
 .slider__content h1 {
   font-size: 68px;
   color: #ffffff;
-  font-weight: 900;
   margin-bottom: 38px;
+  font-family: AlibabaPuHuiTiM;
+  font-weight: normal;
+  line-height: 1.5;
+}
+.slider__content {
+  margin-top: 34px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .slider__content h1 {
@@ -3396,7 +3410,7 @@ p {
 /*  12. FAQ CSS START
 /*----------------------------------------*/
 .faq__wrapper .card {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   border: none;
   background: transparent;
 }
@@ -4877,7 +4891,7 @@ p {
 }
 .page__title-content h2 {
   font-weight: bold;
-  font-family: AlibabaPuHuiTiB;
+  font-family: AlibabaPuHuiTiM;
   color: #FFFFFF;
   position: relative;
 }
@@ -5304,9 +5318,105 @@ p {
 }
 .contact-map {
   height: 490px;
+  margin-bottom: 30px;
 }
-.contact-map .container {
+.contact-map .contact-map-container {
   height: 100%;
+  width: 80%;
+  margin: auto;
+  max-width: 1280px;
+  overflow: hidden;
+}
+.contact-map .contact-map-container .row {
+  height: 100%;
+}
+.contact-map .contact-map-container .map-left {
+  padding: 0;
+  height: 100%;
+}
+.contact-map .contact-map-container .map-right {
+  background-color: rgba(20, 20, 20, 0.9);
+  color: #fff;
+  background-image: url(/common/static/company/images/dw_pc_con_bg.png);
+  background-repeat: repeat;
+  background-position: top left;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.contact-map .contact-map-container .map-right .map-right-wrap {
+  width: 90%;
+  margin: auto;
+  color: #fff;
+}
+.contact-map .contact-map-container .map-right .map-right-wrap > h1 {
+  font-size: 26px;
+  color: #fff;
+}
+.contact-map .contact-map-container .map-right .map-right-wrap .company-info-wrap {
+  margin-top: 4rem;
+}
+.contact-map .contact-map-container .map-right .map-right-wrap .company-info-wrap > p {
+  color: #fff;
+}
+.message-wrap {
+  background-color: #282f49;
+  padding: 2rem 0;
+}
+.message-wrap > h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+}
+.message-wrap > .ly-wrap {
+  width: 80%;
+  margin: auto;
+  max-width: 1280px;
+  color: #fff;
+  margin-top: 30px;
+}
+.message-wrap > .ly-wrap input {
+  width: 100%;
+  height: 50px;
+  max-width: none;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  padding-left: 10px;
+  outline: none;
+}
+.message-wrap > .ly-wrap .bookmsg {
+  width: 100%;
+  height: 50px;
+  max-width: none;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  padding-left: 10px;
+}
+.message-wrap > .ly-wrap .yzm-code {
+  height: 50px;
+}
+.message-wrap > .ly-wrap .code-wrap {
+  display: flex;
+}
+.message-wrap > .ly-wrap .code-wrap .yzm-input-text {
+  margin-right: 10px;
+}
+.message-wrap > .ly-wrap textarea {
+  outline: none;
+}
+.message-wrap > .ly-wrap input::-webkit-input-placeholder {
+  color: #595959;
+}
+.message-wrap > .ly-wrap textarea::-webkit-input-placeholder {
+  color: #595959;
+}
+.message-wrap > .ly-wrap .yzm-submit {
+  background-color: #D9242B;
+  color: #fff;
+}
+.message-wrap > .ly-wrap .row > div {
+  margin-bottom: 30px;
 }
 .map-wrap {
   width: 100%;
@@ -5390,7 +5500,7 @@ p {
 }
 .production-wrap .category-wrap > li.select {
   background-image: linear-gradient(to bottom, #8E33F2, #B83DF5);
-  font-family: AlibabaPuHuiTiB;
+  font-family: AlibabaPuHuiTiM;
   font-weight: bold;
   font-size: 24px;
   text-align: center;
@@ -5486,22 +5596,26 @@ p {
   bottom: 2px;
 }
 .servive-bg {
-  background-color: #F2F2F2;
+  background-color: #fff;
 }
 .service-content {
   margin-top: 60px;
 }
-.service-content .left-menu-item {
-  height: 50px;
-  margin-bottom: 2px;
-  line-height: 50px;
-  background-color: #fff;
-  padding: 0 20px;
+.service-content .left-menu-wrap {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
+}
+.service-content .left-menu-item {
+  padding: 30px;
+  text-align: center;
+  font-family: AlibabaPuHuiTiM;
+  color: #605B66;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 .service-content .left-menu-item.select {
-  background-image: linear-gradient(45deg, #b72024, #e01f27);
+  background-image: linear-gradient(to bottom, #8E33F2, #B83DF5);
   color: #fff;
 }
 .service-content .right-wrap {
@@ -5546,4 +5660,86 @@ p {
   font-size: 14px;
   color: #696969;
   margin: 20px 0;
+}
+.show-wrap {
+  margin-bottom: 80px;
+}
+.show-wrap .show-menu-wrap {
+  height: 85px;
+  background-color: #fff;
+  box-shadow: 0px 1px 7px 0px #E7E4E4;
+  display: flex;
+}
+.show-wrap .show-menu-wrap > .container {
+  display: flex;
+}
+.show-wrap .show-menu-wrap > .container > .show-menu-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: AlibabaPuHuiTiM;
+  font-size: 18px;
+  justify-content: center;
+}
+.show-wrap .show-menu-wrap > .container > .show-menu-item.select {
+  font-size: 20px;
+  background-image: linear-gradient(#8E33F2, #B83DF5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+.show-wrap .show-menu-wrap > .container > .show-menu-item.select::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #8E33F2;
+}
+.show-wrap .show-desc-wrap {
+  margin-top: 50px;
+}
+.show-wrap .show-desc-wrap .title {
+  font-family: AlibabaPuHuiTiB;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.show-wrap .show-desc-wrap .title > .desc-text {
+  color: #7D7A80;
+}
+.show-wrap .params-wrap {
+  margin-top: 61px;
+}
+.show-wrap .params-wrap .params-title {
+  background-color: #9A36F3;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: AlibabaPuHuiTiB;
+  color: #FFFFFF;
+}
+.show-wrap .params-wrap .params-content-wrap {
+  display: flex;
+}
+.show-wrap .params-wrap .params-content-wrap .left {
+  background-color: #F3EAFB;
+  border-bottom: 1px solid #E7E3EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: AlibabaPuHuiTiM;
+  font-size: 20px;
+  padding: 50px;
+}
+.show-wrap .params-wrap .params-content-wrap .right {
+  font-family: AlibabaPuHuiTiM;
+  color: #7D7A80;
+  font-size: 18px;
+  padding: 50px;
+  border-bottom: 1px solid #E7E3EB;
 }

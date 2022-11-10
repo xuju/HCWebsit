@@ -82,11 +82,11 @@
 	// 04. Sticky Header Js
 	windowOn.on('scroll', function () {
 		var scroll = $(window).scrollTop();
-		if (scroll < 100) {
-			$("#header__sticky").removeClass("sticky");
-		} else {
-			$("#header__sticky").addClass("sticky");
-		}
+		// if (scroll < 100) {
+		// 	$("#header__sticky").removeClass("sticky");
+		// } else {
+		// 	$("#header__sticky").addClass("sticky");
+		// }
 	});
 
 	////////////////////////////////////////////////////

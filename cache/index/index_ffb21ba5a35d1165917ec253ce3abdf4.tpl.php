@@ -55,10 +55,10 @@
                 fill: 'row'
             },
             spaceBetween: 30,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
+            // pagination: {
+            //     el: ".swiper-pagination",
+            //     clickable: true,
+            // },
         });
         console.log(honorSwiper);
     }
