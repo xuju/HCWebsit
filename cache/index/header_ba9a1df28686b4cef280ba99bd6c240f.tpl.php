@@ -88,13 +88,13 @@
                                     <li>
                                         <a href="tel:(+468)-254-762-443">
                                             <i class="fal fa-phone-alt"></i>
-                                            (+86) 18018149584
+                                            <!-- (+86) 18018149584 -->
                                         </a>
                                     </li>
                                     <li>
                                         <a href="mailto:qhyft@163.com">
                                             <i class="fal fa-envelope"></i>
-                                            848820348@qq.com
+                                            <!-- 848820348@qq.com -->
                                         </a>
                                     </li>
                                     <li>
@@ -121,7 +121,8 @@
                             </div>
                             <div class="logo-gradient">
                                 <a href="index.html">
-                                    <img src="<?php echo STATIC_URL;?>company/img/logo/logo-gradient.png" alt="logo">
+                                    <!-- <img src="<?php echo STATIC_URL;?>company/img/logo/logo-gradient.png" alt="logo"> -->
+                                    <img src="<?php echo $site['site_logo'];?>" alt="logo">
                                 </a>
                             </div>
                         </div>
@@ -150,6 +151,11 @@
                                                     <?php } ?>
                                             </li>
                                             <?php } ?>
+                                            <div class="site-toggle" style="display: inline-block;"> <a href="">中文</a>/
+                                                <a href="">英文</a>
+                                            </div>
+
+
                                             <!-- <li><a href="about.html">关于我们</a></li>
                                             <li>
                                                 <a href="services.html"> 服务 </a>

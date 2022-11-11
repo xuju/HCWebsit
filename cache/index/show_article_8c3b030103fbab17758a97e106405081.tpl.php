@@ -1,6 +1,12 @@
 <?php defined('IN_YZMPHP') or exit('No permission resources.'); ?><?php include template("index","header"); ?>
 <script type="text/javascript" src="<?php echo STATIC_URL;?>js/yzm-front.js"></script>
-<section class="page__title p-relative d-flex align-items-center fix">
+<?php $parentids=get_category($catid, 'parentid')?>
+<!-- <?php print_r($parentids)?> -->
+<?php $topImg=get_category($catid,'catimg')?>
+<!-- <?php print_r($topImg)?> -->
+<?php print_r($catid)?>
+<script type="text/javascript" src="<?php echo STATIC_URL;?>js/yzm-product-img.js"></script>
+<section class="page__title p-relative d-flex align-items-center fix" data-background="<?php echo $topImg;?>">
     <div class="slider__shape">
         <img class="shape triangle" src="<?php echo STATIC_URL;?>company/img/icon/slider/triangle.png" alt="triangle">
         <img class="shape dotted-square" src="<?php echo STATIC_URL;?>company/img/icon/slider/dotted-square.png"
@@ -11,15 +17,9 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="page__title-content mt-100">
+                <div class="page__title-content ">
                     <h2><?php echo get_catname($catid);?></h2>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <!-- <li class="breadcrumb-item"><a href="<?php echo SITE_URL;?>">回到首页</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">常见问题解答</li> -->
-                            <?php echo get_location($catid);?>
-                        </ol>
-                    </nav>
+
                 </div>
             </div>
         </div>
@@ -77,9 +77,9 @@
 
     <div class="row wow fadeInUp">
 
-        <div class="sidebar__widget-title mb-50  col-12">
+        <!-- <div class="sidebar__widget-title mb-50  col-12">
             <h4>相关文章</h4>
-        </div>
+        </div> -->
         <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'relation')) {$data = $tag->relation(array('field'=>'title,url,color,updatetime,thumb,catid','modelid'=>$modelid,'id'=>$id,'limit'=>'3',));}?>
         <?php if(is_array($data)) foreach($data as $v) { ?>
         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 grid-item  ">

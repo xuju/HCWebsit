@@ -60,7 +60,7 @@
                         <div class="yzm-icon2"><a href="javascript:;" title="下一个" onfocus="this.blur();">下一个</a></div>
                     </div>
                 </div>
-                <div class="col-sm-12  col-lg-6">
+                <div class="col-sm-12  col-lg-6 desc-text-wrap">
                     <div class="title"><?php echo $title;?></div>
                     <div class="desc-text"><?php echo $content;?></div>
                 </div>
@@ -119,6 +119,34 @@
                             <?php echo $v;?><br />
                             <?php } ?>
                         </div>
+                    </div>
+                    <?php } ?>
+
+                    <?php if($bhxt) { ?>
+                    <?php $bhxts=explode(',',$bhxt)?>
+                    <div class="params-content-wrap">
+                        <div class="left">保护系统 </div>
+                        <div class="right">
+                            <?php if(is_array($bhxts)) foreach($bhxts as $v) { ?>
+                            <?php echo $v;?><br />
+                            <?php } ?>
+                        </div>
+                    </div>
+                    <?php } ?>
+                    <?php if($zzg) { ?>
+                    <?php $zzgs=explode(',',$zzg)?>
+                    <div class="params-content-wrap">
+                        <div class="left">制作缸 </div>
+                        <div class="right">
+                            <?php if(is_array($zzgs)) foreach($zzgs as $v) { ?>
+                            <?php echo $v;?><br />
+                            <?php } ?>
+                        </div>
+                    </div>
+                    <?php } ?>
+                    <?php if($cpcspic) { ?>
+                    <div class="params-img">
+                        <img src="<?php echo $cpcspic;?>" style="width: 100%;" alt="">
                     </div>
                     <?php } ?>
                 </div>

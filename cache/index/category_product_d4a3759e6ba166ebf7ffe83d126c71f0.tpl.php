@@ -21,18 +21,25 @@
 <section>
     <div class="container  production-wrap">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3 list-width">
 
 
                 <?php $data = get_childcat($catid);?>
                 <ul class="category-wrap">
-                    <li class="select">
-                        <a href="">部分产品展示图</a>
-                    </li>
+                    <a class="select" href="<?php echo get_category($catid, 'pclink');?>">
+                        <?php if($catid==10) { ?>
+                        所有设备展示
+                        <?php } else { ?>
+                        部分产品展示图
+                        <?php } ?>
+                    </a>
                     <?php if(is_array($data)) foreach($data as $v) { ?>
-                    <li>
+                    <!-- <li>
                         <a href="<?php echo $v['pclink'];?>"><?php echo $v['catname'];?></a>
-                    </li>
+                    </li> -->
+                    <a href="<?php echo $v['pclink'];?>">
+                        <?php echo $v['catname'];?>
+                    </a>
                     <?php } ?>
                 </ul>
             </div>
@@ -42,7 +49,7 @@
                         <?php echo get_location($catid);?>
                     </div>
                     <div class="list-wrap">
-                        <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'lists')) {$data = $tag->lists(array('field'=>'title,url,thumb','catid'=>$catid,'limit'=>'10','page'=>'page',));$pages = $tag->pages();}?>
+                        <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'lists')) {$data = $tag->lists(array('field'=>'title,url,thumb','catid'=>$catid,'limit'=>'9','page'=>'page',));$pages = $tag->pages();}?>
                         <div class="row">
                             <?php if(is_array($data)) foreach($data as $v) { ?>
                             <div class=" col-lg-4 col-sm-6  col-md-6">

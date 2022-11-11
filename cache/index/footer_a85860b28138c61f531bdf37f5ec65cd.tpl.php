@@ -1,6 +1,6 @@
 <?php defined('IN_YZMPHP') or exit('No permission resources.'); ?><!-- footer area start -->
 <footer class="footer-center">
-    <div class="footer__area grey-bg pt-100  ">
+    <div class="footer__area grey-bg  ">
         <div class="footer__top  ani" swiper-animate-effect="fadeInUp" swiper-animate-delay=".1s">
             <div class="container">
                 <div class="footer-top">
@@ -42,11 +42,11 @@
                             <div class="footer__widget-content">
                                 <div class="footer__links">
                                     <ul>
-                                        <li><a href="#">关于我们</a></li>
-                                        <li><a href="#">产品中心</a></li>
-                                        <li><a href="#">咨询服务</a></li>
+                                        <li><a href="#">公司介绍</a></li>
+                                        <li><a href="#">公司荣誉</a></li>
                                         <li><a href="#">合作伙伴</a></li>
-                                        <li><a href="#">联系我们</a></li>
+                                        <li><a href="#">组织架构</a></li>
+                                        <li><a href="#">新闻中心</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -55,17 +55,15 @@
                     <div class="col-xl-2  col-lg-2  col-md-4 col-sm-6">
                         <div class="footer__widget mb-45  ani" swiper-animate-delay=".4s">
                             <div class="footer__widget-title">
-                                <h4>资源</h4>
+                                <h4><?php echo get_catname(23);?></h4>
                             </div>
                             <div class="footer__widget-content">
                                 <div class="footer__links">
+                                    <?php $data = get_childcat(23);?>
                                     <ul>
-                                        <li><a href="#">客户</a></li>
-                                        <li><a href="#">价格</a></li>
-                                        <li><a href="#">新闻</a></li>
-                                        <li><a href="#">学习中心</a></li>
-                                        <li><a href="#">服务台</a></li>
-                                        <li><a href="#">支持</a></li>
+                                        <?php if(is_array($data)) foreach($data as $v) { ?>
+                                        <li><a href="<?php echo $v['pclink'];?>"><?php echo $v['catname'];?></a></li>
+                                        <?php } ?>
                                     </ul>
                                 </div>
                             </div>
@@ -74,17 +72,17 @@
                     <div class="col-xl-2  col-lg-2  col-md-4 col-sm-6">
                         <div class="footer__widget mb-45   ani" swiper-animate-delay=".6s">
                             <div class="footer__widget-title">
-                                <h4>用户案例</h4>
+                                <h4><?php echo get_catname(6);?></h4>
                             </div>
                             <div class="footer__widget-content">
                                 <div class="footer__links">
                                     <ul>
-                                        <li><a href="#">用户案例</a></li>
-                                        <li><a href="#">机构</a></li>
-                                        <li><a href="#">数字营销</a></li>
-                                        <li><a href="#">商业搜索引擎</a></li>
-                                        <li><a href="#">企业</a></li>
-                                        <li><a href="#">出版商</a></li>
+                                        <?php $data = get_childcat(6);?>
+                                        <ul>
+                                            <?php if(is_array($data)) foreach($data as $v) { ?>
+                                            <li><a href="<?php echo $v['pclink'];?>"><?php echo $v['catname'];?></a></li>
+                                            <?php } ?>
+                                        </ul>
                                     </ul>
                                 </div>
                             </div>
@@ -93,17 +91,17 @@
                     <div class="col-xl-2  col-lg-2  col-md-4 col-sm-6">
                         <div class="footer__widget mb-45 ani" swiper-animate-delay=".6s">
                             <div class="footer__widget-title">
-                                <h4>用户案例</h4>
+                                <h4><?php echo get_catname(41);?></h4>
                             </div>
                             <div class="footer__widget-content">
                                 <div class="footer__links">
                                     <ul>
-                                        <li><a href="#">用户案例</a></li>
-                                        <li><a href="#">机构</a></li>
-                                        <li><a href="#">数字营销</a></li>
-                                        <li><a href="#">商业搜索引擎</a></li>
-                                        <li><a href="#">企业</a></li>
-                                        <li><a href="#">出版商</a></li>
+                                        <?php $data = get_childcat(41);?>
+                                        <ul>
+                                            <?php if(is_array($data)) foreach($data as $v) { ?>
+                                            <li><a href="<?php echo $v['pclink'];?>"><?php echo $v['catname'];?></a></li>
+                                            <?php } ?>
+                                        </ul>
                                     </ul>
                                 </div>
                             </div>
@@ -112,23 +110,37 @@
                     <div class="col-xl-2  col-lg-2  col-md-4 col-sm-6">
                         <div class="footer__widget mb-45   ani" swiper-animate-delay=".8s">
                             <div class="footer__widget-title">
-                                <h4>用户案例</h4>
+                                <h4><?php echo get_catname(10);?></h4>
                             </div>
                             <div class="footer__widget-content">
                                 <div class="footer__links">
+                                    <?php $data = get_childcat(10);?>
                                     <ul>
-                                        <li><a href="#">用户案例</a></li>
-                                        <li><a href="#">机构</a></li>
-                                        <li><a href="#">数字营销</a></li>
-                                        <li><a href="#">商业搜索引擎</a></li>
-                                        <li><a href="#">企业</a></li>
-                                        <li><a href="#">出版商</a></li>
+                                        <?php if(is_array($data)) foreach($data as $v) { ?>
+                                        <li><a href="<?php echo $v['pclink'];?>"><?php echo $v['catname'];?></a></li>
+                                        <?php } ?>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                    <div class="col-xl-2  col-lg-2  col-md-4 col-sm-6">
+                        <div class="footer__widget mb-45   ani" swiper-animate-delay=".8s">
+                            <div class="footer__widget-title">
+                                <h4><?php echo get_catname(64);?></h4>
+                            </div>
+                            <div class="footer__widget-content">
+                                <div class="footer__links">
+                                    <?php $data = get_childcat(64);?>
+                                    <ul>
+                                        <?php if(is_array($data)) foreach($data as $v) { ?>
+                                        <li><a href="<?php echo $v['pclink'];?>"><?php echo $v['catname'];?></a></li>
+                                        <?php } ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

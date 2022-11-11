@@ -1,0 +1,86 @@
+{m:include "index","header"}
+
+{php $parentids=get_category($catid, 'parentid')}
+
+{php $topImg=get_category($parentids,'catimg')}
+
+<link href="{STATIC_URL}css/yzm-style.css" rel="stylesheet" type="text/css" />
+
+<section class="page__title p-relative d-flex align-items-center fix" data-background="{$topImg}">
+    <div class="slider__shape">
+        <img class="shape triangle" src="{STATIC_URL}company/img/icon/slider/triangle.png" alt="triangle">
+        <img class="shape dotted-square" src="{STATIC_URL}company/img/icon/slider/dotted-square.png"
+            alt="dotted-square">
+        <img class="shape solid-square" src="{STATIC_URL}company/img/icon/slider/solid-square.png" alt="solid-square">
+        <img class="shape circle-2" src="{STATIC_URL}company/img/icon/slider/circle.png" alt="circle">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="page__title-content ">
+                    <h2>{$title}</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container  production-wrap">
+        <div class="row">
+            <div class="col-lg-3">
+
+
+                {php $data = get_childcat($parentids);}
+                <ul class="category-wrap">
+                    {php $parent=get_category($catid,'parentid')}
+                    <a href="{get_category($parent,'pclink')}">部分产品展示图</a>
+                    {loop $data $v}
+
+                    <a {if $catid===$v[catid]} class="select" {/if} href="{$v[pclink]}">{$v[catname]}</a>
+                    {/loop}
+                </ul>
+            </div>
+            <div class="col-lg-9">
+                <div class="production-right">
+                    <div class="location">
+                        {get_location($catid)}
+                    </div>
+                    <div class="list-wrap   ">
+                        <div class="desc-title">
+                            {$title}
+                        </div>
+                        <div class="desc-wrap">
+                            {$content}
+                        </div>
+                        <div class="pics-wrap">
+                            {php $pictures = string2array($pictures);}
+                            <div class="yzm-image" id="bigpics">
+                                <!-- 获取产品图集第一张的图片地址 -->
+                                <img
+                                    src="{if !isset($pictures[0])}{STATIC_URL}images/nopic.jpg{else}{$pictures[0][url]}{/if}" />
+                            </div>
+                            <div class="yzm-switch" style="display: flex;">
+                                <div class="yzm-icon1"><a href="javascript:;" title="上一个" onfocus="this.blur();">上一个</a>
+                                </div>
+                                <div class="yzm-switch-center" id="pics">
+                                    <ul>
+                                        {loop $pictures $v}
+                                        <li><a href="javascript:;"><img src="{$v[url]}" alt="{$v[alt]}"
+                                                    title="{$v[alt]}"></a>
+                                        </li>
+                                        {/loop}
+                                    </ul>
+                                </div>
+                                <div class="yzm-icon2"><a href="javascript:;" title="下一个" onfocus="this.blur();">下一个</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{m:include "index","footer"}
+<script type="text/javascript" src="{STATIC_URL}js/yzm-product-img.js"></script>

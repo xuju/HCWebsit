@@ -28,14 +28,10 @@
 
                 {php $data = get_childcat($parentid);}
                 <ul class="category-wrap">
-                    <li class="select">
-                        <a href="{get_category($parentid,'pclink')}">部分产品展示图</a>
-                    </li>
+                    <a href="{get_category($parentid,'pclink')}">部分产品展示图</a>
                     {loop $data $v}
-                    <!-- <li {if $catid===$v[catid]} class="select" {/if}> -->
-                    <li>
-                        <a href="{$v[pclink]}">{$v[catname]}</a>
-                    </li>
+
+                    <a {if $catid===$v[catid]} class="select" {/if} href="{$v[pclink]}">{$v[catname]}</a>
                     {/loop}
                 </ul>
             </div>
@@ -45,7 +41,7 @@
                         {get_location($catid)}
                     </div>
                     <div class="list-wrap">
-                        {m:lists field="title,url,thumb" catid="$catid" limit="10" page="page"}
+                        {m:lists field="title,url,thumb" catid="$catid" limit="9" page="page"}
                         <div class="row">
                             {loop $data $v}
                             <div class=" col-lg-4 col-sm-6  col-md-6">

@@ -10,10 +10,10 @@
 <?php include template("index","./home/honor"); ?>
 <?php include template("index","./home/organization"); ?>
 <?php include template("index","./home/news"); ?>
-<?php include template("index","./home/footer"); ?>
 
 
 
+<?php include template("index","footer"); ?>
 
 </body>
 <script src="<?php echo STATIC_URL;?>company/js/vendor/waypoints.min.js"></script>
@@ -37,7 +37,15 @@
         const dom = document.getElementsByClassName('home-types-item');
         $('.home-types-item').on("click", function () {
             let index = $(this).index();
-            swiper.slideTo(index, 1000, false);
+            $(document).scrollTop(index * 900)
+            if (index === 0) {
+                $(document).scrollTop(0)
+            } else {
+                $(document).scrollTop(index * 900 + 900)
+            }
+            // if (index === 1) {
+            //     $(document).scrollTop(1800)
+            // }
         })
 
 

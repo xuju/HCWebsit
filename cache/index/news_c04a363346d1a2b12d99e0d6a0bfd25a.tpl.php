@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class=" col-lg-6">
-                    <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'lists')) {$data = $tag->lists(array('field'=>'title,thumb,url,color,updatetime,content','catid'=>'53','limit'=>'5','order'=>'updatetime
+                    <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'lists')) {$data = $tag->lists(array('field'=>'title,thumb,url,color,updatetime,content','catid'=>'53','limit'=>'4','order'=>'updatetime
                     DESC',));}?>
                     <?php $i=0;?>
 
