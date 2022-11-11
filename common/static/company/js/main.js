@@ -18,7 +18,7 @@
 15. InHover Active Js
 16. Parallax Js
 ****************************************************/
-
+console.log(111);
 (function ($) {
 	"use strict";
 

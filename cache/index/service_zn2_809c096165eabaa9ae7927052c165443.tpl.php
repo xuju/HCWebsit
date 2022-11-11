@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="page__title-content ">
+                <div class="page__title-content wow fadeInUp">
                     <h2><?php echo get_catname($catid);?></h2>
 
                 </div>
@@ -22,7 +22,7 @@
 <div class="servive-bg">
     <section class="service-category">
         <div class="container">
-            <div class="service-category-wrap">
+            <div class="service-category-wrap wow fadeInUp">
                 <?php $catids=$parentid?$parentid:$catid?>
                 <?php $data = get_childcat($catids);?>
                 <div class="left">
@@ -38,10 +38,10 @@
             </div>
         </div>
     </section>
-    <section class="service-content">
+    <section class="service-content  ">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3  wow fadeInUp">
 
                     <div class="left-menu-wrap">
                         <div class="left-menu-item  service-menu-item ">
@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-lg-9 ">
                     <div class="right-wrap">
-                        <div class="right-content-item ">
+                        <div class="right-content-item  wow fadeInUp ">
                             <h3>3D打印文件格式规范</h3>
                             <div class="desc">
                                 以下是使用不同软件，导出STL格式文件的具体方法：
@@ -84,7 +84,7 @@
                                 <img src="<?php echo STATIC_URL;?>company/images/fw01.jpg" alt="">
                             </div>
                         </div>
-                        <div class="right-content-item ">
+                        <div class="right-content-item  wow fadeInUp ">
                             <h3>部分设计规范</h3>
                             <div class="desc">
                                 为了确保您的设计能够顺利打印，请您依次操作以下步骤：
@@ -106,7 +106,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="right-content-item ">
+                        <div class="right-content-item  wow fadeInUp ">
                             <h3>选择合适的材料</h3>
                             <div class="desc">
                                 您可以根据您的实际需要选择合适的材料，下面是各种材料的重要信息。
@@ -185,7 +185,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="right-content-item ">
+                        <div class="right-content-item  wow fadeInUp ">
                             <h3>3D打印不同材料的最小壁厚要求</h3>
                             <div class="desc">
                                 在您的3D设计文件中，模型的内、外表面闭合形成薄壁，其中：<br />至少有两个面与其他薄壁相连的，称为支撑性薄壁，如下图：
@@ -301,7 +301,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="right-content-item ">
+                        <div class="right-content-item  wow fadeInUp ">
                             <h3>空心设计中逸出孔的大小要求</h3>
                             <div class="desc">
                                 如果您的设计是空心的，需要在适当的部位设计逸出孔，用于移除打印完毕后的产品中未被使用的材料，具体如下：
@@ -317,7 +317,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="right-content-item ">
+                        <div class="right-content-item  wow fadeInUp ">
                             <h3>立柱的最小壁厚设计要求</h3>
                             <div class="desc">
                                 模型中如果某个凸出部分的特征其长度超过宽度2倍我们称之为立柱（长度小于宽度2倍的称为凸状细节）,其中两端都和薄壁相连的称为支撑型立柱如下图：
@@ -373,7 +373,7 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="right-content-item ">
+                        <div class="right-content-item  wow fadeInUp ">
                             <h3>凸状和凹状的细节要求</h3>
                             <div class="desc">
                                 模型中如果某个凸起部分的特征其高度小于宽度的2倍（若高度大于宽度的2倍我们称为独立柱子）我们称之为凸状细节，如下图：
@@ -446,7 +446,7 @@
                                     当凹状细节的深度或宽度小于最小凹状细节要求时，将无法准确地打印，无法进行打磨、喷洒等后处理。此时建议您增加深度/宽度、去除该部分或者选择其他合适的材料。</p>
                             </div>
                         </div>
-                        <div class="right-content-item ">
+                        <div class="right-content-item  wow fadeInUp ">
                             <h3>间隙设计要求：</h3>
                             <div class="desc">
                                 间隙是指任何两个零件薄壁或者立柱之间的距离如下图：
@@ -488,7 +488,7 @@
 
                             </div>
                         </div>
-                        <div class="right-content-item ">
+                        <div class="right-content-item  wow fadeInUp ">
                             <h3>间隙设计要求：</h3>
                             <div class="desc">
                                 螺距是指螺纹上相邻两牙对应点之间的轴向距离如下图：

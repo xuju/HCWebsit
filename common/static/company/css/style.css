@@ -5188,6 +5188,7 @@ p {
 }
 .footer__copyright-text p {
   margin-bottom: 0;
+  color: #fff;
 }
 .footer__copyright-text p a {
   color: blue;
@@ -5743,6 +5744,9 @@ p {
   font-family: AlibabaPuHuiTiM;
   font-size: 18px;
   justify-content: center;
+}
+.show-wrap .show-menu-wrap > .container > .show-menu-item:hover a {
+  color: #8E33F2 !important;
 }
 .show-wrap .show-menu-wrap > .container > .show-menu-item.select {
   font-size: 20px;

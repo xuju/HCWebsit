@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class=" col-sm-12 col-lg-6">
-                <div class="company-title ani d-none d-lg-block wow fadeInUp" data-delay=".1s">
+                <div class="company-title  d-none d-lg-block wow fadeInUp" data-delay=".1s">
                     <span class="company-title-text">
                         公司简介
                     </span>

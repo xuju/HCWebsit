@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="page__title-content ">
+                <div class="page__title-content wow fadeInUp ">
                     <h2><?php echo get_catname($catid);?></h2>
 
                 </div>
@@ -22,7 +22,7 @@
 </section>
 <section class="service-category">
     <div class="container">
-        <div class="service-category-wrap">
+        <div class="service-category-wrap wow fadeInUp">
             <?php $catids=$parentid?$parentid:$catid?>
             <?php $data = get_childcat($catids);?>
             <div class="left">
@@ -39,8 +39,8 @@
     </div>
 </section>
 <section class="service-center" style="padding-top: 60px;">
-    <div class="container">
-        <div class="service-center-content">
+    <div class="container ">
+        <div class="service-center-content wow fadeInUp">
             <div class="title"> <?php echo get_category($catid, 'catname');?></div>
             <div class="sub-title">交货周期</div>
             <p class="desc">

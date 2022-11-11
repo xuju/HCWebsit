@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="page__title-content ">
+                <div class="page__title-content wow fadeInUp">
                     <h2><?php echo get_catname($catid);?></h2>
 
                 </div>
@@ -23,7 +23,7 @@
 <section>
     <div class="container  production-wrap">
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3 wow fadeInUp">
 
 
                 <?php $data = get_childcat($parentid);?>
@@ -37,14 +37,14 @@
             </div>
             <div class="col-lg-9">
                 <div class="production-right">
-                    <div class="location">
+                    <div class="location wow fadeInUp">
                         <?php echo get_location($catid);?>
                     </div>
                     <div class="list-wrap">
                         <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'lists')) {$data = $tag->lists(array('field'=>'title,url,thumb','catid'=>$catid,'limit'=>'9','page'=>'page',));$pages = $tag->pages();}?>
-                        <div class="row">
+                        <div class="row ">
                             <?php if(is_array($data)) foreach($data as $v) { ?>
-                            <div class=" col-lg-4 col-sm-6  col-md-6">
+                            <div class=" col-lg-4 col-sm-6  col-md-6 wow fadeInUp">
                                 <a href="<?php echo $v['url'];?>">
                                     <div class="list-item">
                                         <div class="img-wrap">

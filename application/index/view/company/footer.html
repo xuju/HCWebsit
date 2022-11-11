@@ -4,7 +4,7 @@
         <div class="footer__top  ani" swiper-animate-effect="fadeInUp" swiper-animate-delay=".1s">
             <div class="container">
                 <div class="footer-top">
-                    <div class="footer-top-item">
+                    <div class="footer-top-item    wow fadeInUp" data-delay=".1s">
                         <div class="footer-item-left">
                             <img src="{STATIC_URL}company/images/tel.png" alt="联系电话">
                         </div>
@@ -13,7 +13,7 @@
                             <span class="footer-item-value">{$site[phone]}</span>
                         </div>
                     </div>
-                    <div class="footer-top-item">
+                    <div class="footer-top-item    wow fadeInUp" data-delay=".1s">
                         <div class="footer-item-left">
                             <img src="{STATIC_URL}company/images/location.png" alt="联系电话">
                         </div>
@@ -22,7 +22,7 @@
                             <span class="footer-item-value">{$site[address]}</span>
                         </div>
                     </div>
-                    <div class="footer-top-item">
+                    <div class="footer-top-item    wow fadeInUp" data-delay=".1s">
                         <div class="footer-item-left">
                             <img src="{STATIC_URL}company/images/email.png" alt="联系电话">
                         </div>
@@ -150,7 +150,7 @@
                     <div class="col-12">
                         <div class="footer__copyright-text">
                             <p>&copy;
-                                京ICP证030173号京网文|2013|0934-983号 Copyright ©2022 Baidu
+                                {$site[site_copyright]}
                             </p>
                         </div>
                     </div>

@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="page__title-content ">
+                <div class="page__title-content wow fadeInUp ">
                     <h2><?php echo get_catname($catid);?></h2>
 
                 </div>
@@ -31,7 +31,7 @@
         <div class="container">
             <?php $data = get_childcat($parid);?>
             <?php if(is_array($data)) foreach($data as $v) { ?>
-            <li class="show-menu-item <?php if($catid===$v[catid]) { ?>  select <?php } ?> ">
+            <li class="show-menu-item <?php if($catid===$v[catid]) { ?>  select <?php } ?>  wow fadeInUp">
                 <a href="<?php echo $v['pclink'];?>"><?php echo $v['catname'];?></a>
             </li>
             <?php } ?>

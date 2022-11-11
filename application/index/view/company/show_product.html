@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-                <div class="page__title-content ">
+                <div class="page__title-content wow fadeInUp ">
                     <h2>{get_catname($catid)}</h2>
 
                 </div>
@@ -31,7 +31,7 @@
         <div class="container">
             {php $data = get_childcat($parid);}
             {loop $data $v}
-            <li class="show-menu-item {if  $catid===$v[catid]}  select {/if} ">
+            <li class="show-menu-item {if  $catid===$v[catid]}  select {/if}  wow fadeInUp">
                 <a href="{$v[pclink]}">{$v[catname]}</a>
             </li>
             {/loop}
