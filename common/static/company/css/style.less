@@ -5764,6 +5764,7 @@ p {
     font-family: AlibabaPuHuiTiM;
     color: #FFFFFF;
     position: relative;
+    font-size: 60px;
 }
 
 .page__title-content h2::before {
@@ -7008,4 +7009,120 @@ p {
     .footer__copyright-text {
         text-align: center;
     }
+}
+
+.time-wrap {
+    display: flex;
+    flex-direction: column;
+
+    .time-item {
+        position: relative;
+
+
+        .time-circle {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #9C73E1;
+            position: absolute;
+            left: -36px;
+            top: 5px;
+
+            &::before {
+                content: "";
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                position: absolute;
+                left: -5px;
+                right: 0;
+                top: -5px;
+                bottom: 0;
+                background-color: rgba(219, 197, 255, .5);
+            }
+        }
+
+
+        .time-text {
+            flex: 1;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: -28px;
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                background-color: #DCC7FE;
+                z-index: -1;
+            }
+
+            .time-year {
+                font-family: AlibabaPuHuiTiB;
+                font-weight: bold;
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+            .time-desc p {
+                font-size: 18px;
+                font-family: AlibabaPuHuiTiR;
+                color: #44434D;
+                line-height: 1.5;
+
+            }
+
+        }
+    }
+
+
+}
+
+.cp-wrap {
+    padding: 30px !important;
+    margin-left: 30px;
+
+    .time-year {
+        font-family: AlibabaPuHuiTiM !important;
+        color: #605B66 !important;
+        font-weight: normal !important;
+        font-size: 18px !important;
+
+        padding-bottom: 20px;
+        margin-bottom: 0 !important;
+    }
+
+    .time-item {
+        .time-circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #9C73E1;
+            position: absolute;
+            left: -34px;
+            top: 10px;
+
+            &::before {
+                content: "";
+                width: 20px !important;
+                height: 20px !important;
+                border-radius: 50%;
+                position: absolute;
+                left: -4px;
+                right: 0;
+                top: -4px;
+                bottom: 0;
+                background-color: rgba(219, 197, 255, .5);
+            }
+        }
+    }
+}
+
+.cp-desc {
+    margin-left: 30px;
+    margin-top: 30px;
+    color: #605B66 !important;
+
+
 }

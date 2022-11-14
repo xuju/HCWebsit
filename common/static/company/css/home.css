@@ -322,60 +322,6 @@ body {
 .company-rong .row {
   padding-left: 50px;
 }
-.company-rong .time-wrap {
-  display: flex;
-  flex-direction: column;
-}
-.company-rong .time-wrap .time-item {
-  position: relative;
-}
-.company-rong .time-wrap .time-item .time-circle {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: #9C73E1;
-  position: absolute;
-  left: -36px;
-  top: 5px;
-}
-.company-rong .time-wrap .time-item .time-circle::before {
-  content: "";
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  position: absolute;
-  left: -5px;
-  right: 0;
-  top: -5px;
-  bottom: 0;
-  background-color: rgba(219, 197, 255, 0.5);
-}
-.company-rong .time-wrap .time-item .time-text {
-  flex: 1;
-  position: relative;
-}
-.company-rong .time-wrap .time-item .time-text::before {
-  content: "";
-  position: absolute;
-  left: -28px;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background-color: #DCC7FE;
-  z-index: -1;
-}
-.company-rong .time-wrap .time-item .time-text .time-year {
-  font-family: AlibabaPuHuiTiB;
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-.company-rong .time-wrap .time-item .time-text .time-desc p {
-  font-size: 18px;
-  font-family: AlibabaPuHuiTiR;
-  color: #44434D;
-  line-height: 1.5;
-}
 .company-rong .rongyuc {
   position: absolute;
   top: 22%;

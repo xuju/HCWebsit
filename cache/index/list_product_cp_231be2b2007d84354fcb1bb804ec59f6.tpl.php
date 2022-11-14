@@ -1,5 +1,6 @@
 <?php defined('IN_YZMPHP') or exit('No permission resources.'); ?><?php include template("index","header"); ?>
-<section class="page__title p-relative d-flex align-items-center fix" data-background="<?php echo $catimg;?>">
+<?php $listimgs=$catimg?$catimg:get_category($parentid, 'catimg')?>
+<section class="page__title p-relative d-flex align-items-center fix" data-background="<?php echo $listimgs;?>">
     <div class="slider__shape">
         <img class="shape triangle" src="<?php echo STATIC_URL;?>company/img/icon/slider/triangle.png" alt="triangle">
         <img class="shape dotted-square" src="<?php echo STATIC_URL;?>company/img/icon/slider/dotted-square.png"
@@ -24,22 +25,16 @@
             <div class="col-lg-3 list-width">
 
 
-                <?php $data = get_childcat($catid);?>
+                <?php $data = get_childcat(get_category($catid, 'parentid'));?>
                 <ul class="category-wrap wow fadeInUp">
-                    <a class="select" href="<?php echo get_category($catid, 'pclink');?>">
-                        <?php if($catid==10) { ?>
-                        所有设备展示
-                        <?php } elseif ($catid==23) { ?>
-                        部分生产工艺展示
-                        <?php } else { ?>
+                    <a href="<?php echo get_category($parentid, 'pclink');?>">
                         部分产品展示图
-                        <?php } ?>
                     </a>
                     <?php if(is_array($data)) foreach($data as $v) { ?>
                     <!-- <li>
                         <a href="<?php echo $v['pclink'];?>"><?php echo $v['catname'];?></a>
                     </li> -->
-                    <a href="<?php echo $v['pclink'];?>">
+                    <a <?php if($catid===$v[catid]) { ?> class="select" <?php } ?> href="<?php echo $v['pclink'];?>">
                         <?php echo $v['catname'];?>
                     </a>
                     <?php } ?>
@@ -51,21 +46,26 @@
                         <?php echo get_location($catid);?>
                     </div>
                     <div class="list-wrap">
-                        <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'lists')) {$data = $tag->lists(array('field'=>'title,url,thumb','catid'=>$catid,'limit'=>'9','page'=>'page',));$pages = $tag->pages();}?>
+                        <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'lists')) {$data = $tag->lists(array('field'=>'title,url,thumb,description','catid'=>$catid,'limit'=>'9','page'=>'page',));$pages = $tag->pages();}?>
+                        <?php $i=0?>
                         <div class="row">
-                            <?php if(is_array($data)) foreach($data as $v) { ?>
-                            <div class=" col-lg-4 col-sm-6  col-md-6 wow fadeInUp">
-                                <a href="<?php echo $v['url'];?>">
-                                    <div class="list-item">
-                                        <div class="img-wrap">
-                                            <img src="<?php echo get_thumb($v['thumb']);?>" alt="<?php echo $v['title'];?>">
+                            <div class="time-wrap cp-wrap">
+                                <?php if(is_array($data)) foreach($data as $v) { ?>
+                                <?php $i++; ?>
+                                <div class="time-item wow fadeInUp" data-delay=".<?php echo $i;?>s">
+                                    <div class="time-circle"></div>
+                                    <div class="time-text">
+                                        <div class="time-year">
+                                            <?php echo $v['title'];?>
                                         </div>
-                                        <span class="title"><?php echo $v['title'];?></span>
+                                        <div class="time-desc">
+                                            <?php echo $v['description'];?>
+                                        </div>
                                     </div>
-                                </a>
+                                </div>
+                                <?php } ?>
 
                             </div>
-                            <?php } ?>
                             <div class="col-xl-12">
                                 <div class="portfolio__load mt-25">
 

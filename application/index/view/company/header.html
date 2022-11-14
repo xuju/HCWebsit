@@ -85,23 +85,23 @@
                         <div class="col-xl-6 col-lg-7 col-md-8">
                             <div class="header__info f-right">
                                 <ul>
-                                    <li>
+                                    <!-- <li>
                                         <a href="tel:(+468)-254-762-443">
                                             <i class="fal fa-phone-alt"></i>
-                                            <!-- (+86) 18018149584 -->
+                                            (+86) 18018149584
                                         </a>
                                     </li>
                                     <li>
                                         <a href="mailto:qhyft@163.com">
                                             <i class="fal fa-envelope"></i>
-                                            <!-- 848820348@qq.com -->
+                                            848820348@qq.com
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0);" class="search-toggle">
                                             <i class="far fa-search"></i>
                                         </a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </div>

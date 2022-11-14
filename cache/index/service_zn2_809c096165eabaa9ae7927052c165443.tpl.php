@@ -168,16 +168,23 @@
                                             <td>160℃</td>
                                         </tr>
                                         <tr>
-                                            <td>6061铝合金</td>
-                                            <td>焊接、电镀性好、易加工</td>
-                                            <td>机械制造</td>
-                                            <td>CNC</td>
+                                            <td>AlSi10Mg</td>
+                                            <td>打印产品的强度高</td>
+                                            <td>零配件制造</td>
+                                            <td>SLM</td>
                                             <td></td>
                                         </tr>
                                         <tr>
                                             <td>7075铝合金</td>
                                             <td>机械性能好、抗腐蚀、抗氧化</td>
-                                            <td>机械制造、模具加工</td>
+                                            <td>零配件制造</td>
+                                            <td>CNC</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6061铝合金</td>
+                                            <td>焊接性能好，强度高</td>
+                                            <td>零配件制造</td>
                                             <td>CNC</td>
                                             <td></td>
                                         </tr>
@@ -279,8 +286,8 @@
                                             <th scope="col">白色尼龙</th>
                                             <th scope="col">灰色玻璃纤维</th>
                                             <th scope="col">灰色高韧性类ABS</th>
-                                            <th scope="col">6061铝合金</th>
-                                            <th scope="col">7075铝合金</th>
+                                            <th scope="col">AlSi10Mg铝合金</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -292,7 +299,6 @@
                                             <td>0.8mm</td>
                                             <td>0.8mm</td>
                                             <td>0.8mm</td>
-                                            <td>1mm</td>
                                             <td>1mm</td>
                                         </tr>
 
@@ -341,8 +347,8 @@
                                             <th scope="col">透明光敏树脂</th>
                                             <th scope="col">白色尼龙</th>
                                             <th scope="col">灰色玻璃纤维</th>
-                                            <th scope="col">6061铝合金</th>
-                                            <th scope="col">7075铝合金</th>
+                                            <th scope="col">AlSi10Mg铝合金</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -354,7 +360,7 @@
                                             <td>1mm</td>
                                             <td>1mm</td>
                                             <td>1mm</td>
-                                            <td>1mm</td>
+
                                         </tr>
                                         <tr>
 
@@ -365,7 +371,7 @@
                                             <td>1mm</td>
                                             <td>1mm</td>
                                             <td>1mm</td>
-                                            <td>1mm</td>
+
                                         </tr>
 
 
@@ -382,11 +388,12 @@
 
                                 <img src="<?php echo STATIC_URL;?>company/images/6.jpg" alt="">
                                 <div class="desc">
-                                    最小凸状细节通常是由打印机的精度决定的。不同材料的凸状细节的最小高度/宽度要求如下（例如，8000树脂材料的凸字细节，其高度和宽度必须大于1.2mm，才能打印清楚）：
+                                    最小凸状细节通常是由打印机的精度决定的。不同材料的凸状细节的最小高度/宽度要求如下（例如8000树脂材料的凸字细节其高度和宽度必须大于1.2mm才能打印清楚）：
                                 </div>
                                 <img src="<?php echo STATIC_URL;?>company/images/7.jpg" alt="">
                                 <p class="desc">
-                                    去除支撑、打磨、喷砂等工序决定了最小立柱壁厚要求不同材料立柱最小壁厚要求如下：
+                                    去除支撑、打磨、喷砂等工序决定了最小立柱壁厚要求不同材料立柱最小壁厚要求如下：<br />
+
                                 </p>
                                 <table class="table table-bordered">
                                     <thead>
@@ -398,6 +405,7 @@
                                             <th scope="col">白色尼龙</th>
                                             <th scope="col">灰色玻璃纤维</th>
                                             <th scope="col">灰色类ABS</th>
+                                            <th scope="col">AlSi10Mg铝合金</th>
 
                                         </tr>
                                     </thead>
@@ -410,12 +418,12 @@
                                             <td>1mm</td>
                                             <td>1mm</td>
                                             <td>0.8mm</td>
-
+                                            <td>0.5mm</td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <p class="desc">
-                                    最小凸状细节通常是由打印机的精度决定的。不同材料的凸状细节的最小高度/宽度要求如下（例如8000树脂材料的凸字细节其高度和宽度必须大于1.2mm才能打印清楚）：</p>
+                                    最小凹状细节通常是由打印机的精度决定的。不同材料的凹状细节的最小深度/宽度要求如下（例如，8000树脂材料的凹字细节其深度和宽度必须大于1mm才能打印清楚）：</p>
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -426,7 +434,7 @@
                                             <th scope="col">白色尼龙</th>
                                             <th scope="col">灰色玻璃纤维</th>
                                             <th scope="col">灰色类ABS</th>
-
+                                            <th scope="col">AlSi10Mg铝合金</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -438,7 +446,7 @@
                                             <td>1mm</td>
                                             <td>1mm</td>
                                             <td>0.8mm</td>
-
+                                            <td>0.5mm</td>
                                         </tr>
                                     </tbody>
                                 </table>

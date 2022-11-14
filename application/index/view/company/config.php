@@ -17,7 +17,9 @@
     'category_page_honor' => '公司荣誉',	
     'category_page_partner' => '合作伙伴',	
     'category_page_organization' => '组织架构',	
-    'category_article_service' => '服务专区'
+    'category_article_service' => '服务专区',
+    'category_product_cp' => '产品中心',
+    
   ),
   
   
@@ -29,7 +31,9 @@
 		'list_product' => '产品列表页模板',
 		'list_download' => '下载列表页模板',
 		'list_diyform' => '自定义表单列表模板', 		
-    'list_article_service' => '服务专区'
+    'list_article_service' => '服务专区',
+    "list_article_gy.html"=>"生产工艺方法",
+    'list_product_cp' => '产品中心',
   ),
   
   

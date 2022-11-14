@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="page__title-content ">
-                    <h2><?php echo $title;?></h2>
+                    <h2><?php echo get_catname($catid);?></h2>
 
                 </div>
             </div>

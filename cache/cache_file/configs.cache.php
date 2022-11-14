@@ -8,6 +8,7 @@ return array (
     'site_description' => '海创三维科技,海创三维科技（苏州）有限公司,海创三维科技苏州有限公司,苏州海创三维科技有限公司',
     'organization' => '/uploads/202211/03/221103051826611.png',
     'site_copyright' => '© 2014-2022',
+    'pcdesc' => '因相关内容有敏感信息需要保密所以不做展示，如有需求可以通过超链接在线联系对应部门。谢谢谅解!(仅介绍案例名称)',
     'site_filing' => '京ICP备666666号',
     'site_code' => '',
     'site_theme' => 'company',
@@ -70,10 +71,10 @@ return array (
     'rongyuc' => '/uploads/202211/03/221103035913952.png',
     'rongyue' => '/uploads/202211/03/221103035939248.png',
     'phone' => '18018149584',
-    'address' => '苏州工业园区东旺路8号七号楼A幢F301-047室',
+    'address' => '苏州工业园区东旺路8号',
     'email' => '848820348@qq.com',
   ),
   'expire' => 0,
-  'mtime' => 1668148177,
+  'mtime' => 1668417753,
 );
 ?>

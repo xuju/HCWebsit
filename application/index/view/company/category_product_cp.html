@@ -51,21 +51,29 @@
                         {get_location($catid)}
                     </div>
                     <div class="list-wrap">
-                        {m:lists field="title,url,thumb" catid="$catid" limit="9" page="page"}
+                        {m:lists field="title,url,thumb,description" catid="$catid" limit="9" page="page"}
+                        {php $i=0}
+
                         <div class="row">
-                            {loop $data $v}
-                            <div class=" col-lg-4 col-sm-6  col-md-6 wow fadeInUp">
-                                <a href="{$v[url]}">
-                                    <div class="list-item">
-                                        <div class="img-wrap">
-                                            <img src="{get_thumb($v['thumb'])}" alt="{$v[title]}">
+                            <p class=" cp-desc  wow fadeInUp">{$site[pcdesc]}</p>
+                            <div class="time-wrap cp-wrap">
+
+                                {loop $data $v}
+                                {$i++}
+                                <div class="time-item wow fadeInUp" data-delay=".{$i}s">
+                                    <div class="time-circle"></div>
+                                    <div class="time-text">
+                                        <div class="time-year">
+                                            <a href=""> {$v[title]}</a>
                                         </div>
-                                        <span class="title">{$v[title]}</span>
+                                        <div class="time-desc">
+                                            <!-- {$v[description]} -->
+                                        </div>
                                     </div>
-                                </a>
+                                </div>
+                                {/loop}
 
                             </div>
-                            {/loop}
                             <div class="col-xl-12">
                                 <div class="portfolio__load mt-25">
 

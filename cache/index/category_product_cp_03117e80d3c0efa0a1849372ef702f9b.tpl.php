@@ -51,21 +51,29 @@
                         <?php echo get_location($catid);?>
                     </div>
                     <div class="list-wrap">
-                        <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'lists')) {$data = $tag->lists(array('field'=>'title,url,thumb','catid'=>$catid,'limit'=>'9','page'=>'page',));$pages = $tag->pages();}?>
+                        <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'lists')) {$data = $tag->lists(array('field'=>'title,url,thumb,description','catid'=>$catid,'limit'=>'9','page'=>'page',));$pages = $tag->pages();}?>
+                        <?php $i=0?>
+
                         <div class="row">
-                            <?php if(is_array($data)) foreach($data as $v) { ?>
-                            <div class=" col-lg-4 col-sm-6  col-md-6 wow fadeInUp">
-                                <a href="<?php echo $v['url'];?>">
-                                    <div class="list-item">
-                                        <div class="img-wrap">
-                                            <img src="<?php echo get_thumb($v['thumb']);?>" alt="<?php echo $v['title'];?>">
+                            <p class=" cp-desc  wow fadeInUp"><?php echo $site['pcdesc'];?></p>
+                            <div class="time-wrap cp-wrap">
+
+                                <?php if(is_array($data)) foreach($data as $v) { ?>
+                                <?php $i++; ?>
+                                <div class="time-item wow fadeInUp" data-delay=".<?php echo $i;?>s">
+                                    <div class="time-circle"></div>
+                                    <div class="time-text">
+                                        <div class="time-year">
+                                            <a href=""> <?php echo $v['title'];?></a>
                                         </div>
-                                        <span class="title"><?php echo $v['title'];?></span>
+                                        <div class="time-desc">
+                                            <!-- <?php echo $v['description'];?> -->
+                                        </div>
                                     </div>
-                                </a>
+                                </div>
+                                <?php } ?>
 
                             </div>
-                            <?php } ?>
                             <div class="col-xl-12">
                                 <div class="portfolio__load mt-25">
 
