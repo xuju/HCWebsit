@@ -156,37 +156,12 @@
                                             </div>
 
 
-                                            <!-- <li><a href="about.html">关于我们</a></li>
-                                            <li>
-                                                <a href="services.html"> 服务 </a>
-                                                <ul class="submenu">
-                                                    <li><a href="services.html">服务</a></li>
-                                                    <li><a href="services-details.html">服务详细信息</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="portfolio.html">Insights</a>
-                                                <ul class="submenu">
-                                                    <li><a href="portfolio.html">设备介绍</a></li>
-                                                    <li><a href="portfolio-details.html">设备详细信息</a></li>
-                                                    <li><a href="team.html">team</a></li>
-                                                    <li><a href="team-details.html">team Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="blog.html">新闻中心</a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">新闻中心</a></li>
-                                                    <li><a href="blog-details.html">新闻中心 详情</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">联系我们</a></li> -->
                                         </ul>
                                     </nav>
                                 </div>
-                                <div class="header__btn d-none d-sm-block d-lg-none d-xl-block ml-50">
+                                <!-- <div class="header__btn d-none d-sm-block d-lg-none d-xl-block ml-50">
                                     <a href="contact.html" class="z-btn z-btn-white">询 价</a>
-                                </div>
+                                </div> -->
                                 <div class="sidebar__menu d-lg-none">
                                     <div class="sidebar-toggle-btn" id="sidebar-toggle">
                                         <span class="line"></span>
@@ -231,10 +206,10 @@
                         <a class="nav-link active" id="menu-tab" data-toggle="tab" href="#menu" role="tab"
                             aria-controls="menu" aria-selected="true">menu</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info"
                             aria-selected="false">info</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <div class="sidebar__content">
@@ -242,7 +217,7 @@
                     <div class="tab-pane fade show active" id="menu" role="tabpanel" aria-labelledby="menu-tab">
                         <div class="logo mb-40">
                             <a href="index.html">
-                                <img src="<?php echo STATIC_URL;?>company/img/logo/logo.png" alt="logo">
+                                <img src="<?php echo $site['site_logo'];?>" alt="logo">
                             </a>
                         </div>
                         <div class="mobile-menu"></div>
@@ -251,7 +226,7 @@
                         <div class="sidebar__info">
                             <div class="logo mb-40">
                                 <a href="index.html">
-                                    <img src="<?php echo STATIC_URL;?>company/img/logo/logo.png" alt="logo">
+                                    <img src="<?php echo $site['site_logo'];?>" alt="logo">
                                 </a>
                             </div>
                             <p>We must explain to you how all seds this mistakens idea off denouncing pleasures and

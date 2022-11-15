@@ -19,7 +19,10 @@
     'category_page_organization' => '组织架构',	
     'category_article_service' => '服务专区',
     'category_product_cp' => '产品中心',
-    
+    "category_page_service_d"=>"服务专区单页面",
+    "category_page_service_gy"=>"生产工艺单页",
+    "category_page_service_fw"=>"服务指南单页",
+    "category_page_service_sh1"=>"服务售后单页",
   ),
   
   

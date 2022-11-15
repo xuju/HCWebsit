@@ -5627,6 +5627,18 @@ p {
   position: relative;
   height: 100%;
 }
+.service-category .service-category-wrap > .left > .left-item.select {
+  color: #9134F2;
+}
+.service-category .service-category-wrap > .left > .left-item.select:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #9134F2;
+  bottom: 2px;
+}
 .service-category .service-category-wrap > .left > .left-item a {
   padding: 0 30px;
   position: relative;

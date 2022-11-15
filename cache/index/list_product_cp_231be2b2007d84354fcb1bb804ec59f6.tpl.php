@@ -22,6 +22,7 @@
 <section>
     <div class="container  production-wrap">
         <div class="row">
+
             <div class="col-lg-3 list-width">
 
 
@@ -49,6 +50,7 @@
                         <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'lists')) {$data = $tag->lists(array('field'=>'title,url,thumb,description','catid'=>$catid,'limit'=>'9','page'=>'page',));$pages = $tag->pages();}?>
                         <?php $i=0?>
                         <div class="row">
+                            <p class=" cp-desc  wow fadeInUp"><?php echo $site['pcdesc'];?></p>
                             <div class="time-wrap cp-wrap">
                                 <?php if(is_array($data)) foreach($data as $v) { ?>
                                 <?php $i++; ?>
@@ -56,10 +58,10 @@
                                     <div class="time-circle"></div>
                                     <div class="time-text">
                                         <div class="time-year">
-                                            <?php echo $v['title'];?>
+                                            <a href="<?php echo get_category(51, 'pclink');?>"> <?php echo $v['title'];?></a>
                                         </div>
                                         <div class="time-desc">
-                                            <?php echo $v['description'];?>
+                                            <!-- <?php echo $v['description'];?> -->
                                         </div>
                                     </div>
                                 </div>

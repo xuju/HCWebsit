@@ -1,6 +1,6 @@
 <?php defined('IN_YZMPHP') or exit('No permission resources.'); ?><?php include template("index","header"); ?>
 <?php $listimgs=$catimg?$catimg:get_category($parentid, 'catimg')?>
-<?php $select=79?>
+<?php $select=83?>
 <section class="page__title p-relative d-flex align-items-center fix" data-background="<?php echo $listimgs;?>">
     <div class="slider__shape">
         <img class="shape triangle" src="<?php echo STATIC_URL;?>company/img/icon/slider/triangle.png" alt="triangle">
@@ -25,15 +25,15 @@
         <div class="container">
             <div class="service-category-wrap wow fadeInUp">
                 <?php $catids=$parentid?$parentid:$catid?>
-                <?php $data = get_childcat($catids);?>
+                <?php $data = get_childcat($catid);?>
                 <div class="left">
                     <?php if(is_array($data)) foreach($data as $v) { ?>
-                    <div class="left-item  select">
+                    <div class="left-item  <?php if($v[catid]===$select) { ?>  select<?php } ?>">
                         <a href="<?php echo $v['pclink'];?>"><?php echo $v['catname'];?></a>
                     </div>
                     <?php } ?>
                 </div>
-                <div class="right">
+                <div class="right d-none d-lg-block">
                     <?php echo get_location($catid);?>
                 </div>
             </div>
@@ -43,30 +43,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3  wow fadeInUp">
-                    <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'lists')) {$data = $tag->lists(array('field'=>'title,thumb,url,color,catid,updatetime','catid'=>$catid,'limit'=>'1000','order'=>'article_order ASC',));}?>
+                    <?php $data = get_childcat($select);?>
                     <?php $i=0;?>
+                    <?php if(is_array($data)) foreach($data as $v) { ?>
+                    <?php $i++;?>
                     <div class="left-menu-wrap">
-                        <?php if(is_array($data)) foreach($data as $v) { ?>
-                        <?php $i++;?>
-                        <div <?php if($i===1) { ?> class="left-menu-item  select" <?php } else { ?>class="left-menu-item" <?php } ?>>
-                            <a href="<?php echo $v['url'];?>"><?php echo $v['title'];?></a>
-
+                        <div class="left-menu-item  <?php if($i===1) { ?> service-menu-item <?php } ?> ">
+                            <a href="<?php echo $v['pclink'];?>"> <?php echo $v['catname'];?></a>
                         </div>
-                        <?php } ?>
                     </div>
+                    <?php } ?>
                 </div>
                 <div class="col-lg-9 ">
-
                     <div class="right-wrap">
-                        <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'get')) {$data = $tag->get(array('sql'=>"select * from hc_article where catid=$select",'limit'=>'1',));}?>
+                        <?php $tag = yzm_base::load_sys_class('yzm_tag');if(method_exists($tag, 'get')) {$data = $tag->get(array('sql'=>"select * from hc_page where catid=87",'limit'=>'1',));}?>
                         <?php if(is_array($data)) foreach($data as $v) { ?>
                         <div class="right-content-item  wow fadeInUp ">
                             <h3> <?php echo $v['title'];?></h3>
                             <div class="desc">
                                 <?php echo $v['content'];?>
                             </div>
-
                         </div>
+
+
 
                         <?php } ?>
                     </div>

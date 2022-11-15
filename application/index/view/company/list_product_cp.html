@@ -22,6 +22,7 @@
 <section>
     <div class="container  production-wrap">
         <div class="row">
+
             <div class="col-lg-3 list-width">
 
 
@@ -49,6 +50,7 @@
                         {m:lists field="title,url,thumb,description" catid="$catid" limit="9" page="page"}
                         {php $i=0}
                         <div class="row">
+                            <p class=" cp-desc  wow fadeInUp">{$site[pcdesc]}</p>
                             <div class="time-wrap cp-wrap">
                                 {loop $data $v}
                                 {$i++}
@@ -56,10 +58,10 @@
                                     <div class="time-circle"></div>
                                     <div class="time-text">
                                         <div class="time-year">
-                                            {$v[title]}
+                                            <a href="{get_category(51, 'pclink')}"> {$v[title]}</a>
                                         </div>
                                         <div class="time-desc">
-                                            {$v[description]}
+                                            <!-- {$v[description]} -->
                                         </div>
                                     </div>
                                 </div>

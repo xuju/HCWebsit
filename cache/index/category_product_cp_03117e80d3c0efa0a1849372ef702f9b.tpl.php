@@ -27,13 +27,7 @@
                 <?php $data = get_childcat($catid);?>
                 <ul class="category-wrap wow fadeInUp">
                     <a class="select" href="<?php echo get_category($catid, 'pclink');?>">
-                        <?php if($catid==10) { ?>
-                        所有设备展示
-                        <?php } elseif ($catid==23) { ?>
-                        部分生产工艺展示
-                        <?php } else { ?>
                         部分产品展示图
-                        <?php } ?>
                     </a>
                     <?php if(is_array($data)) foreach($data as $v) { ?>
                     <!-- <li>
@@ -47,7 +41,7 @@
             </div>
             <div class="col-lg-9">
                 <div class="production-right">
-                    <div class="location wow fadeInUp">
+                    <div class="location wow fadeInUp d-none d-lg-block">
                         <?php echo get_location($catid);?>
                     </div>
                     <div class="list-wrap">
@@ -64,7 +58,7 @@
                                     <div class="time-circle"></div>
                                     <div class="time-text">
                                         <div class="time-year">
-                                            <a href=""> <?php echo $v['title'];?></a>
+                                            <a href="<?php echo get_category(51, 'pclink');?>"> <?php echo $v['title'];?></a>
                                         </div>
                                         <div class="time-desc">
                                             <!-- <?php echo $v['description'];?> -->

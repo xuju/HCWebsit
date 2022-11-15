@@ -39,11 +39,11 @@
                 <div class="map-right-wrap">
                     <h1>海创三维科技（苏州）有限公司</h1>
                     <div class="company-info-wrap">
-                        <p>地址：江苏省,苏州市,工业园区东旺路8号</p>
+                        <p>地址：<?php echo $site['address'];?></p>
                         <p> </p>
-                        <p>电话：<a href="tel:(+86)-18018149584">(+86) 18018149584</a></p>
+                        <p>电话：<a href="tel:(+86)-18018149584"><?php echo $site['phone'];?></a></p>
 
-                        <p>邮箱：<a href="mailto:848820348@qq.com">848820348@qq.com</a></p>
+                        <p>邮箱：<a href="mailto:848820348@qq.com"><?php echo $site['email'];?></a></p>
                     </div>
                     <div class="iShare iShare1" style="margin-top:30px;">
 
@@ -158,7 +158,7 @@
     <h6 style='margin:0 0 5px 0;'>海创三维科技（苏州）有限公司</h6>
 
     <p style='margin:0;line-height:1.5;font-size:13px;'>
-        苏州工业园区东旺路8号七号楼A幢F301-047室
+        苏州工业园区东旺路
     </p>
 </div>`;
     const infoWindow = new BMapGL.InfoWindow(sContent);
