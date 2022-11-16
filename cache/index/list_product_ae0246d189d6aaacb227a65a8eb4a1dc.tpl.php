@@ -23,7 +23,7 @@
 <section>
     <div class="container  production-wrap">
         <div class="row">
-            <div class="col-lg-3 wow fadeInUp">
+            <div class="col-lg-3  list-width wow fadeInUp">
 
 
                 <?php $data = get_childcat($parentid);?>

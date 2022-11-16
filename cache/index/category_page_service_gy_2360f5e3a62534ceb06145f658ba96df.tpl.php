@@ -44,7 +44,7 @@
             </div>
             <div class="col-lg-9">
                 <div class="production-right">
-                    <div class="location wow fadeInUp">
+                    <div class="location wow fadeInUp d-none d-lg-block">
                         <?php echo get_location($catid);?>
                     </div>
                     <div class="list-wrap">

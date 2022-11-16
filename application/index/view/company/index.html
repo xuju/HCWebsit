@@ -38,19 +38,39 @@
         });
 
 
+        const isMobile = () => {
+            return /(iPhone|iPad|iPod|iOS|Android|Linux armv8l|Linux armv7l|Linux aarch64)/i.test(navigator.platform);
+        };
+        if (isMobile()) {
+            let honorSwiper = new Swiper(".honorSwiper", {
+                slidesPerView: 2,
+                autoplay: true,
+                grid: {
+                    rows: 4,
+                    fill: 'row'
+                },
+                spaceBetween: 30,
+                // pagination: {
+                //     el: ".swiper-pagination",
+                //     clickable: true,
+                // },
+            });
+        } else {
+            let honorSwiper = new Swiper(".honorSwiper", {
+                slidesPerView: 5,
+                autoplay: true,
+                grid: {
+                    rows: 4,
+                    fill: 'row'
+                },
+                spaceBetween: 30,
+                // pagination: {
+                //     el: ".swiper-pagination",
+                //     clickable: true,
+                // },
+            });
+        }
 
-        let honorSwiper = new Swiper(".honorSwiper", {
-            slidesPerView: 5,
-            grid: {
-                rows: 4,
-                fill: 'row'
-            },
-            spaceBetween: 30,
-            // pagination: {
-            //     el: ".swiper-pagination",
-            //     clickable: true,
-            // },
-        });
 
     }
 

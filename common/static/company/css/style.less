@@ -52,6 +52,9 @@ html {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+}
 
 // @font-face {
 //     font-family: AlibabaPuHuiTiM;
@@ -1392,10 +1395,18 @@ p {
     margin-top: 40px;
 }
 
+.toggle-lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .sidebar__close {
     position: absolute;
-    top: 70px;
-    right: 80px;
+    // top: 70px;
+    // right: 80px;
+    top: 5px;
+    left: 26px;
 }
 
 .sidebar__close-btn {
@@ -6499,7 +6510,7 @@ p {
         text-align: center;
         font-family: AlibabaPuHuiTiM;
         color: #605B66;
-        font-size: 18px;
+        font-size: 16px;
         border-bottom: 1px solid rgba(0, 0, 0, .1);
         display: block;
 
@@ -6508,7 +6519,7 @@ p {
             color: #fff;
             font-family: AlibabaPuHuiTiM;
 
-            font-size: 24px;
+
             text-align: center;
             box-sizing: border-box;
             color: #fff;
@@ -7139,5 +7150,669 @@ p {
     margin-top: 30px;
     color: #605B66 !important;
 
+
+}
+
+
+
+
+
+body {
+    background: #fff !important;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 940px;
+}
+
+.home-swiper {
+    position: relative;
+}
+
+
+.home-types {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 159px;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 100;
+}
+
+.home-types .home-types-wrap {
+    height: 159px;
+    display: flex;
+
+}
+
+.home-types-wrap .select {
+    background-image: url("/common/static/company/images/home_select.png");
+    background-size: 100% 100%;
+}
+
+.home-types .home-types-wrap>div {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.home-types .home-types-wrap>div>div {
+    margin-top: 10px;
+}
+
+.swiper-slide {
+    // overflow: hidden;
+}
+
+.home-one {
+    width: 100%;
+    height: 100%;
+    /* background-image: url('/common/static/company/images/banner.png'); */
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.home-two {
+    width: 100%;
+    height: 100%;
+    /* background-image: url('/common/static/company/images/banner.png'); */
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.home-three {
+    width: 100%;
+    height: 100%;
+    background-image: url('/common/static/company/images/banner.png');
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.home-two-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.home-one-desc {
+    background-image: url('/common/static/company/images/矩形.png');
+    width: 394px;
+    height: 50px;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.home-one-desc>span {
+    font-size: 20px;
+    color: #FEFEFE;
+}
+
+/* .home-one::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -moz-linear-gradient(60deg, #690ed0 0%, #170da2 100%);
+    background-image: -ms-linear-gradient(60deg, #690ed0 0%, #170da2 100%);
+    background-image: -webkit-linear-gradient(60deg, #690ed0 0%, #170da2 100%);
+    background-image: linear-gradient(60deg, #690ed0 0%, #170da2 100%);
+    opacity: 0.9;
+} */
+
+.slider__shape img {
+    position: absolute;
+}
+
+.slider__shape img.triangle {
+    left: 28%;
+    bottom: 38%;
+    animation: triangle 5s linear 0s infinite alternate;
+    -webkit-animation: triangle 5s linear 0s infinite alternate;
+}
+
+.slider__shape img.dotted-square {
+    left: 38%;
+    bottom: 25%;
+    animation: dottedSquare 8s linear 0s infinite alternate;
+    -webkit-animation: dottedSquare 8s linear 0s infinite alternate;
+}
+
+.slider__shape img.solid-square {
+    bottom: 19%;
+    right: 25%;
+    z-index: 1;
+    animation: solidsquare 5s linear 0s infinite alternate;
+    -webkit-animation: solidsquare 5s linear 0s infinite alternate;
+}
+
+.slider__shape img.circle {
+    right: 10%;
+    bottom: -47%;
+    animation: sliderCircle 7s linear 0s infinite alternate;
+    -webkit-animation: sliderCircle 7s linear 0s infinite alternate;
+}
+
+.slider__shape img.circle-2 {
+    right: 12%;
+    top: 65%;
+    animation: sliderCircle 7s linear 0s infinite alternate;
+    -webkit-animation: sliderCircle 7s linear 0s infinite alternate;
+}
+
+.slider__shape-1 {
+    top: -120px;
+    left: -100px;
+    z-index: -1;
+}
+
+
+.home-text {
+    margin-top: 120px;
+}
+
+.features__area {
+    margin-top: 150px;
+}
+
+.about__area,
+.rongyu,
+.hezuo,
+.zuzhi {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.rongyu {
+    padding-top: 30px;
+    flex-direction: column;
+
+}
+
+.rongyu-engish {
+    font-size: 18px;
+    color: #4636ff;
+    display: block;
+    font-weight: 700;
+    font-family: "Microsoft Yahei", serif;
+    margin-bottom: 25px;
+}
+
+
+
+.rongyu-content>div {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 40px;
+    font-family: "Microsoft Yahei", sans-serif;
+    color: #1f1841;
+}
+
+.hezuo {
+    flex-direction: column;
+}
+
+.hezuo-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hezuo-content {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hezuo-content>div>img {
+
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.hezuo-content>div>img:nth-child(5n+5) {
+    margin-right: 0px;
+}
+
+.hezuo-content>div {
+    overflow: hidden;
+    width: 18%;
+    margin-right: 2%;
+    margin-bottom: 50px;
+}
+
+.hezuo-content>div:hover img {
+    transform: scale(1.2);
+}
+
+.swiper-company-desc {
+    .company-rotate {
+        width: 468px;
+        height: 687px;
+        position: relative;
+
+        >img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 1s;
+            z-index: 1;
+
+            &:first-child {
+                z-index: 2;
+                backface-visibility: hidden;
+            }
+
+        }
+
+        &:hover img {
+            transform: rotateY(180deg);
+        }
+
+        .company-desc-bg {
+            background-image: url("/common/static/company/images/gsjj-rect.jpg");
+            width: 523px;
+            height: 310px;
+            background-size: 100% 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+
+.swiper-company-desc {
+    margin-top: 126px;
+}
+
+.swiper-company-desc>.container {
+    /* padding-top: 70px; */
+
+    box-sizing: border-box;
+}
+
+
+.company-Swiper {
+    position: relative;
+}
+
+
+
+.company-title {
+    display: flex;
+    align-items: baseline;
+}
+
+.company-title .company-title-text {
+    font-family: AlibabaPuHuiTiM;
+    font-size: 55px;
+}
+
+.company-title .company-title-desc {
+    color: #898799;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.company-desc {
+    font-family: AlibabaPuHuiTiB;
+    font-size: 12px;
+    color: #44434D;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.company-desc>span {
+    font-size: 16px;
+    color: #44434D;
+    font-weight: bold;
+    font-family: AlibabaPuHuiTiB;
+}
+
+.faq__wrapper .btn-link {
+    background-color: #BB6FF9;
+    color: #fff;
+}
+
+.faq__wrapper .collapsed {
+    color: #1f1841 !important;
+    background-color: #fff !important;
+}
+
+.home-title-wrap {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+
+
+    .r-title {
+        font-family: AlibabaPuHuiTiM;
+        font-size: 55px;
+
+        color: #242232;
+        margin-bottom: 80px;
+
+    }
+
+    .r-desc {
+        font-family: AlibabaSans-Regular;
+        color: #898799;
+        font-size: 24px;
+        margin-left: 10px;
+    }
+}
+
+.company-rong {
+
+    margin-top: 75px;
+    padding: 35px 0;
+    background-image: url("/common/static/company/images/descbg.jpg");
+    position: relative;
+    background-size: 100% 100%;
+
+    .rong-title-wrap {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        margin-bottom: 54px;
+        margin-top: 50px;
+
+        .r-title {
+            font-family: AlibabaPuHuiTiM;
+            font-size: 55px;
+
+            color: #242232;
+        }
+
+        .r-desc {
+            font-family: AlibabaSans-Regular;
+            color: #898799;
+            font-size: 24px;
+            margin-left: 10px;
+        }
+    }
+
+    .row {
+        padding-left: 50px;
+    }
+
+
+
+    .rongyuc {
+        position: absolute;
+        top: 22%;
+        z-index: 2;
+        left: -18%;
+    }
+
+    .rongyue {
+        position: absolute;
+        right: -10%;
+        z-index: 1;
+        top: -5%;
+    }
+}
+
+.honor {
+    margin-top: 75px;
+    padding: 35px 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    .list-wrap {
+
+        flex: 1;
+        overflow: hidden;
+        padding-bottom: 50px;
+
+        >.swiper {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .honorSwiper {
+        >.swiper-wrapper>.swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            height: calc((100% - 30px) / 4);
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    }
+
+}
+
+.organization {
+
+    padding: 90px 0;
+    position: relative;
+
+    width: 100%;
+    height: 768px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    background-image: url("/common/static/company/images/zzkjbg.jpg");
+    background-size: 100% 100%;
+
+    .r-title {
+        color: #fff;
+    }
+
+    >.img-wrap {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+
+    }
+}
+
+.news {
+
+    padding: 35px 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .news-wrap {
+        >.container {
+            margin-top: 71px;
+
+            >.row>div {
+                padding: 0;
+            }
+        }
+
+        .news-left {
+            padding-right: 65px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .news-l-b {
+            flex: 1;
+            display: flex;
+            background-color: #F5F5F5;
+            padding: 15px;
+
+
+            .new-l-b-left {
+                width: 80px;
+                height: 80px;
+                background-image: url("/common/static/company/images/home_select.png");
+                background-size: 100% 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                margin-right: 18px;
+
+                .news-day {
+                    font-family: AlibabaPuHuiTiM;
+                    font-weight: bold;
+                    color: #fff;
+                    font-size: 36px;
+                }
+
+                .news-month {
+                    color: #fff;
+                    font-size: 18px;
+                }
+            }
+
+            .new-l-b-right {
+                flex: 1;
+                overflow: hidden;
+
+                .new-left-title {
+                    font-family: AlibabaPuHuiTiM;
+                    color: #242232;
+                    font-size: 24px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-bottom: 10px;
+                }
+
+                .new-left-desc {
+
+                    color: #44434C;
+                    font-size: 16px;
+                    text-overflow: -o-ellipsis-lastline;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    line-clamp: 2;
+                    -webkit-box-orient: vertical;
+
+                }
+            }
+        }
+
+        .news-right {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+
+
+            >.news-right-item {
+                flex: 1;
+                overflow: hidden;
+                display: flex;
+                padding-bottom: 35px;
+                border-bottom: 1px solid #E6E6E6;
+
+                .news-item-left {
+                    flex-basis: 143px;
+                    margin-right: 20px;
+
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .news-item-right {
+                    flex: 1;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+
+                    .news-right-title {
+                        font-family: AlibabaPuHuiTiM;
+                        color: #242232;
+                        font-size: 24px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .news-right-time {
+                        font-family: AlibabaPuHuiTiR;
+                        font-size: 16px;
+                        color: #999999;
+                    }
+
+                    .news-right-desc {
+                        color: #44434C;
+                        font-size: 16px;
+                        text-overflow: -o-ellipsis-lastline;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                    }
+                }
+            }
+        }
+    }
 
 }

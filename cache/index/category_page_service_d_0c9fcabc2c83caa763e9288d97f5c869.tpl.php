@@ -33,7 +33,7 @@
                     </div>
                     <?php } ?>
                 </div>
-                <div class="right">
+                <div class="right d-none d-lg-block">
                     <?php echo get_location($catid);?>
                 </div>
             </div>

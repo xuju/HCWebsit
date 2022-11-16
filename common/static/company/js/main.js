@@ -18,7 +18,7 @@
 15. InHover Active Js
 16. Parallax Js
 ****************************************************/
-console.log(111);
+
 (function ($) {
 	"use strict";
 
@@ -128,7 +128,7 @@ console.log(111);
 
 		$('html, body').animate({
 			scrollTop: 0,
-		}, 1500);
+		}, 500);
 	});
 
 	////////////////////////////////////////////////////
@@ -214,135 +214,135 @@ console.log(111);
 
 	////////////////////////////////////////////////////
 	// 09. Brand Slider JS
-	$('.brand__slider ').owlCarousel({
-		loop: true,
-		margin: 30,
-		autoplay: false,
-		autoplayTimeout: 3000,
-		smartSpeed: 500,
-		items: 6,
-		navText: ['<button><i class="fa fa-angle-left"></i>PREV</button>', '<button>NEXT<i class="fa fa-angle-right"></i></button>'],
-		nav: false,
-		dots: false,
-		responsive: {
-			0: {
-				items: 1
-			},
-			576: {
-				items: 2
-			},
-			767: {
-				items: 2
-			},
-			992: {
-				items: 3
-			},
-			1200: {
-				items: 4
-			},
-			1600: {
-				items: 4
-			}
-		}
-	});
+	// $('.brand__slider ').owlCarousel({
+	// 	loop: true,
+	// 	margin: 30,
+	// 	autoplay: false,
+	// 	autoplayTimeout: 3000,
+	// 	smartSpeed: 500,
+	// 	items: 6,
+	// 	navText: ['<button><i class="fa fa-angle-left"></i>PREV</button>', '<button>NEXT<i class="fa fa-angle-right"></i></button>'],
+	// 	nav: false,
+	// 	dots: false,
+	// 	responsive: {
+	// 		0: {
+	// 			items: 1
+	// 		},
+	// 		576: {
+	// 			items: 2
+	// 		},
+	// 		767: {
+	// 			items: 2
+	// 		},
+	// 		992: {
+	// 			items: 3
+	// 		},
+	// 		1200: {
+	// 			items: 4
+	// 		},
+	// 		1600: {
+	// 			items: 4
+	// 		}
+	// 	}
+	// });
 
-	////////////////////////////////////////////////////
-	// 10. Testimonial Slider Js
-	$('.testimonial__slider').owlCarousel({
-		loop: true,
-		margin: 30,
-		autoplay: false,
-		autoplayTimeout: 3000,
-		smartSpeed: 500,
-		items: 6,
-		navText: ['<button><i class="fa fa-angle-left"></i>PREV</button>', '<button>NEXT<i class="fa fa-angle-right"></i></button>'],
-		nav: false,
-		dots: true,
-		responsive: {
-			0: {
-				items: 1
-			},
-			576: {
-				items: 1
-			},
-			767: {
-				items: 1
-			},
-			992: {
-				items: 1
-			},
-			1200: {
-				items: 1
-			},
-			1600: {
-				items: 1
-			}
-		}
-	});
+	// ////////////////////////////////////////////////////
+	// // 10. Testimonial Slider Js
+	// $('.testimonial__slider').owlCarousel({
+	// 	loop: true,
+	// 	margin: 30,
+	// 	autoplay: false,
+	// 	autoplayTimeout: 3000,
+	// 	smartSpeed: 500,
+	// 	items: 6,
+	// 	navText: ['<button><i class="fa fa-angle-left"></i>PREV</button>', '<button>NEXT<i class="fa fa-angle-right"></i></button>'],
+	// 	nav: false,
+	// 	dots: true,
+	// 	responsive: {
+	// 		0: {
+	// 			items: 1
+	// 		},
+	// 		576: {
+	// 			items: 1
+	// 		},
+	// 		767: {
+	// 			items: 1
+	// 		},
+	// 		992: {
+	// 			items: 1
+	// 		},
+	// 		1200: {
+	// 			items: 1
+	// 		},
+	// 		1600: {
+	// 			items: 1
+	// 		}
+	// 	}
+	// });
 
-	////////////////////////////////////////////////////
-	// 11. Project Slider Js
-	$('.project__slider').owlCarousel({
-		loop: true,
-		margin: 30,
-		autoplay: false,
-		autoplayTimeout: 3000,
-		smartSpeed: 500,
-		items: 6,
-		navText: ['<button><i class="fa fa-angle-left"></i>PREV</button>', '<button>NEXT<i class="fa fa-angle-right"></i></button>'],
-		nav: false,
-		dots: true,
-		responsive: {
-			0: {
-				items: 1
-			},
-			576: {
-				items: 1
-			},
-			767: {
-				items: 2
-			},
-			992: {
-				items: 2
-			},
-			1200: {
-				items: 2
-			},
-			1600: {
-				items: 2
-			}
-		}
-	});
+	// ////////////////////////////////////////////////////
+	// // 11. Project Slider Js
+	// $('.project__slider').owlCarousel({
+	// 	loop: true,
+	// 	margin: 30,
+	// 	autoplay: false,
+	// 	autoplayTimeout: 3000,
+	// 	smartSpeed: 500,
+	// 	items: 6,
+	// 	navText: ['<button><i class="fa fa-angle-left"></i>PREV</button>', '<button>NEXT<i class="fa fa-angle-right"></i></button>'],
+	// 	nav: false,
+	// 	dots: true,
+	// 	responsive: {
+	// 		0: {
+	// 			items: 1
+	// 		},
+	// 		576: {
+	// 			items: 1
+	// 		},
+	// 		767: {
+	// 			items: 2
+	// 		},
+	// 		992: {
+	// 			items: 2
+	// 		},
+	// 		1200: {
+	// 			items: 2
+	// 		},
+	// 		1600: {
+	// 			items: 2
+	// 		}
+	// 	}
+	// });
 
 
 	////////////////////////////////////////////////////
 	// 12. Masonary Js
-	$('.grid').imagesLoaded(function () {
-		// init Isotope
-		var $grid = $('.grid').isotope({
-			itemSelector: '.grid-item',
-			percentPosition: true,
-			masonry: {
-				// use outer width of grid-sizer for columnWidth
-				columnWidth: 1
-			}
-		});
+	// $('.grid').imagesLoaded(function () {
+	// 	// init Isotope
+	// 	var $grid = $('.grid').isotope({
+	// 		itemSelector: '.grid-item',
+	// 		percentPosition: true,
+	// 		masonry: {
+	// 			// use outer width of grid-sizer for columnWidth
+	// 			columnWidth: 1
+	// 		}
+	// 	});
 
 
-		// filter items on button click
-		$('.masonary-menu').on('click', 'button', function () {
-			var filterValue = $(this).attr('data-filter');
-			$grid.isotope({ filter: filterValue });
-		});
+	// 	// filter items on button click
+	// 	$('.masonary-menu').on('click', 'button', function () {
+	// 		var filterValue = $(this).attr('data-filter');
+	// 		$grid.isotope({ filter: filterValue });
+	// 	});
 
-		//for menu active class
-		$('.masonary-menu button').on('click', function (event) {
-			$(this).siblings('.active').removeClass('active');
-			$(this).addClass('active');
-			event.preventDefault();
-		});
+	// 	//for menu active class
+	// 	$('.masonary-menu button').on('click', function (event) {
+	// 		$(this).siblings('.active').removeClass('active');
+	// 		$(this).addClass('active');
+	// 		event.preventDefault();
+	// 	});
 
-	});
+	// });
 
 
 	////////////////////////////////////////////////////
@@ -353,10 +353,10 @@ console.log(111);
 
 	////////////////////////////////////////////////////
 	// 14. Counter Js
-	$('.counter').counterUp({
-		delay: 100,
-		time: 1000
-	});
+	// $('.counter').counterUp({
+	// 	delay: 100,
+	// 	time: 1000
+	// });
 
 	////////////////////////////////////////////////////
 	// 15. InHover Active Js
@@ -378,22 +378,3 @@ console.log(111);
 })(jQuery);
 
 
-$(function () {
-	function serviceDescShow(index) {
-		$('.right-content-item').each((index, elemet) => {
-			$(elemet).hide();
-		})
-		$('.right-content-item').eq(index).show();
-	}
-	serviceDescShow(0);
-	$('.service-menu-item').eq(0).addClass('select');
-
-	$('.service-menu-item').on("click", function () {
-		$('.service-menu-item').removeClass('select');
-
-		let index = $(this).index();
-		$('.service-menu-item').eq(index).addClass('select')
-		serviceDescShow(index);
-	})
-
-})

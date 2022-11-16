@@ -11,62 +11,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo STATIC_URL;?>company/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo STATIC_URL;?>company/images/favicon.ico">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/preloader.css">
+    <!-- <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/preloader.css"> -->
     <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/slick.css">
+
+    <!-- <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/slick.css"> -->
     <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/meanmenu.css">
-    <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/owl.carousel.min.css">
+    <!-- <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/owl.carousel.min.css"> -->
     <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/animate.min.css">
-    <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/jquery.fancybox.min.css">
+    <!-- <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/jquery.fancybox.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/fontAwesome5Pro.css">
     <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/elegantFont.css">
-    <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/default.css">
+    <!-- <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/default.css"> -->
     <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/style.css">
 
-    <link rel="stylesheet" type="text/css" href="<?php echo STATIC_URL;?>plugin/swiper/css/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="<?php echo STATIC_URL;?>plugin/swiper/css/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/8.4.4/swiper-bundle.min.css">
     <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/carousel.css">
-    <script type="text/javascript" src="<?php echo STATIC_URL;?>plugin/swiper/js/swiper-bundle.min.js"></script>
+    <!-- <script type="text/javascript" src="<?php echo STATIC_URL;?>plugin/swiper/js/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js"></script>
 
-    <script src="<?php echo STATIC_URL;?>company/js/vendor/jquery-3.5.1.min.js"></script>
+    <!-- <script src="<?php echo STATIC_URL;?>company/js/vendor/jquery-3.5.1.min.js"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-    <!-- Add your site or application content here -->
-
-    <!-- preloader area start -->
-    <!-- <div id="loading">
-        <div id="loading-center">
-            <div id="loading-center-absolute">
-                <div class="object" id="object_one"></div>
-                <div class="object" id="object_two"></div>
-                <div class="object" id="object_three"></div>
-                <div class="object" id="object_four"></div>
-                <div class="object" id="object_five"></div>
-                <div class="object" id="object_six"></div>
-                <div class="object" id="object_seven"></div>
-                <div class="object" id="object_eight"></div>
-            </div>
-        </div>
-
-    </div> -->
-    <!-- preloader area end -->
 
 
-    <!-- scroll up area start -->
+
     <div class="scroll-up" id="scroll" style="display: none;">
         <a href="javascript:void(0);"><i class="fas fa-level-up-alt"></i></a>
     </div>
-    <!-- scroll up area end -->
 
-    <!-- header area start -->
     <header>
         <div class="header__area p-relative header__transparent">
             <div class="header__top d-none d-md-block">
@@ -204,22 +184,22 @@
                 <ul class="nav nav-tabs" id="sidebar-tab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" id="menu-tab" data-toggle="tab" href="#menu" role="tab"
-                            aria-controls="menu" aria-selected="true">menu</a>
+                            aria-controls="menu" aria-selected="true">菜单</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info"
-                            aria-selected="false">info</a>
-                    </li> -->
+                    <li class="nav-item toggle-lang">
+                        <a href="" class="nav-link" aria-selected="false">中文</a>
+                        <a href="" class="nav-link" aria-selected="false">英文</a>
+                    </li>
                 </ul>
             </div>
             <div class="sidebar__content">
                 <div class="tab-content" id="sidebar-tab-content">
                     <div class="tab-pane fade show active" id="menu" role="tabpanel" aria-labelledby="menu-tab">
-                        <div class="logo mb-40">
+                        <!-- <div class="logo mb-40">
                             <a href="index.html">
                                 <img src="<?php echo $site['site_logo'];?>" alt="logo">
                             </a>
-                        </div>
+                        </div> -->
                         <div class="mobile-menu"></div>
                     </div>
                     <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
@@ -229,10 +209,8 @@
                                     <img src="<?php echo $site['site_logo'];?>" alt="logo">
                                 </a>
                             </div>
-                            <p>We must explain to you how all seds this mistakens idea off denouncing pleasures and
-                                praising pain was born and I will give you a completed accounts of the system and
-                                expound.</p>
-                            <a href="contact.html" class="z-btn z-btn-white">contact us</a>
+
+                            <a href="contact.html" class="z-btn z-btn-white">联系我们</a>
                             <div class="sidebar__search">
                                 <form action="#">
                                     <input type="text" placeholder="Your Keywords..">
@@ -246,7 +224,7 @@
                                             <i class="fal fa-map-marker-alt"></i>
                                         </div>
                                         <div class="text">
-                                            <span>江苏省，苏州市，高新区 枫桥街道浩福路66号</span>
+                                            <span><?php echo $site['address'];?></span>
                                         </div>
                                     </li>
                                     <li>
@@ -254,7 +232,7 @@
                                             <i class="fal fa-envelope"></i>
                                         </div>
                                         <div class="text ">
-                                            <span><a href="mailto:support@HaiC.3D.com">support@HaiC.3D.com</a></span>
+                                            <span><a href="mailto:<?php echo $site['email'];?>"><?php echo $site['email'];?></a></span>
                                         </div>
                                     </li>
                                     <li>
@@ -262,7 +240,7 @@
                                             <i class="fas fa-phone-alt"></i>
                                         </div>
                                         <div class="text">
-                                            <span><a href="tel:(+86)-13375184697">(+86) 13375184697</a></span>
+                                            <span><a href="tel:(+86)-13375184697"><?php echo $site['phone'];?></a></span>
                                         </div>
                                     </li>
                                 </ul>
