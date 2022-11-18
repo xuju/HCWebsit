@@ -15,22 +15,23 @@
 
     <!-- CSS here -->
     <!-- <link rel="stylesheet" href="{STATIC_URL}company/css/preloader.css"> -->
-    <link rel="stylesheet" href="{STATIC_URL}company/css/bootstrap.min.css">
-
+    <!-- <link rel="stylesheet" href="{STATIC_URL}company/css/bootstrap.min.css"> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="{STATIC_URL}company/css/slick.css"> -->
-    <link rel="stylesheet" href="{STATIC_URL}company/css/meanmenu.css">
+
     <!-- <link rel="stylesheet" href="{STATIC_URL}company/css/owl.carousel.min.css"> -->
     <link rel="stylesheet" href="{STATIC_URL}company/css/animate.min.css">
     <!-- <link rel="stylesheet" href="{STATIC_URL}company/css/jquery.fancybox.min.css"> -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="{STATIC_URL}company/css/fontAwesome5Pro.css">
-    <link rel="stylesheet" href="{STATIC_URL}company/css/elegantFont.css">
+    <!-- <link rel="stylesheet" href="{STATIC_URL}company/css/elegantFont.css"> -->
     <!-- <link rel="stylesheet" href="{STATIC_URL}company/css/default.css"> -->
     <link rel="stylesheet" href="{STATIC_URL}company/css/style.css">
 
     <!-- <link rel="stylesheet" type="text/css" href="{STATIC_URL}plugin/swiper/css/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/8.4.4/swiper-bundle.min.css">
-    <link rel="stylesheet" href="{STATIC_URL}company/css/carousel.css">
+    <!-- <link rel="stylesheet" href="{STATIC_URL}company/css/carousel.css"> -->
     <!-- <script type="text/javascript" src="{STATIC_URL}plugin/swiper/js/swiper-bundle.min.js"></script> -->
     <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js"></script>
 
@@ -44,7 +45,10 @@
 
 
     <div class="scroll-up" id="scroll" style="display: none;">
-        <a href="javascript:void(0);"><i class="fas fa-level-up-alt"></i></a>
+        <a href="javascript:void(0);">
+            <i class="fas fa-level-up-alt"></i>
+            <!-- <img src="{STATIC_URL}company/images/back.jpg" alt="返回"> -->
+        </a>
     </div>
 
     <header>
@@ -132,7 +136,9 @@
                                                     {/if}
                                             </li>
                                             {/loop}
-                                            <div class="site-toggle" style="display: inline-block;"> <a href="">中文</a>/
+                                            <div class="site-toggle d-none d-lg-inline-block"
+                                                style="display: inline-block;">
+                                                <a href="">中文</a>/
                                                 <a href="">英文</a>
                                             </div>
 

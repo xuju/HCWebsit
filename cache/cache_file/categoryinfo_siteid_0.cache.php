@@ -370,7 +370,7 @@ return array (
     array (
       'catid' => 46,
       'siteid' => 0,
-      'catname' => '覆膜产品',
+      'catname' => '复膜产品',
       'modelid' => 2,
       'parentid' => 41,
       'arrparentid' => '0,41',
@@ -386,7 +386,7 @@ return array (
       'domain' => '',
       'entitle' => '',
       'subtitle' => '',
-      'mobname' => '覆膜产品',
+      'mobname' => '复膜产品',
       'category_template' => 'category_product',
       'list_template' => 'list_product',
       'show_template' => 'show_product_other',
@@ -1236,6 +1236,6 @@ return array (
     ),
   ),
   'expire' => 0,
-  'mtime' => 1668564373,
+  'mtime' => 1668738353,
 );
 ?>

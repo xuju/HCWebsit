@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-between">
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                    <div class="col-xl-2 col-lg-2 col-md-4  d-none d-lg-block ">
                         <div class="footer__widget mb-45  ani " swiper-animate-effect="fadeInUp"
                             swiper-animate-delay=".2s">
                             <div class="footer__widget-title">
@@ -52,7 +52,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2  col-lg-2  col-md-4 col-sm-6">
+                    <div class="col-xl-2  col-lg-2  col-md-4  d-none d-lg-block ">
                         <div class="footer__widget mb-45  ani" swiper-animate-delay=".4s">
                             <div class="footer__widget-title">
                                 <h4><?php echo get_catname(70);?></h4>
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2  col-lg-2  col-md-4 col-sm-6">
+                    <div class="col-xl-2  col-lg-2  col-md-4  d-none d-lg-block ">
                         <div class="footer__widget mb-45   ani" swiper-animate-delay=".6s">
                             <div class="footer__widget-title">
                                 <h4><?php echo get_catname(6);?></h4>
@@ -88,7 +88,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2  col-lg-2  col-md-4 col-sm-6">
+                    <div class="col-xl-2  col-lg-2  col-md-4  d-none d-lg-block ">
                         <div class="footer__widget mb-45 ani" swiper-animate-delay=".6s">
                             <div class="footer__widget-title">
                                 <h4><?php echo get_catname(41);?></h4>
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2  col-lg-2  col-md-4 col-sm-6">
+                    <div class="col-xl-2  col-lg-2  col-md-4  d-none d-lg-block ">
                         <div class="footer__widget mb-45   ani" swiper-animate-delay=".8s">
                             <div class="footer__widget-title">
                                 <h4><?php echo get_catname(10);?></h4>
@@ -124,7 +124,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2  col-lg-2  col-md-4 col-sm-6">
+                    <div class="col-xl-2  col-lg-2  col-md-4  d-none d-lg-block ">
                         <div class="footer__widget mb-45   ani" swiper-animate-delay=".8s">
                             <div class="footer__widget-title">
                                 <h4><?php echo get_catname(82);?></h4>
@@ -166,10 +166,13 @@
 <!-- JS here -->
 
 <!-- <script src="<?php echo STATIC_URL;?>company/js/vendor/waypoints.min.js"></script> -->
-<script src="<?php echo STATIC_URL;?>company/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="<?php echo STATIC_URL;?>company/js/bootstrap.bundle.min.js"></script> -->
+<!-- jQuery and JavaScript Bundle with Popper -->
+
+<script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
 <script src="<?php echo STATIC_URL;?>company/js/jquery.meanmenu.js"></script>
 <script src="<?php echo STATIC_URL;?>company/js/slick.min.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<!-- <script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script> -->
 <!-- <script src="<?php echo STATIC_URL;?>company/js/jquery.fancybox.min.js"></script>
 <script src="<?php echo STATIC_URL;?>company/js/jquery.counterup.min.js"></script>
 <script src="<?php echo STATIC_URL;?>company/js/isotope.pkgd.min.js"></script> -->
