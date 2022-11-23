@@ -12,7 +12,7 @@ return array (
     'site_filing' => '京ICP备666666号',
     'site_code' => '',
     'site_theme' => 'company',
-    'site_logo' => '/uploads/202211/10/221110021316564.png',
+    'site_logo' => '/uploads/202211/23/221123031833907.png',
     'url_mode' => '1',
     'is_words' => '1',
     'upload_maxsize' => '921600',
@@ -75,6 +75,6 @@ return array (
     'email' => '848820348@qq.com',
   ),
   'expire' => 0,
-  'mtime' => 1668563775,
+  'mtime' => 1669187916,
 );
 ?>

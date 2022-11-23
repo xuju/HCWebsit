@@ -1096,6 +1096,34 @@ return array (
     ),
     39 => 
     array (
+      'catid' => 96,
+      'siteid' => 0,
+      'catname' => '公司简介',
+      'modelid' => 1,
+      'parentid' => 0,
+      'arrparentid' => '0',
+      'arrchildid' => '96',
+      'catdir' => 'gongsijianjie',
+      'catimg' => '',
+      'type' => 0,
+      'listorder' => 0,
+      'target' => '_self',
+      'member_publish' => 0,
+      'display' => 0,
+      'pclink' => 'http://localhost:91/gongsijianjie/',
+      'domain' => '',
+      'entitle' => 'Company profile',
+      'subtitle' => '',
+      'mobname' => '公司简介',
+      'category_template' => 'category_article',
+      'list_template' => 'list_article',
+      'show_template' => 'show_article',
+      'seo_title' => '',
+      'seo_keywords' => '',
+      'seo_description' => '',
+    ),
+    40 => 
+    array (
       'catid' => 6,
       'siteid' => 0,
       'catname' => '产品中心',
@@ -1122,7 +1150,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    40 => 
+    41 => 
     array (
       'catid' => 41,
       'siteid' => 0,
@@ -1150,7 +1178,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    41 => 
+    42 => 
     array (
       'catid' => 10,
       'siteid' => 0,
@@ -1178,7 +1206,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    42 => 
+    43 => 
     array (
       'catid' => 82,
       'siteid' => 0,
@@ -1206,7 +1234,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    43 => 
+    44 => 
     array (
       'catid' => 51,
       'siteid' => 0,
@@ -1236,6 +1264,6 @@ return array (
     ),
   ),
   'expire' => 0,
-  'mtime' => 1668738353,
+  'mtime' => 1669018933,
 );
 ?>

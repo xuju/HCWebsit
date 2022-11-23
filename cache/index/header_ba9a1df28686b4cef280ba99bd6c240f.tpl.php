@@ -99,14 +99,14 @@
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="logo">
-                                <a href="index.html">
-                                    <img src="<?php echo STATIC_URL;?>company/img/logo/logo.png" alt="logo">
+                                <a href="/">
+                                    <img src="<?php echo STATIC_URL;?>company/img/logo/logo.png" width="262" height="32" alt="logo">
                                 </a>
                             </div>
                             <div class="logo-gradient">
-                                <a href="index.html">
+                                <a href="/">
                                     <!-- <img src="<?php echo STATIC_URL;?>company/img/logo/logo-gradient.png" alt="logo"> -->
-                                    <img src="<?php echo $site['site_logo'];?>" alt="logo">
+                                    <img src="<?php echo $site['site_logo'];?>" width="262" height="32" alt="logo">
                                 </a>
                             </div>
                         </div>
