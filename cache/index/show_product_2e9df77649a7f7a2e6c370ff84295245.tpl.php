@@ -66,89 +66,10 @@
                 </div>
                 <div class="col-12  params-wrap">
                     <div class="params-title"><?php echo $title;?></div>
-                    <?php if($jgxt) { ?>
-                    <?php $jgxts=explode(',',$jgxt)?>
                     <div class="params-content-wrap">
-                        <div class="left">激光系统 </div>
-                        <div class="right">
-                            <?php if(is_array($jgxts)) foreach($jgxts as $v) { ?>
-                            <?php echo $v;?><br />
-                            <?php } ?>
-                        </div>
+                        <?php echo $shebei;?>
                     </div>
-                    <?php } ?>
-                    <?php if($ctxt) { ?>
-                    <?php $ctxts=explode(',',$ctxt)?>
-                    <div class="params-content-wrap">
-                        <div class="left">重涂系统 </div>
-                        <div class="right">
-                            <?php if(is_array($ctxts)) foreach($ctxts as $v) { ?>
-                            <?php echo $v;?><br />
-                            <?php } ?>
-                        </div>
-                    </div>
-                    <?php } ?>
-                    <?php if($gxsmxt) { ?>
-                    <?php $gxsmxts=explode(',',$gxsmxt)?>
-                    <div class="params-content-wrap">
-                        <div class="left">光学扫描系统 </div>
-                        <div class="right">
-                            <?php if(is_array($gxsmxts)) foreach($gxsmxts as $v) { ?>
-                            <?php echo $v;?><br />
-                            <?php } ?>
-                        </div>
-                    </div>
-                    <?php } ?>
-                    <?php if($sjxt) { ?>
-                    <?php $sjxts=explode(',',$sjxt)?>
-                    <div class="params-content-wrap">
-                        <div class="left">升降系统 </div>
-                        <div class="right">
-                            <?php if(is_array($sjxts)) foreach($sjxts as $v) { ?>
-                            <?php echo $v;?><br />
-                            <?php } ?>
-                        </div>
-                    </div>
-                    <?php } ?>
-                    <?php if($szc) { ?>
-                    <?php $szcs=explode(',',$szc)?>
-                    <div class="params-content-wrap">
-                        <div class="left">树脂槽 </div>
-                        <div class="right">
-                            <?php if(is_array($szcs)) foreach($szcs as $v) { ?>
-                            <?php echo $v;?><br />
-                            <?php } ?>
-                        </div>
-                    </div>
-                    <?php } ?>
 
-                    <?php if($bhxt) { ?>
-                    <?php $bhxts=explode(',',$bhxt)?>
-                    <div class="params-content-wrap">
-                        <div class="left">保护系统 </div>
-                        <div class="right">
-                            <?php if(is_array($bhxts)) foreach($bhxts as $v) { ?>
-                            <?php echo $v;?><br />
-                            <?php } ?>
-                        </div>
-                    </div>
-                    <?php } ?>
-                    <?php if($zzg) { ?>
-                    <?php $zzgs=explode(',',$zzg)?>
-                    <div class="params-content-wrap">
-                        <div class="left">制作缸 </div>
-                        <div class="right">
-                            <?php if(is_array($zzgs)) foreach($zzgs as $v) { ?>
-                            <?php echo $v;?><br />
-                            <?php } ?>
-                        </div>
-                    </div>
-                    <?php } ?>
-                    <?php if($cpcspic) { ?>
-                    <div class="params-img">
-                        <img src="<?php echo $cpcspic;?>" style="width: 100%;" alt="">
-                    </div>
-                    <?php } ?>
                 </div>
             </div>
         </div>

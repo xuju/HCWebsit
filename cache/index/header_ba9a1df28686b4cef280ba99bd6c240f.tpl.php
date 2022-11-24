@@ -100,13 +100,13 @@
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="logo">
                                 <a href="/">
-                                    <img src="<?php echo STATIC_URL;?>company/img/logo/logo.png" width="262" height="32" alt="logo">
+                                    <img src="<?php echo STATIC_URL;?>company/img/logo/logo.png" height="50" alt="logo">
                                 </a>
                             </div>
                             <div class="logo-gradient">
                                 <a href="/">
                                     <!-- <img src="<?php echo STATIC_URL;?>company/img/logo/logo-gradient.png" alt="logo"> -->
-                                    <img src="<?php echo $site['site_logo'];?>" width="262" height="32" alt="logo">
+                                    <img src="<?php echo $site['site_logo'];?>" height="50" alt="logo">
                                 </a>
                             </div>
                         </div>

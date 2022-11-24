@@ -5840,6 +5840,35 @@ p {
   border-bottom: 1px solid #E7E3EB;
   padding-left: 92px;
 }
+.show-wrap .params-wrap .params-content-wrap {
+  display: flex;
+}
+.show-wrap .params-wrap .params-content-wrap table tr td:first-child {
+  background-color: #F3EAFB;
+  border-bottom: 1px solid #E7E3EB;
+  padding: 10px;
+  text-align: center;
+  font-family: AlibabaPuHuiTiM;
+  font-size: 20px;
+  vertical-align: middle;
+  width: 300px !important;
+  border-left: 1px solid #E7E3EB;
+}
+.show-wrap .params-wrap .params-content-wrap table tr td:last-child {
+  font-family: AlibabaPuHuiTiM;
+  color: #7D7A80;
+  font-size: 18px;
+  border-bottom: 1px solid #E7E3EB;
+  border-right: 1px solid #E7E3EB;
+  padding: 16px;
+  padding-left: 92px;
+}
+.show-wrap .params-wrap .params-content-wrap table tr td:last-child p,
+.show-wrap .params-wrap .params-content-wrap table tr td:last-child div {
+  font-family: AlibabaPuHuiTiM;
+  color: #7D7A80;
+  font-size: 18px;
+}
 @media (max-width: 750px) {
   .show-menu-wrap > .container {
     padding: 0 !important;

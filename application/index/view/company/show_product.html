@@ -66,89 +66,10 @@
                 </div>
                 <div class="col-12  params-wrap">
                     <div class="params-title">{$title}</div>
-                    {if $jgxt}
-                    {php $jgxts=explode(',',$jgxt)}
                     <div class="params-content-wrap">
-                        <div class="left">激光系统 </div>
-                        <div class="right">
-                            {loop $jgxts $v}
-                            {$v}<br />
-                            {/loop}
-                        </div>
+                        {$shebei}
                     </div>
-                    {/if}
-                    {if $ctxt}
-                    {php $ctxts=explode(',',$ctxt)}
-                    <div class="params-content-wrap">
-                        <div class="left">重涂系统 </div>
-                        <div class="right">
-                            {loop $ctxts $v}
-                            {$v}<br />
-                            {/loop}
-                        </div>
-                    </div>
-                    {/if}
-                    {if $gxsmxt}
-                    {php $gxsmxts=explode(',',$gxsmxt)}
-                    <div class="params-content-wrap">
-                        <div class="left">光学扫描系统 </div>
-                        <div class="right">
-                            {loop $gxsmxts $v}
-                            {$v}<br />
-                            {/loop}
-                        </div>
-                    </div>
-                    {/if}
-                    {if $sjxt}
-                    {php $sjxts=explode(',',$sjxt)}
-                    <div class="params-content-wrap">
-                        <div class="left">升降系统 </div>
-                        <div class="right">
-                            {loop $sjxts $v}
-                            {$v}<br />
-                            {/loop}
-                        </div>
-                    </div>
-                    {/if}
-                    {if $szc}
-                    {php $szcs=explode(',',$szc)}
-                    <div class="params-content-wrap">
-                        <div class="left">树脂槽 </div>
-                        <div class="right">
-                            {loop $szcs $v}
-                            {$v}<br />
-                            {/loop}
-                        </div>
-                    </div>
-                    {/if}
 
-                    {if $bhxt}
-                    {php $bhxts=explode(',',$bhxt)}
-                    <div class="params-content-wrap">
-                        <div class="left">保护系统 </div>
-                        <div class="right">
-                            {loop $bhxts $v}
-                            {$v}<br />
-                            {/loop}
-                        </div>
-                    </div>
-                    {/if}
-                    {if $zzg}
-                    {php $zzgs=explode(',',$zzg)}
-                    <div class="params-content-wrap">
-                        <div class="left">制作缸 </div>
-                        <div class="right">
-                            {loop $zzgs $v}
-                            {$v}<br />
-                            {/loop}
-                        </div>
-                    </div>
-                    {/if}
-                    {if $cpcspic}
-                    <div class="params-img">
-                        <img src="{$cpcspic}" style="width: 100%;" alt="">
-                    </div>
-                    {/if}
                 </div>
             </div>
         </div>

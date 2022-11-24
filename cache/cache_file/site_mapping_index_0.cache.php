@@ -93,8 +93,11 @@ return array (
     '^gongsijianjie$' => 'index/index/lists/catid/96',
     '^gongsijianjie\\/list_(\\d+)$' => 'index/index/lists/catid/96/page/$1',
     '^gongsijianjie\\/(\\d+)$' => 'index/index/show/catid/96/id/$1',
+    '^ceshi$' => 'index/index/lists/catid/97',
+    '^ceshi\\/list_(\\d+)$' => 'index/index/lists/catid/97/page/$1',
+    '^ceshi\\/(\\d+)$' => 'index/index/show/catid/97/id/$1',
   ),
   'expire' => 0,
-  'mtime' => 1669018862,
+  'mtime' => 1669195851,
 );
 ?>

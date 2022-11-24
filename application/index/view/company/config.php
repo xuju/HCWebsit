@@ -23,6 +23,7 @@
     "category_page_service_gy"=>"生产工艺单页",
     "category_page_service_fw"=>"服务指南单页",
     "category_page_service_sh1"=>"服务售后单页",
+    "category_page_service_c"=>"服务专区单页",
   ),
   
   
@@ -44,9 +45,10 @@
   'show_temp' => 
   array (
 	    'show_article' => '文章内容页模板', 
-	    'show_product' => '产品内容页模板', 
+	    'show_product' => '设备内容页模板', 
 	    'show_download' => '下载内容页模板', 
 	    'show_diyform' => '自定义表单内容页模板', 
+      'show_product_other' => '产品中心内容页模板', 
   ) 
   
 );?>

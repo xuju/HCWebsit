@@ -1124,13 +1124,41 @@ return array (
     ),
     40 => 
     array (
+      'catid' => 97,
+      'siteid' => 0,
+      'catname' => '测试',
+      'modelid' => 2,
+      'parentid' => 6,
+      'arrparentid' => '0,6',
+      'arrchildid' => '97',
+      'catdir' => 'ceshi',
+      'catimg' => '',
+      'type' => 0,
+      'listorder' => 0,
+      'target' => '_self',
+      'member_publish' => 0,
+      'display' => 1,
+      'pclink' => 'http://localhost:91/ceshi/',
+      'domain' => '',
+      'entitle' => '',
+      'subtitle' => '',
+      'mobname' => '测试',
+      'category_template' => 'category_product',
+      'list_template' => 'list_product',
+      'show_template' => 'show_product copy',
+      'seo_title' => '',
+      'seo_keywords' => '',
+      'seo_description' => '',
+    ),
+    41 => 
+    array (
       'catid' => 6,
       'siteid' => 0,
       'catname' => '产品中心',
       'modelid' => 2,
       'parentid' => 0,
       'arrparentid' => '0',
-      'arrchildid' => '6,7,8,9,26,27,28',
+      'arrchildid' => '6,7,8,9,26,27,28,97',
       'catdir' => 'chanpinzhongxin',
       'catimg' => '/uploads/202211/16/221116100407690.jpg',
       'type' => 0,
@@ -1150,7 +1178,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    41 => 
+    42 => 
     array (
       'catid' => 41,
       'siteid' => 0,
@@ -1178,7 +1206,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    42 => 
+    43 => 
     array (
       'catid' => 10,
       'siteid' => 0,
@@ -1206,7 +1234,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    43 => 
+    44 => 
     array (
       'catid' => 82,
       'siteid' => 0,
@@ -1234,7 +1262,7 @@ return array (
       'seo_keywords' => '',
       'seo_description' => '',
     ),
-    44 => 
+    45 => 
     array (
       'catid' => 51,
       'siteid' => 0,
@@ -1264,6 +1292,6 @@ return array (
     ),
   ),
   'expire' => 0,
-  'mtime' => 1669018933,
+  'mtime' => 1669195855,
 );
 ?>
