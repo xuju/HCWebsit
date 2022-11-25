@@ -1,0 +1,78 @@
+{m:include "index","header"}
+
+{php $parentids=get_category($catid, 'parentid')}
+
+{php $topImg=get_category($parentids,'catimg')}
+<link href="{STATIC_URL}css/yzm-common.css" rel="stylesheet" type="text/css" />
+<link href="{STATIC_URL}css/yzm-style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{STATIC_URL}js/yzm-product-img.js"></script>
+<section class="page__title p-relative d-flex align-items-center fix" data-background="{$topImg}">
+    <div class="slider__shape">
+        <img class="shape triangle" src="{STATIC_URL}company/img/icon/slider/triangle.png" alt="triangle">
+        <img class="shape dotted-square" src="{STATIC_URL}company/img/icon/slider/dotted-square.png"
+            alt="dotted-square">
+        <img class="shape solid-square" src="{STATIC_URL}company/img/icon/slider/solid-square.png" alt="solid-square">
+        <img class="shape circle-2" src="{STATIC_URL}company/img/icon/slider/circle.png" alt="circle">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="page__title-content wow fadeInUp ">
+                    <h2>{get_catname($catid)}</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="show-wrap">
+    <div class="show-menu-wrap">
+        {php $parid=get_category($catid, 'parentid')}
+        <div class="container">
+            {php $data = get_childcat($parid);}
+            {loop $data $v}
+            <li class="show-menu-item {if  $catid===$v[catid]}  select {/if}  wow fadeInUp">
+                <a href="{$v[pclink]}">{$v[catname]}</a>
+            </li>
+            {/loop}
+        </div>
+    </div>
+    <div class="show-desc-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12  col-lg-6" style="overflow: hidden;">
+                    {php $pictures = string2array($pictures);}
+                    <div class="yzm-image" id="bigpics">
+                        <!-- 获取产品图集第一张的图片地址 -->
+                        <img
+                            src="{if !isset($pictures[0])}{STATIC_URL}images/nopic.jpg{else}{$pictures[0][url]}{/if}" />
+                    </div>
+                    <div class="yzm-switch" style="display: flex;">
+                        <div class="yzm-icon1"><a href="javascript:;" title="上一个" onfocus="this.blur();">上一个</a></div>
+                        <div class="yzm-switch-center" id="pics">
+                            <ul>
+                                {loop $pictures $v}
+                                <li><a href="javascript:;"><img src="{$v[url]}" alt="{$v[alt]}" title="{$v[alt]}"></a>
+                                </li>
+                                {/loop}
+                            </ul>
+                        </div>
+                        <div class="yzm-icon2"><a href="javascript:;" title="下一个" onfocus="this.blur();">下一个</a></div>
+                    </div>
+                </div>
+                <div class="col-sm-12  col-lg-6 desc-text-wrap">
+                    <div class="title">{$title}</div>
+                    <div class="desc-text">{$content}</div>
+                </div>
+                <div class="col-12  params-wrap">
+                    <div class="params-title">{$title}</div>
+                    <div class="params-content-wrap">
+                        {$shebei}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{m:include "index","footer"}

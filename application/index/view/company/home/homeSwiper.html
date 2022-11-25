@@ -47,7 +47,7 @@
                 </div>
                 <div class="container  home-text">
                     <div class="row">
-                        <div class="col-xl-9 col-lg-9 col-md-10 col-sm-10">
+                        <div class="col-xl-10 col-lg-9 col-md-10 col-sm-10">
                             <div class="slider__content">
                                 <!-- <span swiper-animate-effect="fadeInUp" class="ani"
                                     swiper-animate-delay=".3s">我们有最先进最优秀的服务技术和团队</span> -->

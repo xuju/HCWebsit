@@ -1,0 +1,99 @@
+{m:include "index","header"}
+<section class="page__title p-relative d-flex align-items-center fix" data-background="{$catimg}">
+    <div class="slider__shape">
+        <img class="shape triangle" src="{STATIC_URL}company/img/icon/slider/triangle.png" alt="triangle">
+        <img class="shape dotted-square" src="{STATIC_URL}company/img/icon/slider/dotted-square.png"
+            alt="dotted-square">
+        <img class="shape solid-square" src="{STATIC_URL}company/img/icon/slider/solid-square.png" alt="solid-square">
+        <img class="shape circle-2" src="{STATIC_URL}company/img/icon/slider/circle.png" alt="circle">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="page__title-content wow fadeInUp">
+                    <h2>{get_catname($catid)}</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container  production-wrap">
+        <div class="row">
+            <div class="col-lg-3 list-width">
+
+
+                {php $data = get_childcat($catid);}
+                <ul class="category-wrap wow fadeInUp">
+                    <a class="select" href="{get_category($catid, 'pclink')}">
+                        部分产品展示图
+                    </a>
+                    {loop $data $v}
+                    <!-- <li>
+                        <a href="{$v[pclink]}">{$v[catname]}</a>
+                    </li> -->
+                    <a href="{$v[pclink]}">
+                        {$v[catname]}
+                    </a>
+                    {/loop}
+                </ul>
+            </div>
+            <div class="col-lg-9">
+                <div class="production-right">
+                    <div class="location wow fadeInUp d-none d-lg-block">
+                        {get_location($catid)}
+                    </div>
+                    <div class="list-wrap">
+                        {m:lists field="title,url,thumb,description" catid="$catid" limit="9" page="page"}
+                        {php $i=0}
+
+                        <div class="row">
+                            <p class=" cp-desc  wow fadeInUp">{$site[pcdesc]}</p>
+                            <div class="time-wrap cp-wrap">
+
+                                {loop $data $v}
+                                {$i++}
+                                <div class="time-item wow fadeInUp" data-delay=".{$i}s">
+                                    <div class="time-circle"></div>
+                                    <div class="time-text">
+                                        <div class="time-year">
+                                            <a href="{get_category(51, 'pclink')}"> {$v[title]}</a>
+                                        </div>
+                                        <div class="time-desc">
+                                            <!-- {$v[description]} -->
+                                        </div>
+                                    </div>
+                                </div>
+                                {/loop}
+
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="portfolio__load mt-25">
+
+
+                                    <div class="basic-pagination wow fadeInUp">
+                                        <!-- <?php
+                                         $str=$pages;
+                                         $str=str_ireplace('上页','←',$str);
+                                       
+                                         $str=str_ireplace('下页','→',$str);
+                                         $str=str_ireplace('<div id="page">','',$str);
+                                       
+                                        ?> -->
+
+                                        <ul>
+                                            {$pages}
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{m:include "index","footer"}

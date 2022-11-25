@@ -1,0 +1,55 @@
+<?php
+return array (
+  'contents' => 
+  array (
+    0 => 
+    array (
+      'fieldid' => 38,
+      'modelid' => 1,
+      'field' => 'rong_id',
+      'name' => '公司荣誉排序',
+      'tips' => '',
+      'css' => '',
+      'minlength' => 0,
+      'maxlength' => 100,
+      'errortips' => '',
+      'fieldtype' => 'input',
+      'defaultvalue' => '',
+      'setting' => '',
+      'isrequired' => 0,
+      'issystem' => 0,
+      'isunique' => 0,
+      'isadd' => 0,
+      'listorder' => 1,
+      'disabled' => 0,
+      'type' => 0,
+      'status' => 1,
+    ),
+    1 => 
+    array (
+      'fieldid' => 48,
+      'modelid' => 1,
+      'field' => 'article_order',
+      'name' => '文章顺序',
+      'tips' => '数字越小文章越靠前',
+      'css' => '',
+      'minlength' => 0,
+      'maxlength' => 100,
+      'errortips' => '',
+      'fieldtype' => 'number',
+      'defaultvalue' => '',
+      'setting' => '',
+      'isrequired' => 0,
+      'issystem' => 0,
+      'isunique' => 0,
+      'isadd' => 0,
+      'listorder' => 1,
+      'disabled' => 0,
+      'type' => 0,
+      'status' => 1,
+    ),
+  ),
+  'expire' => 0,
+  'mtime' => 1669360696,
+);
+?>

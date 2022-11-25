@@ -1,0 +1,55 @@
+<?php
+return array (
+  'contents' => 
+  array (
+    0 => 
+    array (
+      'fieldid' => 25,
+      'modelid' => 2,
+      'field' => 'pictures',
+      'name' => '产品图集',
+      'tips' => '',
+      'css' => '',
+      'minlength' => 0,
+      'maxlength' => 1000,
+      'errortips' => '',
+      'fieldtype' => 'images',
+      'defaultvalue' => '',
+      'setting' => '',
+      'isrequired' => 0,
+      'issystem' => 0,
+      'isunique' => 0,
+      'isadd' => 1,
+      'listorder' => 1,
+      'disabled' => 0,
+      'type' => 0,
+      'status' => 1,
+    ),
+    1 => 
+    array (
+      'fieldid' => 51,
+      'modelid' => 2,
+      'field' => 'shebei',
+      'name' => '设备参数',
+      'tips' => '',
+      'css' => '',
+      'minlength' => 0,
+      'maxlength' => 100,
+      'errortips' => '',
+      'fieldtype' => 'editor',
+      'defaultvalue' => '',
+      'setting' => '',
+      'isrequired' => 0,
+      'issystem' => 0,
+      'isunique' => 0,
+      'isadd' => 0,
+      'listorder' => 1,
+      'disabled' => 0,
+      'type' => 0,
+      'status' => 1,
+    ),
+  ),
+  'expire' => 0,
+  'mtime' => 1669361929,
+);
+?>

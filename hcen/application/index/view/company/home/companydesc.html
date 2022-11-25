@@ -1,0 +1,63 @@
+<div class="swiper-company-desc">
+    <div class="container">
+        <div class="row">
+            <div class=" col-sm-12 col-lg-6 d-none d-lg-block">
+
+                <div class="company-desc-swiper wow fadeInUp " data-delay=".3s">
+                    <div class="company-rotate">
+                        {m:banner field="title,image,url,typeid,status" limit="10", typeid=2}
+                        {loop $data $v}
+                        <img src="{$v[image]}" alt="">
+                        {/loop}
+                        <div class="company-desc-bg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-sm-12 col-lg-6">
+                <div class="company-title  d-none d-lg-block wow fadeInUp" data-delay=".1s">
+                    <span class="company-title-text">
+                        {get_category(96, 'catname')}
+                    </span>
+                    <!-- <span class="company-title-desc">{get_category(96, 'entitle')}</span> -->
+                </div>
+                <div class="company-desc wow fadeInUp" data-delay=".2s">
+                    <span>{$site[site_name]}</span>{$site[comanydesc]}
+                </div>
+                <div class="faq__wrapper">
+                    {m:lists field="id,title,content" catid="96" order="inputtime ASC"}
+                    {php $i=0;}
+
+                    <div id="accordion">
+                        {loop $data $v}
+                        {php $i++;}
+                        {php $coll="collapse".$v[id]}
+
+                        <div class="card company-card wow fadeInUp" data-delay=".3s">
+                            <div class="card-header" id="heading{$v[id]}">
+                                <h5 class="mb-0">
+                                    <button class="btn   btn-link {if $i!=1} collapsed {/if}" data-toggle="collapse"
+                                        data-target="#collapse{$v[id]}" aria-expanded="true"
+                                        aria-controls="collapse{$v[id]}">
+                                        {$v[title]}
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapse{$v[id]}" class="collapse {if $i==1} show {/if}"
+                                aria-labelledby="heading{$v[id]}" data-parent="#accordion">
+                                <div class="card-body " data-delay=".4s">
+                                    {$v[content]}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/loop}
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

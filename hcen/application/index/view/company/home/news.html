@@ -1,0 +1,71 @@
+<div class="news">
+    <div class="home-title-wrap  wow fadeInUp" data-delay=".1s">
+        <div class="r-title">{get_catname(53)}</div>
+        <!-- <div class="r-desc d-none d-lg-block">{get_category(53, 'entitle')}</div> -->
+    </div>
+    <div class="news-wrap">
+        <div class="container">
+            <div class="row">
+                <div class=" col-lg-6   d-none d-lg-block">
+                    {m:lists field="title,thumb,url,color,updatetime,content" catid="53" limit="1" order="updatetime
+                    DESC"}
+                    <div class="news-left wow fadeInUp" data-delay=".1s">
+                        {loop $data $v}
+                        <img src="{$v[thumb]}" alt="{$v[title]}">
+                        <div class="news-left-bottom">
+                            <div class="news-l-b">
+                                <div class="new-l-b-left">
+                                    <div class="news-day">
+                                        {date('d', $v['updatetime'])}
+                                    </div>
+                                    <div class="news-month">
+                                        {date('m', $v['updatetime'])}
+                                    </div>
+                                </div>
+                                <div class="new-l-b-right">
+                                    <div class="new-left-title">
+                                        <a href="{$v[url]}"> {$v[title]}</a>
+                                    </div>
+                                    <div class="new-left-desc">
+                                        {$v[content]}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/loop}
+                    </div>
+                </div>
+                <div class=" col-lg-6">
+                    {m:lists field="title,thumb,url,color,updatetime,content" catid="53" limit="4" order="updatetime
+                    DESC"}
+                    {php $i=0;}
+
+                    <div class="news-right  ani">
+                        {loop $data $v}
+                        {$i++}
+                        {if $i!=1}
+                        <div class="news-right-item wow fadeInUp" data-delay=".{$i}s">
+                            <div class="news-item-left">
+                                <img src="{$v[thumb]}" alt="{$v[title]}">
+                            </div>
+                            <div class="news-item-right">
+                                <div class="news-right-title">
+                                    <a href="{$v[url]}"> {$v[title]}</a>
+                                </div>
+                                <div class="news-right-time">
+                                    {date('Y-m-d',$v['updatetime'])}
+                                </div>
+                                <div class="news-right-desc">
+                                    {$v[content]}
+                                </div>
+                            </div>
+                        </div>
+                        {/if}
+                        {/loop}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,97 @@
+{m:include "index","header"}
+<section class="page__title p-relative d-flex align-items-center fix" data-background="{$catimg}">
+    <div class="slider__shape">
+        <img class="shape triangle" src="{STATIC_URL}company/img/icon/slider/triangle.png" alt="triangle">
+        <img class="shape dotted-square" src="{STATIC_URL}company/img/icon/slider/dotted-square.png"
+            alt="dotted-square">
+        <img class="shape solid-square" src="{STATIC_URL}company/img/icon/slider/solid-square.png" alt="solid-square">
+        <img class="shape circle-2" src="{STATIC_URL}company/img/icon/slider/circle.png" alt="circle">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="page__title-content wow fadeInUp">
+                    <h2>{get_catname($catid)}</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container  production-wrap">
+        <div class="row">
+            <div class="col-lg-3 list-width">
+
+
+                {php $data = get_childcat($catid);}
+                <ul class="category-wrap wow fadeInUp">
+                    <a class="select" href="{get_category($catid, 'pclink')}">
+                        {if $catid==10}
+                        所有设备展示
+                        {elseif $catid==23}
+                        部分生产工艺展示
+                        {else}
+                        部分产品展示图
+                        {/if}
+                    </a>
+                    {loop $data $v}
+                    <!-- <li>
+                        <a href="{$v[pclink]}">{$v[catname]}</a>
+                    </li> -->
+                    <a href="{$v[pclink]}">
+                        {$v[catname]}
+                    </a>
+                    {/loop}
+                </ul>
+            </div>
+            <div class="col-lg-9">
+                <div class="production-right">
+                    <div class="location wow fadeInUp d-none d-lg-block">
+                        {get_location($catid)}
+                    </div>
+                    <div class="list-wrap">
+                        {m:lists field="title,url,thumb" catid="$catid" limit="9" page="page"}
+                        <div class="row">
+                            {loop $data $v}
+                            <div class=" col-lg-4 col-sm-6  col-md-6 wow fadeInUp">
+                                <a href="{$v[url]}">
+                                    <div class="list-item">
+                                        <div class="img-wrap">
+                                            <img src="{get_thumb($v['thumb'])}" alt="{$v[title]}">
+                                        </div>
+                                        <span class="title">{$v[title]}</span>
+                                    </div>
+                                </a>
+
+                            </div>
+                            {/loop}
+                            <div class="col-xl-12">
+                                <div class="portfolio__load mt-25">
+
+
+                                    <div class="basic-pagination wow fadeInUp">
+                                        <!-- <?php
+                                         $str=$pages;
+                                         $str=str_ireplace('上页','←',$str);
+                                       
+                                         $str=str_ireplace('下页','→',$str);
+                                         $str=str_ireplace('<div id="page">','',$str);
+                                       
+                                        ?> -->
+
+                                        <ul>
+                                            {$pages}
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{m:include "index","footer"}

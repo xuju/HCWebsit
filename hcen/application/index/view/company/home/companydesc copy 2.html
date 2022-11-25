@@ -1,0 +1,208 @@
+<div class="swiper-company-desc">
+    <div class="container">
+        <div class="row">
+            <div class=" col-sm-12 col-lg-6 d-none d-lg-block">
+                <!-- <div class="company-desc-swiper wow fadeInUp " data-delay=".3s">
+                    <div class="swiper company-Swiper">
+                        {m:banner field="title,image,url,typeid,status" limit="10", typeid=2}
+
+                        <div class="swiper-wrapper">
+                            {loop $data $v}
+                            <div class="swiper-slide">
+                                <img src="{$v[image]}" alt="">
+                            </div>
+                            {/loop}
+
+                        </div>
+                        <div class="company-desc-bg"></div>
+                    </div>
+                </div> -->
+                <div class="company-desc-swiper wow fadeInUp " data-delay=".3s">
+                    <div class="company-rotate">
+                        {m:banner field="title,image,url,typeid,status" limit="10", typeid=2}
+                        {loop $data $v}
+                        <img src="{$v[image]}" alt="">
+                        {/loop}
+                        <div class="company-desc-bg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-sm-12 col-lg-6">
+                <div class="company-title  d-none d-lg-block wow fadeInUp" data-delay=".1s">
+                    <span class="company-title-text">
+                        {get_category(96, 'catname')}
+                    </span>
+                    <span class="company-title-desc">{get_category(96, 'entitle')}</span>
+                </div>
+                <div class="company-desc wow fadeInUp" data-delay=".2s">
+                    <span>{$site[site_name]}</span>{$site[comanydesc]}
+                </div>
+                <div class="faq__wrapper">
+                    {m:lists field="id,title,content" catid="96" }
+                    {php $i=0;}
+                    <div id="accordion">
+                        {loop $data $v}
+                        {php $i++;}
+                        {php $coll="collapse".$v[id]}
+
+                        <div class="card  wow fadeInUp" data-delay=".3s">
+                            <div class="card-header" id="{$coll}">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#{$coll}"
+                                        aria-expanded="true" aria-controls="{$coll}">
+                                        {$v[title]}
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="{$coll}" class="collapse {if $i===1} show {/if}" aria-labelledby="{$coll}"
+                                data-parent="#accordion">
+                                <div class="card-body wow fadeInUp" data-delay=".4s">
+                                    <div class="card-body">
+                                        {$v[content]}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        {/loop}
+                        <!-- <div class="card wow fadeInUp" data-delay=".4s">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        {$v[title]}
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse  show" aria-labelledby="headingTwo"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    {$v[content]}
+                                </div>
+                            </div>
+                        </div> -->
+
+
+                        <!-- <div class="card wow fadeInUp" data-delay=".4s">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        技术服务
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <div style="text-indent: 28px;">
+                                        3D打印，精密铸造和CNC机械加工相结合在航空航天应用技术服务：叶片、整体叶盘和涡轮盘、无人机机身蜂窝结构件、机身承力件、机身整体化制造；航天器尾喷管、航天发动机关键件。
+                                    </div>
+                                    <div style="text-indent: 28px;">
+                                        3D打印，精密铸造和CNC机械加工相结合在汽车开发应用技术服务：汽车零部件开发、汽车展览样车开发、汽车工程样车制造、复合材料车身研发。
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!--   <div class="card  wow fadeInUp" data-delay=".3s">
+                             <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                        企业职能
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordion">
+                                <div class="card-body wow fadeInUp" data-delay=".4s">
+                                    <div style="text-indent: 28px;">
+                                        一接受企业委托，和研究院一起开展科学研究和技术攻关，为企业提供技术咨询和决策咨询、解决企业面临的技术难题等。 </div>
+                                    <div style="text-indent: 28px;">
+                                        二结合公司优势以公司完备的3D打印，机加工，检测，真空复膜及相关辅助设备和公司的技术团队为企业，机构，院校，研究所提供全面的3D打印结合精密加工制造生产及新型工艺方案的技术服务及解决方案。
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <div class="card wow fadeInUp" data-delay=".4s">
+                                <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            技术服务
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        <div style="text-indent: 28px;">
+                                            3D打印，精密铸造和CNC机械加工相结合在航空航天应用技术服务：叶片、整体叶盘和涡轮盘、无人机机身蜂窝结构件、机身承力件、机身整体化制造；航天器尾喷管、航天发动机关键件。
+                                        </div>
+                                        <div style="text-indent: 28px;">
+                                            3D打印，精密铸造和CNC机械加工相结合在汽车开发应用技术服务：汽车零部件开发、汽车展览样车开发、汽车工程样车制造、复合材料车身研发。
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        <!--  <div class="card wow fadeInUp" data-delay=".5s">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        3D打印材料研发销售
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <div style="text-indent: 28px;">
+                                        金属、塑料、树脂等的液态、粉材、丝材材料开发。
+                                    </div>
+                                    <div style="text-indent: 28px;">
+                                        3D打印和CNC机械加工相结合在快速模具和小批量零件制造方面的服务。
+                                    </div>
+                                    <div style="text-indent: 28px;">
+                                        3D打印在医疗行业技术服务：牙科矫正、手术导航、人工内植物、生物活性 骨、手术参考模型。
+                                    </div>
+                                    <div style="text-indent: 28px;">
+                                        CNC零配件机械加工，覆膜，精密铸造等服务。
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card wow fadeInUp" data-delay=".5s">
+                            <div class="card-header" id="headingfour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                        三维反求技术服务
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapsefour" class="collapse" aria-labelledby="headingfour"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <div style="text-indent: 28px;">
+                                        大中小型外形测量与三维CAD建模、应力应变检测与设 计物理仿真。
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

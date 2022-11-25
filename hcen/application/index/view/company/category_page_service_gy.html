@@ -1,0 +1,80 @@
+{m:include "index","header"}
+{php $listimgs=$catimg?$catimg:get_category($parentid, 'catimg')}
+
+<section class="page__title p-relative d-flex align-items-center fix" data-background="{$listimgs}">
+    <div class="slider__shape">
+        <img class="shape triangle" src="{STATIC_URL}company/img/icon/slider/triangle.png" alt="triangle">
+        <img class="shape dotted-square" src="{STATIC_URL}company/img/icon/slider/dotted-square.png"
+            alt="dotted-square">
+        <img class="shape solid-square" src="{STATIC_URL}company/img/icon/slider/solid-square.png" alt="solid-square">
+        <img class="shape circle-2" src="{STATIC_URL}company/img/icon/slider/circle.png" alt="circle">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="page__title-content wow fadeInUp">
+                    <h2>{get_catname($catid)}</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{php $flag=count(get_childcat($catid))>0}
+{php $ids=$flag?$catid:get_category($catid, 'parentid')}
+<section>
+    <div class="container  production-wrap">
+        <div class="row">
+            <div class="col-lg-3 wow fadeInUp list-width">
+
+
+                {php $data = get_childcat($ids);}
+                {php $i=0;}
+                <ul class="category-wrap">
+                    <a href="">Partial production</a>
+                    {loop $data $v}
+                    {php $i++;}
+                    {if $flag}
+                    <a {if $i==1} class="select" {/if} href="{$v[pclink]}">{$v[catname]}</a>
+                    {else}
+                    <a {if $catid===$v[catid]} class="select" {/if} href="{$v[pclink]}">{$v[catname]}</a>
+                    {/if}
+                    {/loop}
+                </ul>
+            </div>
+            <div class="col-lg-9">
+                <div class="production-right">
+                    <div class="location wow fadeInUp d-none d-lg-block">
+                        {get_location($catid)}
+                    </div>
+                    <div class="list-wrap">
+
+
+                        {if $flag}
+                        {m:get sql="select * from hc_page where catid=71" limit="1"}
+                        {loop $data $v}
+
+                        <div class="desc-title">
+                            {$v[title]}
+                        </div>
+                        <div class="desc-wrap">
+                            {$v[content]}
+                        </div>
+                        {/loop}
+                        {else}
+
+                        <div class="desc-title">
+                            {$title}
+                        </div>
+                        <div class="desc-wrap">
+                            {$content}
+                        </div>
+                        {/if}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{m:include "index","footer"}

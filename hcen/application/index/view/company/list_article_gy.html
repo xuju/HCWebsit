@@ -1,0 +1,57 @@
+{m:include "index","header"}
+{php $listimgs=$catimg?$catimg:get_category($parentid, 'catimg')}
+
+<section class="page__title p-relative d-flex align-items-center fix" data-background="{$listimgs}">
+    <div class="slider__shape">
+        <img class="shape triangle" src="{STATIC_URL}company/img/icon/slider/triangle.png" alt="triangle">
+        <img class="shape dotted-square" src="{STATIC_URL}company/img/icon/slider/dotted-square.png"
+            alt="dotted-square">
+        <img class="shape solid-square" src="{STATIC_URL}company/img/icon/slider/solid-square.png" alt="solid-square">
+        <img class="shape circle-2" src="{STATIC_URL}company/img/icon/slider/circle.png" alt="circle">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="page__title-content wow fadeInUp d-none d-lg-block">
+                    <h2>{get_catname($catid)}</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container  production-wrap">
+        <div class="row">
+            <div class="col-lg-3 wow fadeInUp">
+
+
+                <!-- {php $data = get_childcat($parentid);} -->
+                {m:lists field="title,url,thumb" catid="$catid" limit="90"}
+                <ul class="category-wrap">
+                    <a href="{get_category($catid,'url')}" class="select">部分生产工艺展示{php print_r($catid)}</a>
+                    {loop $data $v}
+
+                    <a {if $catid===$v[catid]} class="select" {/if} href="{$v[url]}">{$v[title]}</a>
+                    {/loop}
+                </ul>
+            </div>
+            <div class="col-lg-9">
+                <div class="production-right">
+                    <div class="location wow fadeInUp d-none d-lg-block">
+                        {get_location($catid)}
+                    </div>
+                    <div class="list-wrap">
+
+                        <div class="row ">
+                            {m:get sql="SELECT * FROM hc_article" where="1=1"}
+                            {php print_r($data)}
+                            {php if}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{m:include "index","footer"}
