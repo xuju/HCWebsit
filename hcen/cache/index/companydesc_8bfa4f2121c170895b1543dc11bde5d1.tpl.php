@@ -32,11 +32,11 @@
                         <?php $i++;?>
                         <?php $coll="collapse".$v[id]?>
 
-                        <div class="card company-card wow fadeInUp" data-delay=".3s">
+                        <!-- <div class="card company-card wow fadeInUp" data-delay=".3s">
                             <div class="card-header" id="heading<?php echo $v['id'];?>">
                                 <h5 class="mb-0">
                                     <button class="btn   btn-link <?php if($i!=1) { ?> collapsed <?php } ?>" data-toggle="collapse"
-                                        data-target="#collapse<?php echo $v['id'];?>" aria-expanded="true"
+                                        data-target="#collapse<?php echo $v['id'];?>" aria-expanded="false"
                                         aria-controls="collapse<?php echo $v['id'];?>">
                                         <?php echo $v['title'];?>
                                     </button>
@@ -45,6 +45,24 @@
 
                             <div id="collapse<?php echo $v['id'];?>" class="collapse <?php if($i==1) { ?> show <?php } ?>"
                                 aria-labelledby="heading<?php echo $v['id'];?>" data-parent="#accordion">
+                                <div class="card-body " data-delay=".4s">
+                                    <?php echo $v['content'];?>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="card company-card wow fadeInUp" data-delay=".3s">
+                            <div class="card-header" id="heading<?php echo $v['id'];?>">
+                                <h5 class="mb-0">
+                                    <button class="btn   btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapse<?php echo $v['id'];?>" aria-expanded="false"
+                                        aria-controls="collapse<?php echo $v['id'];?>">
+                                        <?php echo $v['title'];?>
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapse<?php echo $v['id'];?>" class="collapse" aria-labelledby="heading<?php echo $v['id'];?>"
+                                data-parent="#accordion">
                                 <div class="card-body " data-delay=".4s">
                                     <?php echo $v['content'];?>
                                 </div>

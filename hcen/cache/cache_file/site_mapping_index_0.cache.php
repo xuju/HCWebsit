@@ -98,6 +98,6 @@ return array (
     '^ceshi\\/(\\d+)$' => 'index/index/show/catid/97/id/$1',
   ),
   'expire' => 0,
-  'mtime' => 1669364613,
+  'mtime' => 1669599117,
 );
 ?>

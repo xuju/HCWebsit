@@ -137,8 +137,8 @@
                                             <?php } ?>
                                             <div class="site-toggle d-none d-lg-inline-block"
                                                 style="display: inline-block;">
-                                                <a href="">ch</a>/
-                                                <a href="">en</a>
+                                                <a href="<?php echo $site['chsite'];?>">ch</a>/
+                                                <a href="/">en</a>
                                             </div>
 
 
@@ -193,8 +193,8 @@
                             aria-controls="menu" aria-selected="true">菜单</a>
                     </li>
                     <li class="nav-item toggle-lang">
-                        <a href="" class="nav-link" aria-selected="false">ch</a>
-                        <a href="" class="nav-link" aria-selected="false">en</a>
+                        <a href="<?php echo $site['chsite'];?>" class="nav-link" aria-selected="false">ch</a>
+                        <a href="/" class="nav-link" aria-selected="false">en</a>
                     </li>
                 </ul>
             </div>

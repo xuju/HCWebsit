@@ -24,11 +24,14 @@
     <section class="service-category">
         <div class="container">
             <div class="service-category-wrap wow fadeInUp">
+
                 {php $catids=$parentid?$parentid:$catid}
                 {php $data = get_childcat($catid);}
+                {php $i=0;}
                 <div class="left">
                     {loop $data $v}
-                    <div class="left-item  {if  $v[catid]===$select}  select{/if}">
+
+                    <div class="left-item  {if  $v[catid]===$select}  select{/if}  ">
                         <a href="{$v[pclink]}">{$v[catname]}</a>
                     </div>
                     {/loop}
@@ -48,7 +51,7 @@
                     {loop $data $v}
                     {php $i++;}
                     <div class="left-menu-wrap">
-                        <div class="left-menu-item  {if $i===1} service-menu-item {/if} ">
+                        <div class="left-menu-item  {if $i===1} service-menu-item  select {/if} ">
                             <a href="{$v[pclink]}"> {$v[catname]}</a>
                         </div>
                     </div>
@@ -64,9 +67,6 @@
                                 {$v[content]}
                             </div>
                         </div>
-
-
-
                         {/loop}
                     </div>
 

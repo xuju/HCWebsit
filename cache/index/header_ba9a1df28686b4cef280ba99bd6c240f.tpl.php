@@ -137,8 +137,8 @@
                                             <?php } ?>
                                             <div class="site-toggle d-none d-lg-inline-block"
                                                 style="display: inline-block;">
-                                                <a href="">中文</a>/
-                                                <a href="">英文</a>
+                                                <a href="/">中文</a>/
+                                                <a href="<?php echo $site['ensite'];?>">英文</a>
                                             </div>
 
 
@@ -193,8 +193,8 @@
                             aria-controls="menu" aria-selected="true">菜单</a>
                     </li>
                     <li class="nav-item toggle-lang">
-                        <a href="" class="nav-link" aria-selected="false">中文</a>
-                        <a href="" class="nav-link" aria-selected="false">英文</a>
+                        <a href="/" class="nav-link" aria-selected="false">中文</a>
+                        <a href="<?php echo $site['ensite'];?>" class="nav-link" aria-selected="false">英文</a>
                     </li>
                 </ul>
             </div>

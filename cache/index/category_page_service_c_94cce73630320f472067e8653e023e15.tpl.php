@@ -24,11 +24,14 @@
     <section class="service-category">
         <div class="container">
             <div class="service-category-wrap wow fadeInUp">
+
                 <?php $catids=$parentid?$parentid:$catid?>
                 <?php $data = get_childcat($catid);?>
+                <?php $i=0;?>
                 <div class="left">
                     <?php if(is_array($data)) foreach($data as $v) { ?>
-                    <div class="left-item  <?php if($v[catid]===$select) { ?>  select<?php } ?>">
+
+                    <div class="left-item  <?php if($v[catid]===$select) { ?>  select<?php } ?>  ">
                         <a href="<?php echo $v['pclink'];?>"><?php echo $v['catname'];?></a>
                     </div>
                     <?php } ?>
@@ -48,7 +51,7 @@
                     <?php if(is_array($data)) foreach($data as $v) { ?>
                     <?php $i++;?>
                     <div class="left-menu-wrap">
-                        <div class="left-menu-item  <?php if($i===1) { ?> service-menu-item <?php } ?> ">
+                        <div class="left-menu-item  <?php if($i===1) { ?> service-menu-item  select <?php } ?> ">
                             <a href="<?php echo $v['pclink'];?>"> <?php echo $v['catname'];?></a>
                         </div>
                     </div>
@@ -64,9 +67,6 @@
                                 <?php echo $v['content'];?>
                             </div>
                         </div>
-
-
-
                         <?php } ?>
                     </div>
 

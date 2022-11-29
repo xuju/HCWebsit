@@ -5,6 +5,12 @@
 
 
 <?php include template("index","/home/homeSwiper"); ?>
+<?php include template("index","./home/companydesc"); ?>
+<?php include template("index","./home/companyrong"); ?>
+<?php include template("index","./home/honor"); ?>
+<?php include template("index","./home/organization"); ?>
+<?php include template("index","./home/news"); ?>
+<?php include template("index","footer"); ?>
 
 <script>
     window.onload = function () {

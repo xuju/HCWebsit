@@ -32,11 +32,11 @@
                         {php $i++;}
                         {php $coll="collapse".$v[id]}
 
-                        <div class="card company-card wow fadeInUp" data-delay=".3s">
+                        <!-- <div class="card company-card wow fadeInUp" data-delay=".3s">
                             <div class="card-header" id="heading{$v[id]}">
                                 <h5 class="mb-0">
                                     <button class="btn   btn-link {if $i!=1} collapsed {/if}" data-toggle="collapse"
-                                        data-target="#collapse{$v[id]}" aria-expanded="true"
+                                        data-target="#collapse{$v[id]}" aria-expanded="false"
                                         aria-controls="collapse{$v[id]}">
                                         {$v[title]}
                                     </button>
@@ -45,6 +45,24 @@
 
                             <div id="collapse{$v[id]}" class="collapse {if $i==1} show {/if}"
                                 aria-labelledby="heading{$v[id]}" data-parent="#accordion">
+                                <div class="card-body " data-delay=".4s">
+                                    {$v[content]}
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="card company-card wow fadeInUp" data-delay=".3s">
+                            <div class="card-header" id="heading{$v[id]}">
+                                <h5 class="mb-0">
+                                    <button class="btn   btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapse{$v[id]}" aria-expanded="false"
+                                        aria-controls="collapse{$v[id]}">
+                                        {$v[title]}
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapse{$v[id]}" class="collapse" aria-labelledby="heading{$v[id]}"
+                                data-parent="#accordion">
                                 <div class="card-body " data-delay=".4s">
                                     {$v[content]}
                                 </div>

@@ -454,7 +454,7 @@ return array (
     array (
       'catid' => 53,
       'siteid' => 0,
-      'catname' => 'Company news',
+      'catname' => 'News Center',
       'modelid' => 1,
       'parentid' => 0,
       'arrparentid' => '0',
@@ -470,7 +470,7 @@ return array (
       'domain' => '',
       'entitle' => '公司新闻',
       'subtitle' => '',
-      'mobname' => 'Company news',
+      'mobname' => 'News Center',
       'category_template' => 'category_article',
       'list_template' => 'list_article',
       'show_template' => 'show_article',
@@ -762,7 +762,7 @@ return array (
     array (
       'catid' => 83,
       'siteid' => 0,
-      'catname' => '服务指南',
+      'catname' => 'Service Information',
       'modelid' => 0,
       'parentid' => 82,
       'arrparentid' => '0,82',
@@ -776,9 +776,9 @@ return array (
       'display' => 1,
       'pclink' => 'http://localhost:92/fuwuzhinan2/',
       'domain' => '',
-      'entitle' => '',
+      'entitle' => '服务指南',
       'subtitle' => '',
-      'mobname' => '服务指南',
+      'mobname' => 'Service Information',
       'category_template' => 'category_page_service_fw',
       'list_template' => '',
       'show_template' => '',
@@ -1292,6 +1292,6 @@ return array (
     ),
   ),
   'expire' => 0,
-  'mtime' => 1669364613,
+  'mtime' => 1669599121,
 );
 ?>

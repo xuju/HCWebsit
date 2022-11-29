@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="page__title-content wow fadeInUp">
-                    <h2>{get_catname($catid)}</h2>
+                    <h2>{get_catname($parentid)}</h2>
 
                 </div>
             </div>
@@ -48,7 +48,7 @@
                     {loop $data $v}
 
                     <div class="left-menu-wrap">
-                        <div class="left-menu-item  {if $v[catid]===$catid} service-menu-item {/if} ">
+                        <div class="left-menu-item  {if $v[catid]===$catid} service-menu-item  select {/if} ">
                             <a href="{$v[pclink]}"> {$v[catname]}</a>
                         </div>
                     </div>
