@@ -6,7 +6,7 @@ return array (
     'site_url' => 'http://localhost:91/',
     'site_keyword' => '3D,专业3d打印服务,3D打印部件,3D打印服务,海创三维',
     'site_description' => '海创三维科技,海创三维科技（苏州）有限公司,海创三维科技苏州有限公司,苏州海创三维科技有限公司',
-    'organization' => '/uploads/202211/16/221116095610174.png',
+    'organization' => '/uploads/202212/06/221206100526368.png',
     'site_copyright' => '© 2014-2022',
     'pcdesc' => '因相关内容有敏感信息需要保密所以不做展示，如有需求可以通过超链接在线联系对应部门。谢谢谅解!(仅介绍案例名称)',
     'site_filing' => '京ICP备666666号',
@@ -76,6 +76,6 @@ return array (
     'email' => 'qhyft@163.com',
   ),
   'expire' => 0,
-  'mtime' => 1669605570,
+  'mtime' => 1670292330,
 );
 ?>

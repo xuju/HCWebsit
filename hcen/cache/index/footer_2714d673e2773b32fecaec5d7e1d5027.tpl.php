@@ -45,7 +45,7 @@
                                         <li><a href="#">Company Profile</a></li>
                                         <li><a href="#">Company Honors</a></li>
                                         <li><a href="#">Cooperative Partner</a></li>
-                                        <li><a href="#">organizational</a></li>
+                                        <li><a href="#">Organizational</a></li>
                                         <li><a href="#">News Center</a></li>
                                     </ul>
                                 </div>

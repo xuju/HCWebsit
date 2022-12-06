@@ -202,7 +202,7 @@ return array (
     array (
       'catid' => 27,
       'siteid' => 0,
-      'catname' => '机构复杂零件',
+      'catname' => '结构复杂零件',
       'modelid' => 2,
       'parentid' => 6,
       'arrparentid' => '0,6',
@@ -218,7 +218,7 @@ return array (
       'domain' => '',
       'entitle' => '',
       'subtitle' => '',
-      'mobname' => '机构复杂零件',
+      'mobname' => '结构复杂零件',
       'category_template' => 'category_product_cp',
       'list_template' => 'list_product_cp',
       'show_template' => 'show_product_other',
@@ -1292,6 +1292,6 @@ return array (
     ),
   ),
   'expire' => 0,
-  'mtime' => 1669195855,
+  'mtime' => 1670222103,
 );
 ?>

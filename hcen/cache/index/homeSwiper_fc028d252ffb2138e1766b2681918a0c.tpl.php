@@ -124,7 +124,7 @@
 <script>
 
     let swiper1 = new Swiper(".home-swiper", {
-        autoplay: false,
+        autoplay: true,
         on: {
             init: function () {
                 // swiperAnimateCache(this); //隐藏动画元素 

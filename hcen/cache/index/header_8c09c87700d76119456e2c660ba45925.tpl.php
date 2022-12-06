@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo STATIC_URL;?>company/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
     <!-- CSS here -->
     <!-- <link rel="stylesheet" href="<?php echo STATIC_URL;?>company/css/preloader.css"> -->
@@ -137,8 +137,8 @@
                                             <?php } ?>
                                             <div class="site-toggle d-none d-lg-inline-block"
                                                 style="display: inline-block;">
-                                                <a href="<?php echo $site['chsite'];?>">ch</a>/
-                                                <a href="/">en</a>
+                                                <a href="<?php echo $site['chsite'];?>">Ch</a>/
+                                                <a href="/">En</a>
                                             </div>
 
 
@@ -190,11 +190,11 @@
                 <ul class="nav nav-tabs" id="sidebar-tab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" id="menu-tab" data-toggle="tab" href="#menu" role="tab"
-                            aria-controls="menu" aria-selected="true">菜单</a>
+                            aria-controls="menu" aria-selected="true">MENU</a>
                     </li>
                     <li class="nav-item toggle-lang">
-                        <a href="<?php echo $site['chsite'];?>" class="nav-link" aria-selected="false">ch</a>
-                        <a href="/" class="nav-link" aria-selected="false">en</a>
+                        <a href="<?php echo $site['chsite'];?>" class="nav-link" aria-selected="false">Ch</a>
+                        <a href="/" class="nav-link" aria-selected="false">En</a>
                     </li>
                 </ul>
             </div>
@@ -216,7 +216,7 @@
                                 </a>
                             </div>
 
-                            <a href="contact.html" class="z-btn z-btn-white">联系我们</a>
+                            <a href="contact.html" class="z-btn z-btn-white">Contact US</a>
                             <div class="sidebar__search">
                                 <form action="#">
                                     <input type="text" placeholder="Your Keywords..">

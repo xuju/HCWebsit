@@ -28,7 +28,7 @@
                 <ul class="category-wrap wow fadeInUp">
                     <a class="select" href="<?php echo get_category($catid, 'pclink');?>">
                         <?php if($catid==10) { ?>
-                        所有设备展示
+                        部分设备展示
                         <?php } elseif ($catid==23) { ?>
                         部分生产工艺展示
                         <?php } else { ?>

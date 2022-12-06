@@ -28,11 +28,11 @@
                 <ul class="category-wrap wow fadeInUp">
                     <a class="select" href="<?php echo get_category($catid, 'pclink');?>">
                         <?php if($catid==10) { ?>
-                        所有设备展示
+                        Part of the device
                         <?php } elseif ($catid==23) { ?>
-                        部分生产工艺展示
+                        Partial production process display
                         <?php } else { ?>
-                        部分产品展示图
+                        Part of the product display
                         <?php } ?>
                     </a>
                     <?php if(is_array($data)) foreach($data as $v) { ?>

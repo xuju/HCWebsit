@@ -27,7 +27,7 @@
                 <?php $data = get_childcat($catid);?>
                 <ul class="category-wrap wow fadeInUp">
                     <a class="select" href="<?php echo get_category($catid, 'pclink');?>">
-                        部分产品展示图
+                        Part of the product display
                     </a>
                     <?php if(is_array($data)) foreach($data as $v) { ?>
                     <!-- <li>

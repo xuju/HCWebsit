@@ -28,7 +28,7 @@
 
                 {php $data = get_childcat($parentid);}
                 <ul class="category-wrap">
-                    <a href="{get_category($parentid,'pclink')}">部分产品展示图</a>
+                    <a href="{get_category($parentid,'pclink')}">Part of the device</a>
                     {loop $data $v}
 
                     <a {if $catid===$v[catid]} class="select" {/if} href="{$v[pclink]}">{$v[catname]}</a>

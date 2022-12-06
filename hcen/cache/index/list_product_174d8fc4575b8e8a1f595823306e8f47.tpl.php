@@ -28,7 +28,7 @@
 
                 <?php $data = get_childcat($parentid);?>
                 <ul class="category-wrap">
-                    <a href="<?php echo get_category($parentid,'pclink');?>">部分产品展示图</a>
+                    <a href="<?php echo get_category($parentid,'pclink');?>">Part of the device</a>
                     <?php if(is_array($data)) foreach($data as $v) { ?>
 
                     <a <?php if($catid===$v[catid]) { ?> class="select" <?php } ?> href="<?php echo $v['pclink'];?>"><?php echo $v['catname'];?></a>
